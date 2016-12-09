@@ -61,7 +61,11 @@
 .jumbotron {
   display: flex;
   align-items: center;
+<<<<<<< HEAD
   background-image: url(/assets/hero2.jpg);
+=======
+  background-image: url(assets/hero2.jpg);
+>>>>>>> 812fa0fe18b0e9ec5d6599769540d565175ef782
   background-size: 80rem;
   background-repeat: no-repeat;
   height: 70rem;
