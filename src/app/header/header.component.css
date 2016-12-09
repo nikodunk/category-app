@@ -1,14 +1,6 @@
 
-.superjuice a {
-  font-weight: 700;
-  margin: 0;
-  position: absolute; 
-  top: 20px; 
-  left: 20px; 
-  font-size:3rem;
-  text-decoration:none;
+.navbar-brand a {
   color: #3d7eed;
-
 }
 
 
@@ -20,4 +12,12 @@
    text-align:top left;
   position: absolute; 
   font-size: 1.5rem;
+}
+
+
+
+.navbar-default {
+  background-color:white;
+  padding:0px;
+  margin: 0px;
 }
