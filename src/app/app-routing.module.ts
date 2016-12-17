@@ -7,11 +7,11 @@ import { AboutComponent } from './about/about.component'
 const routes: Routes = [
   {
     path: '',
-    redirectTo: '/results',
+    redirectTo: '/escos',
     pathMatch: 'full'
   },
   {
-    path: 'results',
+    path: 'escos',
     component: EscoResultsComponent
   },
   {
