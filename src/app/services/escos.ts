@@ -42,7 +42,7 @@ export const ESCOS: EscoClass[] = [
   },
 
   
-{ 
+  { 
     name: 'Constellation',
     url: 'https://shop.constellation.com/#/11206/CONED_CONED',
     img: 'assets/constellation.png',

@@ -5,7 +5,7 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
-import { ResultsComponent } from './results/results.component';
+import { EscoResultsComponent } from './results/results.component';
 import { HighlightDirective } from './results/highlight.directive';
 
 import { EscoService } from './services/esco.service';
@@ -17,9 +17,9 @@ import { AppRoutingModule, routedComponents } from './app-routing.module';
   declarations: [
     AppComponent,
     HeaderComponent,
-    ResultsComponent,
+    EscoResultsComponent,
     HighlightDirective,
-    AboutComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,

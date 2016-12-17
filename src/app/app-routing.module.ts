@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { ResultsComponent } from './results/results.component';
+import { EscoResultsComponent } from './results/results.component';
 import { AboutComponent } from './about/about.component'
 
 const routes: Routes = [
@@ -12,7 +12,7 @@ const routes: Routes = [
   },
   {
     path: 'results',
-    component: ResultsComponent
+    component: EscoResultsComponent
   },
   {
     path: 'about',
@@ -26,4 +26,4 @@ const routes: Routes = [
 })
 export class AppRoutingModule { }
 
-export const routedComponents = [ResultsComponent, AboutComponent];
+export const routedComponents = [EscoResultsComponent, AboutComponent];

@@ -7,20 +7,36 @@ import { EscoClass } from '../services/esco.class'
   templateUrl: './results.component.html',
   styleUrls: ['./results.component.css']
 })
-export class ResultsComponent implements OnInit {
 
+export class EscoResultsComponent implements OnInit {
+
+  visibilityLimit = 3;
   escos: EscoClass[];
+
   constructor(private escoService: EscoService) { }
   getEscos() {
     this.escoService.getEscos().then(escos => this.escos = escos);
   };
   
+  visibilityExpander () {
+         this.visibilityLimit = this.visibilityLimit + 3;
+  }
+
+   // sortEscos (escos) {
+   //    escos = Object.keys(escos).sort(function(a,b){return escos[a]-escos[b]})
+   //  }
+
+
 
   ngOnInit() {
     this.getEscos();
+    // this.sortEscos(this.escos);
   };
 
 
+
   public conEd = 0.0875 * 500;
+
+  
 
 }

@@ -33,9 +33,9 @@
 </section>
 
 <section>
-	<div class="container" style="">     
-			<div *ngFor="let esco of escos" (click)="esco.isVisible = !esco.isVisible">
-			    <div  kayakMouseover class="result">
+	<div class="container">     
+			<div *ngFor="let esco of escos, let i = index" (click)="esco.isVisible = !esco.isVisible">
+			    <div  kayakMouseover class="result" *ngIf="i<visibilityLimit" >
 			      	<div class="row">
 				        <div id="imagebox" class="col-sm-1">
 				          <p><img  id="image" src="{{esco.img}}" ></p>
@@ -52,7 +52,7 @@
 				            <a class="btn btn-primary" href="{{esco.url}}"> View Deal </a>
 				            <br>
 				            <br>
-				            <p>More Details</p>
+				            <a>More Details</a>
 				        </div>
 			      	</div>
 			      	<div class="row container" [style.max-height]="esco.isVisible ? '500px' : '0px'">  
@@ -66,6 +66,10 @@
 				      	</div>
 			      	</div>
 			    </div>
+			</div>
+			
+			<div style="text-align:center; padding: 2rem">
+				<a class="btn btn-secondary"(click)="this.visibilityExpander()" *ngIf="visibilityLimit<15"> Load 3 More </a>
 			</div>
 	</div>
 </section>
