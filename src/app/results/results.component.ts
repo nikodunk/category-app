@@ -15,7 +15,8 @@ export class EscoResultsComponent implements OnInit {
 
   constructor(private escoService: EscoService) { }
   getEscos() {
-    this.escoService.getEscos().then(escos => this.escos = escos);
+    this.escoService.getEscos()
+                  .then(escos => this.escos = escos);
   };
   
   visibilityExpander () {
