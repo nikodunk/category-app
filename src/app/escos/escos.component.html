@@ -1,8 +1,8 @@
 <section class="jumbotron">
 	  <div class="container">      
 	      <div style="text-align: center">   
-	        <h2>Reduce your energy costs by $10/month in 5 minutes.</h2>
-	        <h4 style="color: grey">Find the best-rated energy supply companies here.</h4>
+	        <h2>The best energy supply companies for NYC</h2>
+	        <h4 style="color: grey">Reduce your energy costs by up to $10/month in 5 minutes.</h4>
 	        <br> 
 	      </div>
 	    </div>                  
@@ -33,7 +33,9 @@
 </section>
 
 <section>
-	<div class="container">     
+	<div class="container">  
+			<h4 style="color: grey; text-align: center">Best energy supply companies (ESCOs) ranked by price:</h4>  
+			<br>
 			<div *ngFor="let esco of escos, let i = index" (click)="esco.isVisible = !esco.isVisible">
 			    <div  kayakMouseover class="result" *ngIf="i<visibilityLimit" >
 			      	<div class="row">

@@ -3,9 +3,9 @@ import { EscoService } from '../services/esco.service'
 import { EscoClass } from '../services/esco.class'
 
 @Component({
-  selector: 'app-results',
-  templateUrl: './results.component.html',
-  styleUrls: ['./results.component.css']
+  selector: 'app-escos',
+  templateUrl: './escos.component.html',
+  styleUrls: ['./escos.component.css']
 })
 
 export class EscoResultsComponent implements OnInit {

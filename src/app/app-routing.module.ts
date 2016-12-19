@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { EscoResultsComponent } from './results/results.component';
+import { EscoResultsComponent } from './escos/escos.component';
 import { AboutComponent } from './about/about.component'
 
 const routes: Routes = [
