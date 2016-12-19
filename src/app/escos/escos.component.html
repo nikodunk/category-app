@@ -2,7 +2,7 @@
 	  <div class="container">      
 	      <div style="text-align: center">   
 	        <h2>The best energy supply companies for NYC</h2>
-	        <h4 style="color: grey">Reduce your energy costs by up to $10/month in 5 minutes.</h4>
+	        <h4>Reduce your energy costs by up to $10/month in 5 minutes.</h4>
 	        <br> 
 	      </div>
 	    </div>                  
@@ -34,7 +34,7 @@
 
 <section>
 	<div class="container">  
-			<h4 style="color: grey; text-align: center">Best energy supply companies (ESCOs) ranked by price:</h4>  
+			<h4 style="color: grey; text-align: center">Top 3 energy supply companies (ESCOs); ranked by price:</h4>  
 			<br>
 			<div *ngFor="let esco of escos, let i = index" (click)="esco.isVisible = !esco.isVisible">
 			    <div  kayakMouseover class="result" *ngIf="i<visibilityLimit" >
@@ -44,17 +44,17 @@
 				        </div>
 				        <div class="col-sm-5" id="name">
 				            <h3><b>{{esco.name}}</b></h3>
-				            <p style="color:grey"> {{esco.source}} </p>
+				            <p style="color:grey"><b>Source: </b>{{esco.source}} </p>
 				            <br>
 				        </div>
 				        <div class="col-sm-5" id="saving">
 				            <h1> <b>${{ conEd-(esco.cpk * 500) }}</b></h1>
-				            <h5 style="color:grey">savings / mo</h5>
+				            <h5 style="color:grey">savings / month</h5>
 				            <br>
-				            <a class="btn btn-primary" href="{{esco.url}}"> View Deal </a>
+				            <a class="btn btn-primary" href="{{esco.url}}"> Learn More </a>
 				            <br>
 				            <br>
-				            <a>More Details</a>
+				            <a>Show More</a>
 				        </div>
 			      	</div>
 			      	<div class="row container" [style.max-height]="esco.isVisible ? '500px' : '0px'">  
