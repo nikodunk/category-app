@@ -9,16 +9,8 @@ export const ESCOS: EscoClass[] = [
     img: 'assets/think.png',
     cpk: 0.069,
     time: 12,  
-    source: 'non-renewable', 
-  },
-
-  { 
-  	name: 'Clearview Energy',
-  	url: 'https://www.clearviewenergy.com/signup?zipcode=11206#pricing',
-  	img: 'assets/clearview.png',
-  	cpk: 0.079,
-  	time: 12,  
-    source: '100% renewable, mostly wind, details unclear', 
+    source: 'non-renewable',
+    reviews: 'The most cost-savings. Standard New York State mix of hydro, gas and coal, but leading pricing and no known shady customer acquisition practices. No rate fraud.'
   },
 
 
@@ -29,6 +21,7 @@ export const ESCOS: EscoClass[] = [
     cpk: 0.084,
     time: 12, 
     source: '100% Wind', 
+    reviews: 'The most renewable. Took 2 tries until they accepted our ConEd number and showed up on our utility bill, but one of the most established green ESCOs around. Customer service picks up and reacts but is not the best around. Based in Texas. ConEd by way of Brooklyn Solarworks researched that their energy is mislabeled as green – 5% wind and less then 1% solar.',
   },
 
 
@@ -38,7 +31,8 @@ export const ESCOS: EscoClass[] = [
     img: 'assets/publicpower.png',
     cpk: 0.085,
     time: 12, 
-    source: 'Gas 38%, Nuclear 32%, Hydro 14%, Coal 6%, Oil 1%', 
+    source: 'Gas 38%, Nuclear 32%, Hydro 14%, Coal 6%, Oil 1%',
+    reviews: '',
   },
 
   
@@ -49,6 +43,7 @@ export const ESCOS: EscoClass[] = [
     cpk: 0.087,
     time: 12,  
     source: 'Renewable Energy Credits, not renewable power', 
+    reviews: '',
   },
 
 
@@ -59,7 +54,19 @@ export const ESCOS: EscoClass[] = [
     cpk: 0.0875,
     time: 12,
     source: 'Fossil Fuels, Nuclear, Gas',
+    reviews: '',
   },
+
+  { 
+    name: 'Clearview Energy',
+    url: 'https://www.clearviewenergy.com/signup?zipcode=11206#pricing',
+    img: 'assets/clearview.png',
+    cpk: 0.088,
+    time: 12,  
+    source: '100% renewable, mostly wind, details unclear', 
+    reviews: '100$ cancellation fee! Customer service is based in Texas and terrible – only picked up in the evenings EST. If I had a problem I am not confident they would be any support.'
+  },
+
 
   { 
     name: 'East Coast Power & Gas',
@@ -68,6 +75,7 @@ export const ESCOS: EscoClass[] = [
     cpk: 0.089,
     time: 12,  
     source: '100% renewable, not clear', 
+    reviews: '',
   },
 
   { 
@@ -76,7 +84,8 @@ export const ESCOS: EscoClass[] = [
     img: 'assets/xoom.png',
     cpk: 0.090,
     time: 12, 
-    source: 'Gas 38%, Nuclear 32%, Hydro 14%, Coal 6%, Oil 1%'
+    source: 'Gas 38%, Nuclear 32%, Hydro 14%, Coal 6%, Oil 1%',
+    reviews: '',
   },
 
   { 
@@ -86,6 +95,7 @@ export const ESCOS: EscoClass[] = [
     cpk: 0.095,
     time: 12, 
     source: '100% renewable, sources unclear', 
+    reviews: '',
   },
 
   { 
@@ -95,6 +105,7 @@ export const ESCOS: EscoClass[] = [
     cpk: 0.0975,
     time: 12,
     source: '65% Hydro, 35% Wind',
+    reviews: '',
   },
 
   { 
@@ -103,7 +114,8 @@ export const ESCOS: EscoClass[] = [
     img: 'assets/direct.png',
     cpk: 0.099,
     time: 12, 
-    source: 'Renewable Energy Credits, not renewable power', 
+    source: 'Renewable Energy Credits, not renewable power',
+    reviews: '', 
   },
   
   { 
@@ -113,6 +125,7 @@ export const ESCOS: EscoClass[] = [
     cpk: 0.102,
     time: 12, 
     source: '30% renewables, sources unclear', 
+    reviews: '',
   },
 
   { 
@@ -122,6 +135,7 @@ export const ESCOS: EscoClass[] = [
     cpk: 0.105,
     time: 12, 
     source: 'not clear', 
+    reviews: '',
   },
 
 
@@ -131,7 +145,8 @@ export const ESCOS: EscoClass[] = [
     img: 'assets/ethical.png',
     cpk: 0.113,
     time: 12, 
-    source: '99% Wind, 1% Solar', 
+    source: '99% Wind, 1% Solar',
+    reviews: '', 
   },
 
     { 
@@ -141,6 +156,7 @@ export const ESCOS: EscoClass[] = [
     cpk: 0.135,
     time: 12, 
     source: '100% renewable, sources unclear', 
+    reviews: '',
   },
   
 ];

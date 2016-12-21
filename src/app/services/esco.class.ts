@@ -5,4 +5,5 @@ export class EscoClass {
   cpk: number;
   time: number;
   source: string;
+  reviews: string;
 }

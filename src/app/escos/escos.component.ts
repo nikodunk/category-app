@@ -10,7 +10,7 @@ import { EscoClass } from '../services/esco.class'
 
 export class EscoResultsComponent implements OnInit {
 
-  visibilityLimit = 3;
+  visibilityLimit = 2;
   escos: EscoClass[];
 
   constructor(private escoService: EscoService) { }
