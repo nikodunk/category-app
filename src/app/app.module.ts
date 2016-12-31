@@ -15,6 +15,8 @@ import { AboutComponent } from './about/about.component';
 import { AppRoutingModule, routedComponents } from './app-routing.module';
 import { TheBestEscoComponent } from './the-best-esco/the-best-esco.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
+import { EscoComparerComponent } from './esco-comparer/esco-comparer.component';
+import { KeypipePipe } from './keypipe.pipe';
 
 
 
@@ -36,7 +38,9 @@ import { SignUpComponent } from './sign-up/sign-up.component';
     HighlightDirective,
     AboutComponent,
     TheBestEscoComponent,
-    SignUpComponent
+    SignUpComponent,
+    EscoComparerComponent,
+    KeypipePipe
   ],
   imports: [
     BrowserModule,

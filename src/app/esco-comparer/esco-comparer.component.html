@@ -1,0 +1,44 @@
+<div class="container">
+	<div class="col-sm-8 col-sm-offset-2" style="padding: 50px">
+			<br><br>
+			<h2>The ESCO Comparison Supertool</h2>
+			<p class="blog-post-meta" style="color: #999;">for 12 month ESCO contracts</p>
+	</div> 
+</div>   	
+      	<div class="table-responsive">	
+			<table class="table table-hover table-sm ">
+				<tr>
+					<th> </th>
+					<th scope="column" valign="top"></th>
+					<th scope="column" valign="top">Simulated Bill for 500kWh</th>
+					<th scope="column" valign="top">Cancellation Fee (12 mo plan)</th>
+					<th scope="column" valign="top">12 mo rate</th>
+					<th scope="column" valign="top">Energy Source</th>
+					<th scope="column" valign="top"></th>
+					<th scope="column" valign="top"></th>
+					<th scope="column" valign="top"></th>
+				</tr>
+				
+				<tr *ngFor="let esco of escos | keypipe "
+					[ngClass]="{success: esco.value.recommended}"
+					>
+					
+					<th scope="row" class="btn-link"> <img src="{{esco.value.img}}" style="height:20px"></th>
+					<td scope="column" valign="top">{{esco.value.name}}</td>
+					<td scope="column" valign="top">${{(esco.value.cpk * 500 + 83.57)}}</td>
+					<td scope="column" valign="top">${{esco.value.fee}}</td>
+					<td scope="column" valign="top">{{esco.value.cpk * 100 }} c/kWh</td>
+					<td scope="column" valign="top">{{esco.value.source}}</td>
+					<td scope="column" valign="top" style="color:grey"><a class="btn btn-success disabled"> Review</a>
+					 </td> 
+					 <td scope="column" valign="top" style="color:grey">
+					<a class="btn btn-warning disabled" routerLink="">Expand</a>
+					 </td> 
+					 <td scope="column" valign="top" style="color:grey">
+					<a href="{{esco.value.url}}" class="btn btn-primary">Get</a>
+					 </td> 
+					
+				</tr>
+				
+			</table>
+		</div>

@@ -1,14 +1,15 @@
+
+
+
 import { Component, OnInit } from '@angular/core';
 import { EscoService } from '../services/esco.service'
 import { EscoClass } from '../services/esco.class'
 
 @Component({
-  selector: 'app-escos',
-  templateUrl: './escos.component.html',
-  styleUrls: ['./escos.component.css']
+  selector: 'app-esco-comparer',
+  templateUrl: './esco-comparer.component.html'
 })
-
-export class EscoResultsComponent implements OnInit {
+export class EscoComparerComponent implements OnInit {
 
   visibilityLimit = 2;
   escos: EscoClass[];
@@ -20,7 +21,6 @@ export class EscoResultsComponent implements OnInit {
     this.escoService.fetchData()
       .subscribe(
         (data: EscoClass[]) => {
-              console.log(data);
               this.escos = data; 
               }
             )

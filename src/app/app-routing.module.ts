@@ -4,6 +4,8 @@ import { Routes, RouterModule } from '@angular/router';
 import { EscoResultsComponent } from './escos/escos.component';
 import { AboutComponent } from './about/about.component'
 import { TheBestEscoComponent } from './the-best-esco/the-best-esco.component';
+import { EscoComparerComponent } from './esco-comparer/esco-comparer.component';
+
 
 const routes: Routes = [
   {
@@ -22,6 +24,10 @@ const routes: Routes = [
   {
     path: 'escoreview',
     component: TheBestEscoComponent
+  },
+  {
+    path: 'escocompare',
+    component: EscoComparerComponent
   }
 ];
 
