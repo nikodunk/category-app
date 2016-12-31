@@ -12,11 +12,18 @@ export class EscoResultsComponent implements OnInit {
 
   visibilityLimit = 2;
   escos: EscoClass[];
+  public conEd = 0.0875 * 500;
 
   constructor(private escoService: EscoService) { }
+  
   getEscos() {
-    this.escoService.getEscos()
-                  .then(escos => this.escos = escos);
+    this.escoService.fetchData()
+      .subscribe(
+        (data: EscoClass[]) => {
+              this.escos = data; 
+              }
+            )
+
   };
   
   visibilityExpander () {
@@ -33,11 +40,5 @@ export class EscoResultsComponent implements OnInit {
     this.getEscos();
     // this.sortEscos(this.escos);
   };
-
-
-
-  public conEd = 0.0875 * 500;
-
   
-
 }

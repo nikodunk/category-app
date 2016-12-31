@@ -1,41 +1,14 @@
- <section class="jumbotron">
-	  <div class="container">      
-	      <div style="text-align: center">   
-	        <h2>The best energy supply companies for most people in NYC</h2>
-<!-- 	        <h4>Our research, reviews and conclusions.</h4>
- -->	        <br> 
-	      </div>
-	    </div>                  
-</section> 
+<div class="container">
+	<div class="col-sm-8 col-sm-offset-2" style="padding: 50px">
+			<br><br>
+			<h2>ESCO Comparison Guide 2017</h2>
+			<p class="blog-post-meta" style="color: #999;">For Pricing and Energy Sources</p>
+	</div> 
+</div>
 
-<!-- <section>                  
-	<div class="container">
-		<br>
-	    <div class="row" style="text-align:center;" >
-	        <div class="col-md-4" style="padding:3rem"> 
-	          <img style="width: 6rem" src="assets/wind.png">
-	          <h4 style="color: #3d7eed;"><b>No equipment to maintain</b></h4>
-	        </div>
 
-	        <div class="col-md-4" style="padding:3rem"> 
-	          <img style="width: 6rem" src="assets/transmission.png">
-	          <h4 style="color: #3d7eed;"><b>No change in utility</b></h4>
-	        </div>
-
-	        <div class="col-md-4" style="padding:3rem">
-	          <img style="width: 6rem" src="assets/money.png">
-	          <h4 style="color: #3d7eed;"><b>Appears as an item on your regular utility bill.</b></h4>
-	        </div>   
-	    </div> 
-	  	<hr>
-	</div>    
-
-</section> -->
-
-<section>
-	<div class="container">  
-		<!-- 	<h4 style="color: grey; text-align: center">The best ESCOs for most people: </h4>
-			<br> -->
+<div class="container"> 
+	<div class="row">
 			<div *ngFor="let esco of escos, let i = index" (click)="esco.isVisible = !esco.isVisible">
 			    <div  kayakMouseover class="result" *ngIf="i<visibilityLimit" >
 			      	<div class="row">
@@ -61,13 +34,13 @@
 				        </div>
 				        <div class="col-md-4" id="saving">
 				            <h1> <b>${{ conEd-(esco.cpk * 500) }}</b></h1>
-				            <h5 style="color:grey">savings / month <br>over ConEd</h5>
+				            <h5 style="color:grey">avg. savings / month <br>over default energy supply</h5>
 				            <br>
 				            <br>
 				            <a class="btn btn-default disabled">Review now</a>
 				            <br>
 				            <br>
-				            <a class="btn btn-lg btn-success" href="{{esco.url}}"> Sign up </a>
+				            <a href="{{esco.url}}"> <button class="btn btn-primary">Switch Plans Now <span class="glyphicon glyphicon-lock" aria-hidden="true"></span></button> </a>
 				            <br><br>
 				            <p> More Info <span class="glyphicon glyphicon-menu-down glyphicon-lg"></span></p>
 
@@ -91,7 +64,8 @@
 				<a class="btn btn-secondary"(click)="this.visibilityExpander()" *ngIf="visibilityLimit<15"> Load More Options </a>
 			</div>
 	</div>
-</section>
+</div>
+
 
 
 

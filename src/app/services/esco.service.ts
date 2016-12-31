@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { EscoClass } from './esco.class';
-import { ESCOS } from './escos';
-import { Headers, Http } from '@angular/http'
+import { Headers, Http, Response } from '@angular/http'
+import 'rxjs/Rx';
 
 @Injectable()
 export class EscoService {
@@ -14,12 +14,6 @@ export class EscoService {
 
 
 
-  
-   getEscos(): Promise<EscoClass[]> {
-    return Promise.resolve(ESCOS);
-  }
-
-
 
   storeData(){
   	const body=JSON.stringify(this.email);
@@ -29,10 +23,14 @@ export class EscoService {
   	return this.http.post('https://superjuice-1cb15.firebaseio.com/emails.json', body, {headers: headers})
   }
 
-  fetchData() {
 
+
+
+  fetchData() {
+      return this.http.get('https://superjuice-1cb15.firebaseio.com/escos.json')
+        .map((response: Response) => response.json())
   }
 
-
+  
 
 }
