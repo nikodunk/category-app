@@ -3,11 +3,12 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { EscoResultsComponent } from './escos/escos.component';
 import { AboutComponent } from './about/about.component'
+import { TheBestEscoComponent } from './the-best-esco/the-best-esco.component';
 
 const routes: Routes = [
   {
     path: '',
-    redirectTo: '/escos',
+    redirectTo: '/escoreview',
     pathMatch: 'full'
   },
   {
@@ -18,6 +19,10 @@ const routes: Routes = [
     path: 'about',
     component: AboutComponent
   },
+  {
+    path: 'escoreview',
+    component: TheBestEscoComponent
+  }
 ];
 
 @NgModule({

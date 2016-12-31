@@ -1,0 +1,13 @@
+<div class="myPanel" style="border-top: 5px solid #42A948;">
+                  <div style="margin:20px" *ngIf="!this.submitted">
+	      	          	<h4>Sign up to get the latest green tips, deals and advice.</h4>
+	      	          	<form id="contact">
+	                        <input [(ngModel)]="escoService.email" name="email" type="text" class="form-control" placeholder ="Enter your email"/>
+	                        <br>
+	      		            <input class="btn btn-primary btn-sm" value="Sign Up" (click)="onStore()">
+	       				</form>
+                  </div>
+                  <div style="margin:20px" *ngIf="this.submitted">
+                  		<h4 style="text-align:center">Thanks! You're signed up.</h4>
+                  </div>
+</div>
