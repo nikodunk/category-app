@@ -18,6 +18,7 @@ import { SignUpComponent } from './sign-up/sign-up.component';
 import { EscoComparerComponent } from './esco-comparer/esco-comparer.component';
 import { KeypipePipe } from './keypipe.pipe';
 import { SafePipe } from './safe.pipe';
+import { NewsfeedComponent } from './newsfeed/newsfeed.component';
 
 
 
@@ -42,7 +43,8 @@ import { SafePipe } from './safe.pipe';
     SignUpComponent,
     EscoComparerComponent,
     KeypipePipe,
-    SafePipe
+    SafePipe,
+    NewsfeedComponent
   ],
   imports: [
     BrowserModule,

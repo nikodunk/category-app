@@ -5,6 +5,7 @@ import { EscoResultsComponent } from './escos/escos.component';
 import { AboutComponent } from './about/about.component'
 import { TheBestEscoComponent } from './the-best-esco/the-best-esco.component';
 import { EscoComparerComponent } from './esco-comparer/esco-comparer.component';
+import { NewsfeedComponent } from './newsfeed/newsfeed.component';
 
 
 const routes: Routes = [
@@ -28,6 +29,10 @@ const routes: Routes = [
   {
     path: 'escocompare',
     component: EscoComparerComponent
+  },
+  {
+    path: 'newsfeed',
+    component: NewsfeedComponent
   }
 ];
 

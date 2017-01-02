@@ -8,12 +8,7 @@ export class EscoService {
 
     email = null;
 
-  constructor(private http: Http) { 
-        
-    }
-
-
-
+  constructor(private http: Http) { }
 
   storeData(){
   	const body=JSON.stringify(this.email);
@@ -22,8 +17,6 @@ export class EscoService {
   	});
   	return this.http.post('https://superjuice-1cb15.firebaseio.com/emails.json', body, {headers: headers})
   }
-
-
 
 
   fetchData() {
