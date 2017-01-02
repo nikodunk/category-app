@@ -10,7 +10,7 @@ import { EscoComparerComponent } from './esco-comparer/esco-comparer.component';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: '/escoreview',
+    redirectTo: '/escocompare',
     pathMatch: 'full'
   },
   {

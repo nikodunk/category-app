@@ -19,7 +19,12 @@ body {
 }
 
 
+#myFrame { width: 100%; }
 
+mark {
+    background-color: #dff0d8;
+    color: black;
+}
 
 h1, .h1,
 h2, .h2,
@@ -31,4 +36,9 @@ h6, .h6 {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: normal;
   color: #333;
+}
+
+
+.hiddenRow {
+    padding: 0 !important;
 }

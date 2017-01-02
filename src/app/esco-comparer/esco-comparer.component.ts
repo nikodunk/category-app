@@ -1,13 +1,11 @@
-
-
-
 import { Component, OnInit } from '@angular/core';
 import { EscoService } from '../services/esco.service'
 import { EscoClass } from '../services/esco.class'
 
 @Component({
   selector: 'app-esco-comparer',
-  templateUrl: './esco-comparer.component.html'
+  templateUrl: './esco-comparer.component.html',
+  styleUrls: ['./esco-comparer.component.css']
 })
 export class EscoComparerComponent implements OnInit {
 
@@ -31,15 +29,10 @@ export class EscoComparerComponent implements OnInit {
          this.visibilityLimit = this.visibilityLimit + 3;
   }
 
-   // sortEscos (escos) {
-   //    escos = Object.keys(escos).sort(function(a,b){return escos[a]-escos[b]})
-   //  }
-
 
 
   ngOnInit() {
     this.getEscos();
-    // this.sortEscos(this.escos);
   };
   
 }

@@ -17,6 +17,7 @@ import { TheBestEscoComponent } from './the-best-esco/the-best-esco.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
 import { EscoComparerComponent } from './esco-comparer/esco-comparer.component';
 import { KeypipePipe } from './keypipe.pipe';
+import { SafePipe } from './safe.pipe';
 
 
 
@@ -40,7 +41,8 @@ import { KeypipePipe } from './keypipe.pipe';
     TheBestEscoComponent,
     SignUpComponent,
     EscoComparerComponent,
-    KeypipePipe
+    KeypipePipe,
+    SafePipe
   ],
   imports: [
     BrowserModule,
