@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
-
+import {PathLocationStrategy, LocationStrategy} from '@angular/common';
 // import { AngularFireModule } from 'angularfire2';
 
 
@@ -19,6 +19,7 @@ import { EscoComparerComponent } from './esco-comparer/esco-comparer.component';
 import { KeypipePipe } from './keypipe.pipe';
 import { SafePipe } from './safe.pipe';
 import { NewsfeedComponent } from './newsfeed/newsfeed.component';
+import { FooterComponent } from './footer/footer.component';
 
 
 
@@ -44,7 +45,8 @@ import { NewsfeedComponent } from './newsfeed/newsfeed.component';
     EscoComparerComponent,
     KeypipePipe,
     SafePipe,
-    NewsfeedComponent
+    NewsfeedComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
@@ -53,7 +55,7 @@ import { NewsfeedComponent } from './newsfeed/newsfeed.component';
     AppRoutingModule,
     // AngularFireModule.initializeApp(firebaseConfig)
   ],
-  providers: [EscoService],
+  providers: [EscoService, { provide: LocationStrategy, useClass: PathLocationStrategy}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

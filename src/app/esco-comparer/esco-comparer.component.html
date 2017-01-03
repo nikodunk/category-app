@@ -1,44 +1,45 @@
 <div style="padding:100px">
+	<h4 style="text-align: center">Choose a better power provider</h4>
     <h2 style="text-align: center">The ESCO Comparison Tool</h2>
     <div style="text-align: center">
-        <p class="blog-post-meta">Compare 12 month plans for most east-coast ESCOs below. If you don't know what an ESCO is, <a href="https://www.youtube.com/watch?v=WrW-j9Xamkw">click here</a>. We think <mark>our recommendation (green)</mark> offers the best combination of certifications and price, but it's up to you.</p>
+        <p class="blog-post-meta">Compare 12 month plans for most US East Coast <a href="https://www.youtube.com/watch?v=WrW-j9Xamkw">ESCOs.</a> We think our <mark>recommendation (marked in green)</mark> offers the best combination of renewable generation, certifications and price, but it's up to you.</p>
     </div>
 </div>
       	
-        <div class="table-responsive">	
-			<table class="table table-hover table-sm" >
-				<tr>
-					<th> </th>
-					<th scope="column" valign="top"></th>
+        <div class="table-responsive myPanel">	
+			<table class="table table-hover table-sm">
+				<tr style="background-color: #fafafa; vertical-align: center">
+					<th></th>
+					<th scope="column" valign="top">ESCO Name</th>
 					<th scope="column" valign="top">Energy Source</th>
 					<th scope="column" valign="top">External Verification</th>
 					<th scope="column" valign="top">Cancellation Fee (12 mo plan)</th>
 					<th scope="column" valign="top">12 month rate /kWh</th>
 					<th scope="column" valign="top">Simulated Bill for 500kWh</th>
 					<th scope="column" valign="top"></th>
-					<th scope="column" valign="top"></th>
+					<th scope="column" valign="top">Last verified: 1/2/2017</th>
 				</tr>
 			<ng-container *ngFor="let esco of escos | keypipe ">
+
 				<tr [ngClass]="{success: esco.value.recommended}"
-                    data-toggle="collapse" [attr.data-target]="'#'+esco.key" class="accordion-toggle"
-                    >
-					<th scope="row" class="btn-link"> <img src="{{esco.value.img}}" style="height:30px"></th>
+                    data-toggle="collapse" [attr.data-target]="'#'+esco.key" class="accordion-toggle">
+					<th scope="row" class="btn-link"><img src="{{esco.value.img}}" style="height:30px"></th>
 					<td scope="column" valign="top">{{esco.value.name}}</td>
 					<td scope="column" valign="top">{{esco.value.source}}</td>
-					<td *ngIf="esco.value.label == 'Green-e'" scope="column" valign="top"><img src="/assets/green-e.png" style="height: 40px"></td>
+					<td *ngIf="esco.value.label == 'Green-e'" scope="column" valign="top"><a href="https://www.green-e.org/about"><img src="/assets/green-e.png" style="height: 40px"></a></td>
                     <td *ngIf="esco.value.label == 'No'" scope="column" valign="top">{{esco.value.label}}</td>
 					<td scope="column" valign="top">${{esco.value.fee}}</td>
-					<td scope="column" valign="top">{{esco.value.cpk | currency:'USD':true:'1.2-2'}}</td>
+					<td scope="column" valign="top">{{esco.value.cpk | currency:'USD':true:'1.2-4'}}</td>
 					<td scope="column" valign="top">{{(esco.value.cpk * 500 + 83.57) | currency:'USD':true:'1.0-0'}}</td>
 					<td scope="column" valign="top" style="color:grey">
 						<a class="btn btn-warning" routerLink="" [ngClass]="{disabled: !esco.value.video}">View Video</a>
 					</td> 
 					<td scope="column" valign="top" style="color:grey">
 						<a href="{{esco.value.url}}" class="btn btn-primary">Sign Up</a>
-					</td> 
+					</td>
 					
 				</tr>
-                <tr>
+                <tr >
                     <td colspan="9"  class="hiddenRow">
                         <div [attr.id]="esco.key" class="accordian-body collapse" *ngIf="esco.value.video">
                             <div style="margin: 20px">
@@ -50,9 +51,12 @@
             </ng-container>
 				
 			</table>
-    </div>
-<br>
-<br>
-<br>
-<hr>
-<p>* RECs stands for <a href="https://en.wikipedia.org/wiki/Renewable_Energy_Certificate_(United_States)">Renewable Energy Certificates.</a></p>
+    		</div>
+
+    		
+			<br>
+			<br>
+			<br>
+			<p style="text-align: center">It’s easy to do something about climate change! Choose an ESCO powered by renewables or RECs. Get your electricity off fossil fuels and reduce your carbon footprint. </p>
+			<hr>
+			<p>* RECs stands for <a href="https://en.wikipedia.org/wiki/Renewable_Energy_Certificate_(United_States)">Renewable Energy Certificates.</a></p>

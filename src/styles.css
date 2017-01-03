@@ -11,7 +11,8 @@ body {
 
 
 .myPanel {
-	margin: 10px; 
+	margin-top: 10px; 
+  margin-bottom:10px;
 	border-style:solid; 
 	border-width: 0.5px; 
 	border-color:lightgrey; 
@@ -41,4 +42,21 @@ h6, .h6 {
 
 .hiddenRow {
     padding: 0 !important;
+}
+
+
+
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+}
+
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: #434343;
+  padding:0px;
+  margin: 0px;
 }
