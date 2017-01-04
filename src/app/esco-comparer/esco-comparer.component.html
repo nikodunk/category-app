@@ -8,45 +8,45 @@
 </div>
       	
 
-    <div class="table-responsive myPanel">	
-			<table class="table table-hover table-sm">
-				<tr style="background-color: #fafafa; vertical-align: center">
-					<th scope="column" valign="top">Info</th>
-					<th scope="column" valign="top"></th>
-					<th scope="column" valign="top">Name</th>
-					<th scope="column" valign="top">Energy Source</th>
-					<th scope="column" valign="top">External Verifier</th>
-					<th scope="column" valign="top">Cancel Fee (12m plan)</th>
-					<th scope="column" valign="top">c/kWh (12m plan)</th>
-					<th scope="column" valign="top">Bill for 500kWh (sim.)**</th>
-					<th scope="column" valign="top"></th>
+    <div class="table-responsive">	
+			<table class="table">
+				<tr>
+					<th scope="column" valign="top" class="myHeader">Info</th>
+					<th scope="column" valign="top" class="myHeader"></th>
+					<th scope="column" valign="top" class="myHeader"></th>
+					<th scope="column" valign="top" class="myHeader">Source</th>
+					<th scope="column" valign="top" class="myHeader">Verified</th>
+					<th scope="column" valign="top" class="myHeader">Example Bill***</th>
+					<th scope="column" valign="top" class="myHeader">Early Cancel**</th>
+					<th scope="column" valign="top" class="myHeader">c/kWh**</th>
+					<th scope="column" valign="top" class="myHeader"></th>
 				</tr>
-			<ng-container *ngFor="let esco of escos | keypipe ">
-				<tr [ngClass]="{success: esco.value.recommended}">
-					<td scope="column" valign="top" style="padding:0px; margin: 0px">
+
+				<tr *ngFor="let esco of escos | keypipe " [ngClass]="{success: esco.value.recommended}" >
+					<td scope="column" valign="top" style="padding:0px; margin: 0px; vertical-align: middle">
 						<div *ngIf="esco.value.video">
                             <div>
                                 <iframe id="myFrame" [src]="esco.value.video | safe" allowfullscreen></iframe>
                             </div>
                         </div>
                     </td>
-                    <td style="padding-right: 0px; margin-right:0px">
+                    <td style="padding-right: 0px; margin-right:0px; vertical-align: middle">
                     	<img src="{{esco.value.img}}" style="height:30px">
                     </td>
-                    <td scope="row">
+                    <td scope="row" style="vertical-align: middle">
 						{{esco.value.name}}
 					</td>
-					<td scope="column" valign="top">{{esco.value.source}}</td>
-					<td *ngIf="esco.value.label == 'Green-e'" scope="column" valign="top"><a href="https://www.green-e.org/about"><img src="/assets/green-e.png" style="height: 40px"></a></td>
-                    <td *ngIf="esco.value.label == 'No'" scope="column" valign="top">{{esco.value.label}}</td>
-					<td scope="column" valign="top">${{esco.value.fee}}</td>
-					<td scope="column" valign="top">{{esco.value.cpk | currency:'USD':true:'1.2-4'}}</td>
-					<td scope="column" valign="top">{{(esco.value.cpk * 500 + 83.57) | currency:'USD':true:'1.0-0'}}</td>
-					<td scope="column" valign="top" style="color:grey">
-						<a href="{{esco.value.url}}" class="btn btn-primary">Sign Up</a>
+					<td scope="column" style="vertical-align: middle">{{esco.value.source}}</td>
+					<td *ngIf="esco.value.label == 'Green-e'" scope="column" style="vertical-align: middle"><a href="https://www.green-e.org/about"><img src="/assets/green-e.png" style="height: 40px"></a></td>
+                    <td *ngIf="esco.value.label == 'No'" scope="column" style="vertical-align: middle">{{esco.value.label}}</td>
+                    <td scope="column" style="vertical-align: middle">{{(esco.value.cpk * 500 + 83.57) | currency:'USD':true:'1.0-0'}}</td>
+					<td scope="column" style="vertical-align: middle">${{esco.value.fee}}</td>
+					<td scope="column" style="vertical-align: middle">{{esco.value.cpk | currency:'USD':true:'1.2-4'}}</td>
+					<td scope="column" style="vertical-align: middle; color:grey">
+						<a href="{{esco.value.url}}" class="btn btn-success">Sign Up</a>
 					</td>
 				</tr>
-            </ng-container>
+
 				
 			</table>
     		</div>
@@ -59,4 +59,5 @@
 			<p style="text-align: center">It’s easy to do something about climate change! Choose an ESCO powered by renewables or RECs. Get your electricity off fossil fuels and reduce your carbon footprint. </p>
 			<hr>
 			<p>* RECs stands for <a href="https://en.wikipedia.org/wiki/Renewable_Energy_Certificate_(United_States)">Renewable Energy Certificates.</a></p>
-			<p>** Simulated with a standard July ConEd Energy Bill for 500kWh after all taxes and delivery charges, according to the <a href="/assets/simulationbillsummer.jpg">groundbreaking SUPERJUICE method</a>. Your results may vary according to delivery charge and state tax. This is an approximation for ConEd in NY.</p>
+			<p>** For 12 month plans</p>
+			<p>*** Simulated bill with a standard July ConEd energy bill of 500kWh; after all taxes and delivery charges, according to the <a href="/assets/simulationbillsummer.jpg">groundbreaking SUPERJUICE method</a>. Your results may vary according to delivery charge and state tax. This is an approximation for standard apartment usage with delivery by ConEd in NY.</p>

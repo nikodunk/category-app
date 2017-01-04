@@ -1,0 +1,14 @@
+.myHeader { 
+		border-top: none; 
+		vertical-align: bottom;
+	}
+
+
+#myFrame { width: 200px; height: 120px; margin:5px;}
+
+
+.success {
+	border-width: thin;
+    border-style: solid;
+    border-color: lightgrey;
+}
