@@ -4,7 +4,7 @@ import { Headers, Http, Response } from '@angular/http'
 import 'rxjs/Rx';
 
 @Injectable()
-export class EscoService {
+export class DataService {
 
     email = null;
 

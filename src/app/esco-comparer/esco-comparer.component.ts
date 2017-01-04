@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { EscoService } from '../services/esco.service'
+import { DataService } from '../services/data.service'
 import { EscoClass } from '../services/esco.class'
 
 @Component({
@@ -13,7 +13,7 @@ export class EscoComparerComponent implements OnInit {
   escos: EscoClass[];
   public conEd = 0.0875 * 500;
 
-  constructor(private escoService: EscoService) { }
+  constructor(private escoService: DataService) { }
   
   getEscos() {
     this.escoService.fetchData()

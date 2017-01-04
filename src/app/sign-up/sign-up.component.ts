@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { EscoService } from '../services/esco.service'
+import { DataService } from '../services/data.service'
 
 @Component({
   selector: 'app-sign-up',
@@ -9,7 +9,7 @@ export class SignUpComponent implements OnInit {
 
     submitted = false;
 
-  constructor(private escoService: EscoService) {
+  constructor(private escoService: DataService) {
     
 
    }

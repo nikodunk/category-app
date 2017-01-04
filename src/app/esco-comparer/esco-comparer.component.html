@@ -1,30 +1,41 @@
 <div style="padding:100px">
-	<h4 style="text-align: center">Choose a better power provider</h4>
+	<p style="text-align: center; margin-bottom: 0px">Choose a better power provider.</p>
     <h2 style="text-align: center">The ESCO Comparison Tool</h2>
+    <br>
     <div style="text-align: center">
-        <p class="blog-post-meta">Compare 12 month plans for most US East Coast <a href="https://www.youtube.com/watch?v=WrW-j9Xamkw">ESCOs.</a> We think our <mark>recommendation (marked in green)</mark> offers the best combination of renewable generation, certifications and price, but it's up to you.</p>
+        <p class="blog-post-meta">Compare 12 month plans for most US East Coast <a href="https://www.youtube.com/watch?v=WrW-j9Xamkw">ESCOs.</a> We think our <mark>recommendation (marked in green)</mark> offers the best combination of green generation, certifications and price, but it's up to you. Last verified: 1/2/2017</p>
     </div>
 </div>
       	
-        <div class="table-responsive myPanel">	
+
+    <div class="table-responsive myPanel">	
 			<table class="table table-hover table-sm">
 				<tr style="background-color: #fafafa; vertical-align: center">
-					<th></th>
-					<th scope="column" valign="top">ESCO Name</th>
-					<th scope="column" valign="top">Energy Source</th>
-					<th scope="column" valign="top">External Verification</th>
-					<th scope="column" valign="top">Cancellation Fee (12 mo plan)</th>
-					<th scope="column" valign="top">12 month rate /kWh</th>
-					<th scope="column" valign="top">Simulated Bill for 500kWh</th>
+					<th scope="column" valign="top">Info</th>
 					<th scope="column" valign="top"></th>
-					<th scope="column" valign="top">Last verified: 1/2/2017</th>
+					<th scope="column" valign="top">Name</th>
+					<th scope="column" valign="top">Energy Source</th>
+					<th scope="column" valign="top">External Verifier</th>
+					<th scope="column" valign="top">Cancel Fee (12m plan)</th>
+					<th scope="column" valign="top">c/kWh (12m plan)</th>
+					<th scope="column" valign="top">Bill for 500kWh (sim.)**</th>
+					<th scope="column" valign="top"></th>
 				</tr>
 			<ng-container *ngFor="let esco of escos | keypipe ">
-
-				<tr [ngClass]="{success: esco.value.recommended}"
-                    data-toggle="collapse" [attr.data-target]="'#'+esco.key" class="accordion-toggle">
-					<th scope="row" class="btn-link"><img src="{{esco.value.img}}" style="height:30px"></th>
-					<td scope="column" valign="top">{{esco.value.name}}</td>
+				<tr [ngClass]="{success: esco.value.recommended}">
+					<td scope="column" valign="top" style="padding:0px; margin: 0px">
+						<div *ngIf="esco.value.video">
+                            <div>
+                                <iframe id="myFrame" [src]="esco.value.video | safe" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                    </td>
+                    <td style="padding-right: 0px; margin-right:0px">
+                    	<img src="{{esco.value.img}}" style="height:30px">
+                    </td>
+                    <td scope="row">
+						{{esco.value.name}}
+					</td>
 					<td scope="column" valign="top">{{esco.value.source}}</td>
 					<td *ngIf="esco.value.label == 'Green-e'" scope="column" valign="top"><a href="https://www.green-e.org/about"><img src="/assets/green-e.png" style="height: 40px"></a></td>
                     <td *ngIf="esco.value.label == 'No'" scope="column" valign="top">{{esco.value.label}}</td>
@@ -32,26 +43,14 @@
 					<td scope="column" valign="top">{{esco.value.cpk | currency:'USD':true:'1.2-4'}}</td>
 					<td scope="column" valign="top">{{(esco.value.cpk * 500 + 83.57) | currency:'USD':true:'1.0-0'}}</td>
 					<td scope="column" valign="top" style="color:grey">
-						<a class="btn btn-warning" routerLink="" [ngClass]="{disabled: !esco.value.video}">View Video</a>
-					</td> 
-					<td scope="column" valign="top" style="color:grey">
 						<a href="{{esco.value.url}}" class="btn btn-primary">Sign Up</a>
 					</td>
-					
 				</tr>
-                <tr >
-                    <td colspan="9"  class="hiddenRow">
-                        <div [attr.id]="esco.key" class="accordian-body collapse" *ngIf="esco.value.video">
-                            <div style="margin: 20px">
-                                <iframe id="myFrame" [src]="esco.value.video | safe" height="400px" allowfullscreen></iframe>
-                            </div>
-                        </div>
-                    </td>
-                </tr>
             </ng-container>
 				
 			</table>
     		</div>
+
 
     		
 			<br>
@@ -60,3 +59,4 @@
 			<p style="text-align: center">It’s easy to do something about climate change! Choose an ESCO powered by renewables or RECs. Get your electricity off fossil fuels and reduce your carbon footprint. </p>
 			<hr>
 			<p>* RECs stands for <a href="https://en.wikipedia.org/wiki/Renewable_Energy_Certificate_(United_States)">Renewable Energy Certificates.</a></p>
+			<p>** Simulated with a standard July ConEd Energy Bill for 500kWh after all taxes and delivery charges, according to the <a href="/assets/simulationbillsummer.jpg">groundbreaking SUPERJUICE method</a>. Your results may vary according to delivery charge and state tax. This is an approximation for ConEd in NY.</p>

@@ -8,12 +8,9 @@ import {PathLocationStrategy, LocationStrategy} from '@angular/common';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
-import { EscoResultsComponent } from './escos/escos.component';
-import { HighlightDirective } from './escos/highlight.directive';
-import { EscoService } from './services/esco.service';
+import { DataService } from './services/data.service';
 import { AboutComponent } from './about/about.component';
-import { AppRoutingModule, routedComponents } from './app-routing.module';
-import { TheBestEscoComponent } from './the-best-esco/the-best-esco.component';
+import { AppRoutingModule, routedComponents } from './app-routing.module';  
 import { SignUpComponent } from './sign-up/sign-up.component';
 import { EscoComparerComponent } from './esco-comparer/esco-comparer.component';
 import { KeypipePipe } from './keypipe.pipe';
@@ -37,10 +34,7 @@ import { FooterComponent } from './footer/footer.component';
   declarations: [
     AppComponent,
     HeaderComponent,
-    EscoResultsComponent,
-    HighlightDirective,
     AboutComponent,
-    TheBestEscoComponent,
     SignUpComponent,
     EscoComparerComponent,
     KeypipePipe,
@@ -55,7 +49,7 @@ import { FooterComponent } from './footer/footer.component';
     AppRoutingModule,
     // AngularFireModule.initializeApp(firebaseConfig)
   ],
-  providers: [EscoService, { provide: LocationStrategy, useClass: PathLocationStrategy}],
+  providers: [DataService, { provide: LocationStrategy, useClass: PathLocationStrategy}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
