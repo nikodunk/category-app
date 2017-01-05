@@ -49,7 +49,7 @@ import { FooterComponent } from './footer/footer.component';
     AppRoutingModule,
     // AngularFireModule.initializeApp(firebaseConfig)
   ],
-  providers: [DataService, { provide: LocationStrategy, useClass: PathLocationStrategy}],
+  providers: [{ provide: LocationStrategy, useClass: PathLocationStrategy}, DataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
