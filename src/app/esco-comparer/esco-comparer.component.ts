@@ -9,9 +9,7 @@ import { EscoClass } from '../services/esco.class'
 })
 export class EscoComparerComponent implements OnInit {
 
-  visibilityLimit = 2;
   escos: EscoClass[];
-  public conEd = 0.0875 * 500;
 
   constructor(private escoService: DataService) { }
   
@@ -24,10 +22,7 @@ export class EscoComparerComponent implements OnInit {
             )
 
   };
-  
-  visibilityExpander () {
-         this.visibilityLimit = this.visibilityLimit + 3;
-  }
+ 
 
 
 
