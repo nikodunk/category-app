@@ -9,7 +9,7 @@ import { NewsfeedComponent } from './newsfeed/newsfeed.component';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: '/escocompare',
+    redirectTo: 'escocompare',
     pathMatch: 'full'
   },
   {

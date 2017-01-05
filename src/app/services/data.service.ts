@@ -1,5 +1,4 @@
 import { Injectable } from '@angular/core';
-import { EscoClass } from './esco.class';
 import { Headers, Http, Response } from '@angular/http'
 import 'rxjs/Rx';
 
