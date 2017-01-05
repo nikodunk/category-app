@@ -22,6 +22,12 @@
 					<td scope="column" valign="top" class="myHeader h5"></td>
 				</tr>
 				<tr *ngFor="let esco of escos | keypipe " [ngClass]="{recommendedClass: esco.value.recommended}" style="margin:0px">
+					<td style="padding-right: 0px; margin-right:0px; vertical-align: middle">
+                    	<img src="{{esco.value.img}}" style="height:30px">
+                    </td>
+                    <td scope="row" style="vertical-align: middle">
+						{{esco.value.name}}
+					</td>
 					<td scope="column" style="margin: 0px;">
 						<div *ngIf="esco.value.video">
                             <div>
@@ -29,14 +35,8 @@
                             </div>
                         </div>
                     </td>
-                    <td style="padding-right: 0px; margin-right:0px; vertical-align: middle">
-                    	<img src="{{esco.value.img}}" style="height:30px">
-                    </td>
-                    <td scope="row" style="vertical-align: middle">
-						{{esco.value.name}}
-					</td>
 					<td scope="column" style="vertical-align: middle">{{esco.value.source}}</td>
-					<td *ngIf="esco.value.label == 'Green-e'" scope="column" style="vertical-align: middle"><a href="https://www.green-e.org/about"><img src="/assets/green-e.png" style="height: 40px"></a></td>
+					<td *ngIf="esco.value.label == 'Green-e'" scope="column" style="vertical-align: middle"><a href="https://www.green-e.org/about" target="_blank" ><img src="/assets/green-e.png" style="height: 40px"></a></td>
                     <td *ngIf="esco.value.label == 'No'" scope="column" style="vertical-align: middle">{{esco.value.label}}</td>
                     <td scope="column" style="vertical-align: middle">{{(esco.value.cpk * 500 + 83.57) | currency:'USD':true:'1.0-0'}}</td>
 					<td scope="column" style="vertical-align: middle">${{esco.value.fee}}</td>
