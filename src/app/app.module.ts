@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import {PathLocationStrategy, LocationStrategy} from '@angular/common';
-// import { AngularFireModule } from 'angularfire2';
+import { AngularFireModule } from 'angularfire2';
 
 
 import { AppComponent } from './app.component';
@@ -17,17 +17,9 @@ import { KeypipePipe } from './keypipe.pipe';
 import { SafePipe } from './safe.pipe';
 import { NewsfeedComponent } from './newsfeed/newsfeed.component';
 import { FooterComponent } from './footer/footer.component';
+import { firebaseConfig } from '../environments/firebase.config'
 
 
-
-
-// export const firebaseConfig = {
-//   apiKey: '<your-key>',
-//   authDomain: '<your-project-authdomain>',
-//   databaseURL: '<your-database-URL>',
-//   storageBucket: '<your-storage-bucket>',
-//   messagingSenderId: '<your-messaging-sender-id>'
-// };
 
 
 @NgModule({
@@ -47,9 +39,10 @@ import { FooterComponent } from './footer/footer.component';
     FormsModule,
     HttpModule,
     AppRoutingModule,
-    // AngularFireModule.initializeApp(firebaseConfig)
+    AngularFireModule.initializeApp(firebaseConfig)
   ],
   providers: [{ provide: LocationStrategy, useClass: PathLocationStrategy}, DataService],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+
+export class AppModule { };

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { DataService } from '../services/data.service'
+
 
 @Component({
   selector: 'app-newsfeed',
@@ -7,9 +9,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NewsfeedComponent implements OnInit {
 
-  constructor() { }
 
-  ngOnInit() {
-  }
+	news: any;
+
+  	constructor(private dataService: DataService) { }
+    
+
+
+
+	ngOnInit() {
+
+	  	    this.news = this.dataService.fetchNews()
+
+	}
 
 }
