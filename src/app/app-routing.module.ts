@@ -4,12 +4,14 @@ import { Routes, RouterModule } from '@angular/router';
 import { AboutComponent } from './about/about.component'
 import { EscoComparerComponent } from './esco-comparer/esco-comparer.component';
 import { NewsfeedComponent } from './newsfeed/newsfeed.component';
+import { SolarComparerComponent } from './solar-comparer/solar-comparer.component';
+import { SubmitterComponent } from './submitter/submitter.component';
 
 
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'escocompare',
+    redirectTo: 'newsfeed',
     pathMatch: 'full'
   },
   {
@@ -17,12 +19,20 @@ const routes: Routes = [
     component: AboutComponent
   },
   {
-    path: 'escocompare',
+    path: 'escos',
     component: EscoComparerComponent
   },
   {
     path: 'newsfeed',
     component: NewsfeedComponent
+  },
+  {
+    path: 'solar',
+    component: SolarComparerComponent
+  },  
+  {
+    path: 'submit',
+    component: SubmitterComponent
   }
 ];
 

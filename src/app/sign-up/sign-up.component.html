@@ -1,8 +1,8 @@
 <div class="myPanel" style="border-right: 5px solid #f0ad4e;">
                   <div style="margin:20px" *ngIf="!this.submitted">
-	      	          	<h4 style="text-align:center;">Get video reviews of green products to your inbox weekly!</h4>
+	      	          	<h4 style="text-align:center;">Get the latest green product videos to your inbox once a week!</h4>
 	      	          	<form id="contact">
-	                        <input style="margin-bottom: 10px" [(ngModel)]="escoService.email" name="email" type="text" class="form-control" placeholder ="Enter your email"/>
+	                        <input style="margin-bottom: 10px" [(ngModel)]="dataService.email" name="email" type="text" class="form-control" placeholder ="Enter your email"/>
 	      		            <input class="btn btn-primary btn-sm" value="Sign Up" (click)="onStore()">
 	       				</form>
                   </div>

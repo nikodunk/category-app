@@ -1,8 +1,8 @@
 <div style="padding-top:100px; padding-bottom: 100px">
-    <h2 style="">Latest Video Reviews</h2>
+	<p>Compare green products and watch reviews</p>
+    <h2 style="">Newest Green* Product Reviews</h2>
 </div>
  
-
 
 
 <div *ngFor="let new of news | async">
@@ -12,8 +12,16 @@
 	         <div class="blog-post">
 	         	<h3>{{new.title}}</h3>
 				<iframe style="width: 100%" [src]="new.video | safe" frameborder="0" allowfullscreen></iframe>
+				<p>
+					<button class="btn btn-danger" disabled (click)="void">Endorse +1</button>
+					<a *ngIf="new.label" target="_blank" class="btn btn-success" href="{{new.label}}">Sustainability Report</a>
+					<a target="_blank" class="btn btn-primary" href="{{new.link}}">Product Link</a>
+				</p>
 			</div>
 		</div>
     </div>
 
 </div>
+
+
+*By "green", we mean products with a socially or environmentally responsible component, or help accelerate the transition to a carbon-free economy.

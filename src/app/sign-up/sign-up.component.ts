@@ -9,13 +9,13 @@ export class SignUpComponent implements OnInit {
 
     submitted = false;
 
-  constructor(private escoService: DataService) {
+  constructor(private dataService: DataService) {
     
 
    }
 
   onStore(){
-  	this.escoService.storeData().subscribe();
+  	this.dataService.storeEmails().subscribe();
     this.submitted = !this.submitted
   }
 

@@ -1,0 +1,93 @@
+
+<div class="myPanel" style="">
+					<form (ngSubmit)="onSubmit(f.value)" #f="ngForm">
+		                  <div style="margin:20px" class="form-group" *ngIf="!this.submitted">
+			      	          	<h4 style="text-align:center;">Submit New Product</h4>
+			      	          	<p>Report on the newest green products and enter their verification source here</p>
+			      	          	<div class="form-group">
+				      	          	<label for="title">Name</label>
+				                    <input 
+				                    	style="margin-bottom: 10px" 
+				                    	ngModel
+				                    	required
+				                    	name="title"
+				                    	type="text"
+				                    	class="form-control"
+				                    	placeholder="Enter Product Name"
+				                    	/>
+			                    </div>
+			                    <div class="form-group">
+				      	          	<label for="title">Video Review / Product Video</label>
+				                    <input 
+				                    	style="margin-bottom: 10px" 
+				                    	ngModel
+				                    	required
+				                    	name="video"
+				                    	type="text"
+				                    	class="form-control"
+				                    	placeholder="Enter Product Video (ie. youtube link)"
+				                    	/>
+			                    </div>
+			                    <div class="form-group">
+				      	          	<label for="title">Independent Audit or CSR Link</label>
+				                    <input 
+				                    	style="margin-bottom: 10px" 
+				                    	ngModel
+				                    	required
+				                    	name="label"
+				                    	type="text"
+				                    	class="form-control"
+				                    	placeholder="Enter Link to Product CSR Website or Independent Auditor of 'Green' Claims (ie. Green-e)"
+				                    	/>
+			                    </div>
+
+
+			                    <hr>	                    
+			                    <p>Optional:
+			                    <div class="form-group">
+				      	          	<label for="title">Category</label>
+				                    <input 
+				                    	style="margin-bottom: 10px" 
+				                    	ngModel
+				                    	required
+				                    	name="category"
+				                    	type="text"
+				                    	class="form-control"
+				                    	placeholder="Enter Product Category (ie. apparel, beauty, solar)"
+				                    	/>
+			                    </div>	
+			                    <div class="form-group">
+				      	          	<label for="title">Product Link</label>
+				                    <input 
+				                    	style="margin-bottom: 10px" 
+				                    	ngModel
+				                    	name="link"
+				                    	type="text"
+				                    	class="form-control"
+				                    	placeholder="Enter Amazon Product Link"
+				                    	/>
+			                    </div>
+			                    <div class="form-group">
+				      	          	<label for="title">List Price</label>
+				                    <input 
+				                    	style="margin-bottom: 10px" 
+				                    	ngModel
+				                    	name="price"
+				                    	type="text"
+				                    	class="form-control"
+				                    	placeholder="Enter the rough price at the given link, we will automate this ASAP"
+				                    	/>
+			                    </div>				                    
+			      		        <button 
+			      		        	class="btn btn-success"
+			      		        	[disabled]="!f.valid"
+			      		        	>
+			      		        	Submit
+			      		        </button>
+			       				
+		                  </div>
+	                </form>
+                  <div style="margin:20px" *ngIf="this.submitted">
+                  		<h4 style="text-align:center">Thank you for your submission!</h4>
+                  </div>
+</div>
