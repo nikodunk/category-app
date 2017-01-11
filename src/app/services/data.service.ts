@@ -34,10 +34,6 @@ export class DataService {
   }
 
 
-  // fetchData() {
-  //     return this.http.get('https://superjuice-1cb15.firebaseio.com/escos.json')
-  //       
-  // }
 
 
   fetchESCOs() {
