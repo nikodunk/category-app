@@ -13,8 +13,10 @@
 	         	<h3>{{new.title}}</h3>
 				<iframe style="width: 100%" [src]="new.video | safe" frameborder="0" allowfullscreen></iframe>
 				<p>
-					<button class="btn btn-danger" disabled (click)="void">Endorse +1</button>
-					<a *ngIf="new.label" target="_blank" class="btn btn-success" href="{{new.label}}">Proof of Ethics</a>
+					<button class="btn btn-warning" disabled (click)="void">
+	         			<span class="glyphicon glyphicon-triangle-top" aria-hidden="true"></span>
+	         		</button>
+	         		<a *ngIf="new.label" target="_blank" class="btn btn-success" href="{{new.label}}">Proof of Ethics</a>
 					<a target="_blank" class="btn btn-primary" href="{{new.link}}">Product Link</a>
 				</p>
 			</div>
