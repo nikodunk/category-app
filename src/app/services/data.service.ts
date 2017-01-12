@@ -47,7 +47,7 @@ export class DataService {
   fetchNews() {
     return this.af.database.list('/news', {
           query: {
-            limitToFirst: 10,
+            limitToLast: 5,
           } 
         });
   }
