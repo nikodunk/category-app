@@ -4,20 +4,8 @@
 		                  <div style="margin:20px" class="form-group" *ngIf="!this.submitted">
 			      	          	<h4 style="text-align:center;">Submit New Product</h4>
 			      	          	<p>Report on the newest green products and enter their verification source here</p>
-			      	          	<div class="form-group">
-				      	          	<label for="title">Name</label>
-				                    <input 
-				                    	style="margin-bottom: 10px" 
-				                    	ngModel
-				                    	required
-				                    	name="title"
-				                    	type="text"
-				                    	class="form-control"
-				                    	placeholder="Enter Product Name"
-				                    	/>
-			                    </div>
 			                    <div class="form-group">
-				      	          	<label for="title">Video Review / Product Video</label>
+				      	          	<label for="title">Video</label>
 				                    <input 
 				                    	style="margin-bottom: 10px" 
 				                    	ngModel
@@ -25,11 +13,11 @@
 				                    	name="video"
 				                    	type="text"
 				                    	class="form-control"
-				                    	placeholder="Enter Product Video (ie. youtube link)"
+				                    	placeholder="Product Video or Video Review Link (ie. youtube, vimeo)"
 				                    	/>
 			                    </div>
 			                    <div class="form-group">
-				      	          	<label for="title">Independent Audit or CSR Link</label>
+				      	          	<label for="title">Proof of Ethics</label>
 				                    <input 
 				                    	style="margin-bottom: 10px" 
 				                    	ngModel
@@ -37,7 +25,19 @@
 				                    	name="label"
 				                    	type="text"
 				                    	class="form-control"
-				                    	placeholder="Enter Link to Product CSR Website or Independent Auditor of 'Green' Claims (ie. Green-e)"
+				                    	placeholder="CSR Page / Independent Label Link. Why is this thing 'green'? Who's backing up their claim?"
+				                    	/>
+			                    </div>
+			                    <div class="form-group">
+				      	          	<label for="title">Link</label>
+				                    <input 
+				                    	style="margin-bottom: 10px" 
+				                    	ngModel
+				                    	name="link"
+				                    	type="text"
+				                    	required
+				                    	class="form-control"
+				                    	placeholder="Amazon Product Link, link to a page to purchase."
 				                    	/>
 			                    </div>
 
@@ -45,28 +45,27 @@
 			                    <hr>	                    
 			                    <p>Optional:
 			                    <div class="form-group">
+				      	          	<label for="title">Name</label>
+				                    <input 
+				                    	style="margin-bottom: 10px" 
+				                    	ngModel
+				                    	name="title"
+				                    	type="text"
+				                    	class="form-control"
+				                    	placeholder="Enter Product Name, if different from video review"
+				                    	/>
+			                    </div>
+			                    <div class="form-group">
 				      	          	<label for="title">Category</label>
 				                    <input 
 				                    	style="margin-bottom: 10px" 
 				                    	ngModel
-				                    	required
 				                    	name="category"
 				                    	type="text"
 				                    	class="form-control"
 				                    	placeholder="Enter Product Category (ie. apparel, beauty, solar)"
 				                    	/>
 			                    </div>	
-			                    <div class="form-group">
-				      	          	<label for="title">Product Link</label>
-				                    <input 
-				                    	style="margin-bottom: 10px" 
-				                    	ngModel
-				                    	name="link"
-				                    	type="text"
-				                    	class="form-control"
-				                    	placeholder="Enter Amazon Product Link"
-				                    	/>
-			                    </div>
 			                    <div class="form-group">
 				      	          	<label for="title">List Price</label>
 				                    <input 

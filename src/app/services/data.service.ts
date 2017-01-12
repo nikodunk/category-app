@@ -61,6 +61,15 @@ export class DataService {
         });
   }
 
+  fetchData(type: string) {
+    return this.af.database.list('/news', {
+          query: {
+            orderByChild: 'category',
+            equalTo: type,
+          } 
+        });
+  }
+
   
 
 }
