@@ -1,10 +1,12 @@
 
 <div class="myPanel" style="">
 					<form (ngSubmit)="onSubmit(f.value)" #f="ngForm">
-		                  <div style="margin:20px" class="form-group" *ngIf="!this.submitted">
-			      	          	<h4 style="text-align:center;">Submit New Product</h4>
-			      	          	<p>Report on the newest green products and enter their verification source here</p>
-			                    <div class="form-group">
+		                  <div style="margin:40px" *ngIf="!this.submitted">
+			      	          	<h2>Submit New Product</h2>
+			      	          	<p>Enter a new green product into the catalog.</p>
+			      	          	<br>
+			      	          	<br>
+			                    <div>
 				      	          	<label for="title">Video</label>
 				                    <input 
 				                    	style="margin-bottom: 10px" 
@@ -17,7 +19,7 @@
 				                    	/>
 			                    </div>
 			                    <div class="form-group">
-				      	          	<label for="title">Proof of Ethics</label>
+				      	          	<label for="title">Why to Trust</label>
 				                    <input 
 				                    	style="margin-bottom: 10px" 
 				                    	ngModel
@@ -41,44 +43,58 @@
 				                    	/>
 			                    </div>
 
+			                    
 
-			                    <hr>	                    
-			                    <p>Optional:
-			                    <div class="form-group">
-				      	          	<label for="title">Name</label>
-				                    <input 
-				                    	style="margin-bottom: 10px" 
-				                    	ngModel
-				                    	name="title"
-				                    	type="text"
-				                    	class="form-control"
-				                    	placeholder="Enter Product Name, if different from video review"
+			                    <a data-toggle="collapse" href="#collapseExample">
+  								More Options
+								</a>
+								<br>
+								  
+
+
+								<div class="collapse" id="collapseExample">
+									<br>
+								  	<div class="form-group">
+					      	          	<label for="title">Name</label>
+					                    <input 
+					                    	style="margin-bottom: 10px" 
+					                    	ngModel
+					                    	name="title"
+					                    	type="text"
+					                    	class="form-control"
+					                    	placeholder="Enter Product Name, if different from video review"
 				                    	/>
-			                    </div>
-			                    <div class="form-group">
-				      	          	<label for="title">Category</label>
-				                    <input 
-				                    	style="margin-bottom: 10px" 
-				                    	ngModel
-				                    	name="category"
-				                    	type="text"
-				                    	class="form-control"
-				                    	placeholder="Enter Product Category (ie. apparel, beauty, solar)"
-				                    	/>
-			                    </div>	
-			                    <div class="form-group">
-				      	          	<label for="title">List Price</label>
-				                    <input 
-				                    	style="margin-bottom: 10px" 
-				                    	ngModel
-				                    	name="price"
-				                    	type="text"
-				                    	class="form-control"
-				                    	placeholder="Enter the rough price at the given link, we will automate this ASAP"
-				                    	/>
-			                    </div>				                    
+			                    	</div>
+			                    	<div class="form-group">
+					      	          		<label for="title">Category</label>
+					                    	<input 
+					                    	style="margin-bottom: 10px" 
+					                    	ngModel
+					                    	name="category"
+					                    	type="text"
+					                    	class="form-control"
+					                    	placeholder="Enter Product Category (ie. apparel, beauty, solar)"
+					                    	/>
+			                    	</div>	
+			                    	<div class="form-group">
+					      	          		<label for="title">List Price</label>
+					                    	<input 
+					                    	style="margin-bottom: 10px" 
+					                    	ngModel
+					                    	name="price"
+					                    	type="text"
+					                    	class="form-control"
+					                    	placeholder="Enter the rough price at the given link, we will automate this ASAP"
+					                    	/>
+			                    	</div>		
+								</div>
+
+								<br>
+								<hr>
+								<br>
+			                    		                    
 			      		        <button 
-			      		        	class="btn btn-success"
+			      		        	class="btn btn-primary"
 			      		        	[disabled]="!f.valid"
 			      		        	>
 			      		        	Submit
