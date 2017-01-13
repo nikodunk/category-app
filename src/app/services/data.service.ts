@@ -55,14 +55,7 @@ export class DataService {
 
   }
 
-  fetchSolar() {
-    return this.af.database.list('/news', {
-          query: {
-            orderByChild: 'category',
-            equalTo: 'solar',
-          } 
-        });
-  }
+
 
   fetchData(type: string) {
     return this.af.database.list('/news', {
