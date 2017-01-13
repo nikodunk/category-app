@@ -45,11 +45,14 @@ export class DataService {
   }
 
   fetchNews() {
-    return this.af.database.list('/news', {
-          query: {
-            limitToLast: 5,
-          } 
-        });
+    return this.af.database
+              .list('/news', {
+                    query: {
+                      limitToLast: 10,
+                    } 
+                  })
+              .map((array) => array.reverse()) as FirebaseListObservable<any[]>;
+
   }
 
   fetchSolar() {

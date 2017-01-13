@@ -1,7 +1,7 @@
 <div style="padding-top:100px; padding-bottom: 100px">
 	
     <h2 >Newest Green* Product Reviews</h2>
-    <p>Compare green products and watch reviews</p>
+    <p>Compare product videos, prices and why to trust the companies behind them.</p>
 </div>
  
 
@@ -11,12 +11,12 @@
     <div class="row" style="margin-bottom: 50px">
         <div class="col-sm-12 blog-main">
 	         <div class="blog-post">
-	         	<h3>{{new.title}}</h3>
+	         	<h3>
+	         		{{new.title}}
+	         	</h3>
+	         	<!-- <span class="glyphicon glyphicon-triangle-top" aria-hidden="true" (click)="void"></span> -->
 				<iframe style="width: 100%" [src]="new.video | safe" frameborder="0" allowfullscreen></iframe>
 				<p>
-					<button class="btn btn-warning" disabled (click)="void">
-	         			<span class="glyphicon glyphicon-triangle-top" aria-hidden="true"></span>
-	         		</button>
 	         		<a *ngIf="new.label" target="_blank" class="btn btn-success" href="{{new.label}}">Why to trust</a>
 					<a target="_blank" class="btn btn-primary" href="{{new.link}}">Product Link</a>
 				</p>

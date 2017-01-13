@@ -12,14 +12,14 @@ import { DataService } from './services/data.service';
 import { AboutComponent } from './about/about.component';
 import { AppRoutingModule, routedComponents } from './app-routing.module';  
 import { SignUpComponent } from './sign-up/sign-up.component';
-import { EscoComparerComponent } from './esco-comparer/esco-comparer.component';
+import { EscoComparerComponent } from './comparison/esco-comparer/esco-comparer.component';
 import { KeypipePipe } from './keypipe.pipe';
 import { SafePipe } from './safe.pipe';
 import { NewsfeedComponent } from './newsfeed/newsfeed.component';
 import { firebaseConfig } from '../environments/firebase.config';
-import { SolarComparerComponent } from './solar-comparer/solar-comparer.component';
+import { SolarComparerComponent } from './comparison/solar-comparer/solar-comparer.component';
 import { SubmitterComponent } from './submitter/submitter.component';
-import { ApparelComparerComponent } from './apparel-comparer/apparel-comparer.component'
+import { ApparelComparerComponent } from './comparison/apparel-comparer/apparel-comparer.component'
 
 
 

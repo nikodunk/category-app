@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { DataService } from '../services/data.service'
+import { DataService } from '../../services/data.service'
 
 
 @Component({
@@ -19,7 +19,7 @@ export class SolarComparerComponent implements OnInit {
 
   ngOnInit() {
 
-    this.solars = this.dataService.fetchSolar()
+    this.solars = this.dataService.fetchData('solar')
 
   };
   

@@ -2,11 +2,11 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 import { AboutComponent } from './about/about.component'
-import { EscoComparerComponent } from './esco-comparer/esco-comparer.component';
+import { EscoComparerComponent } from './comparison/esco-comparer/esco-comparer.component';
 import { NewsfeedComponent } from './newsfeed/newsfeed.component';
-import { SolarComparerComponent } from './solar-comparer/solar-comparer.component';
+import { SolarComparerComponent } from './comparison/solar-comparer/solar-comparer.component';
 import { SubmitterComponent } from './submitter/submitter.component';
-import { ApparelComparerComponent } from './apparel-comparer/apparel-comparer.component';
+import { ApparelComparerComponent } from './comparison/apparel-comparer/apparel-comparer.component';
 
 
 
@@ -21,21 +21,21 @@ const routes: Routes = [
     component: AboutComponent
   },
   {
-    path: 'escos',
-    component: EscoComparerComponent
-  },
-  {
     path: 'newsfeed',
     component: NewsfeedComponent
+  },
+  {
+    path: 'submit',
+    component: SubmitterComponent
+  },
+  {
+    path: 'escos',
+    component: EscoComparerComponent
   },
   {
     path: 'solar',
     component: SolarComparerComponent
   },  
-  {
-    path: 'submit',
-    component: SubmitterComponent
-  },
   {
     path: 'apparel',
     component: ApparelComparerComponent

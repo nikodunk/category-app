@@ -1,6 +1,6 @@
 <div style="padding-top:100px; padding-bottom:80px">
 	<p>Find the best portable arrays.</p>
-    <h2 style="font-weight: lighter">The Small item Comparison Tool</h2>
+    <h2 style="font-weight: lighter">The Ethical Apparel Comparison Tool</h2>
     <div >
     </div>
 </div>
@@ -12,20 +12,15 @@
 				<tr>
 					<td scope="column" valign="top" class="myHeader h5">Info</td>
 					<td scope="column" valign="top" class="myHeader h5"></td>
-					<td scope="column" valign="top" class="myHeader h5"></td>
-					<td scope="column" valign="top" class="myHeader h5">Audit</td>
+					<td scope="column" valign="top" class="myHeader h5">Trust</td>
 					<td scope="column" valign="top" class="myHeader h5">Made In</td>
 					<td scope="column" valign="top" class="myHeader h5">Material</td>
-					<td scope="column" valign="top" class="myHeader h5">Type</td>
 					<td scope="column" valign="top" class="myHeader h5">Price</td>
 					<td scope="column" valign="top" class="myHeader h5"></td>
 				</tr>
 				<tr *ngFor="let item of apparel | async" 
 					[ngClass]="{recommendedClass: item.recommended}"
 					style="margin:0px" >
-					<td style="padding-right: 0px; margin-right:0px; vertical-align: middle">
-                    	<img src="{{item.img}}" style="height:30px">
-                    </td>
                     <td scope="row" style="vertical-align: middle">
 						{{item.title}}
 					</td>
@@ -36,10 +31,11 @@
                             </div>
                         </div>
                     </td>
-					<td scope="column" style="vertical-align: middle">{{item.label}}</td>
+					<td scope="column" style="vertical-align: middle">
+						<a target="_blank" class="btn btn-success" href="{{item.label}}">Why to trust</a>
+					</td>
 					<td scope="column" style="vertical-align: middle">{{item.origin}}</td>
 					<td scope="column" style="vertical-align: middle">{{item.material}}</td>
-					<td scope="column" style="vertical-align: middle">{{item.type}}</td>
 					<td scope="column" style="vertical-align: middle">${{item.price}}</td>
 					<td scope="column" style="vertical-align: middle; color:grey">
 						<a href="{{item.link}}" target="_blank" class="btn btn-primary">Product Link</a>

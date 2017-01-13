@@ -12,20 +12,15 @@
 				<tr>
 					<td scope="column" valign="top" class="myHeader h5">Info</td>
 					<td scope="column" valign="top" class="myHeader h5"></td>
-					<td scope="column" valign="top" class="myHeader h5"></td>
-					<!-- <td scope="column" valign="top" class="myHeader h5">Source</td> -->
 					<td scope="column" valign="top" class="myHeader h5">Port</td>
 					<td scope="column" valign="top" class="myHeader h5">Output Listed</td>
-					<td scope="column" valign="top" class="myHeader h5">Output Actual</td>
+					<td scope="column" valign="top" class="myHeader h5">Price per Watt</td>
 					<td scope="column" valign="top" class="myHeader h5">Price</td>
 					<td scope="column" valign="top" class="myHeader h5"></td>
 				</tr>
 				<tr *ngFor="let solar of solars | async" 
 					[ngClass]="{recommendedClass: solar.recommended}"
 					style="margin:0px" >
-					<td style="padding-right: 0px; margin-right:0px; vertical-align: middle">
-                    	<img src="{{solar.img}}" style="height:30px">
-                    </td>
                     <td scope="row" style="vertical-align: middle">
 						{{solar.title}}
 					</td>
@@ -37,14 +32,9 @@
                         </div>
                     </td>
 					<td scope="column" style="vertical-align: middle">{{solar.type}}</td>
-					<td scope="column" style="vertical-align: middle">{{solar.listed}}</td>
-					<td scope="column" style="vertical-align: middle">{{solar.actual}}</td>
+					<td scope="column" style="vertical-align: middle">{{solar.listed}}W</td>
+					<td scope="column" style="vertical-align: middle">{{solar.price / solar.listed | currency:'USD':true:'1.2-2'}}</td>
 					<td scope="column" style="vertical-align: middle">${{solar.price}}</td>
-
-                    <!--<td *ngIf="esco.label == 'No'" scope="column" style="vertical-align: middle">{{esco.label}}</td>
-                    <td scope="column" style="vertical-align: middle">{{(esco.cpk * 500 + 83.57) | currency:'USD':true:'1.0-0'}}</td>
-					<td scope="column" style="vertical-align: middle">${{esco.fee}}</td>
-					<td scope="column" style="vertical-align: middle">{{esco.cpk | currency:'USD':true:'1.2-4' }}</td> -->
 					<td scope="column" style="vertical-align: middle; color:grey">
 						<a href="{{solar.link}}" target="_blank" class="btn btn-primary">Product Link</a>
 					</td>
