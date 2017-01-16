@@ -8,28 +8,45 @@
 
 <div *ngFor="let new of news | async" >
 
-    <div class="row" style="margin-bottom: 50px">
-        <div class="col-sm-12 myPanel" style="padding: 20px; margin: 10px">
-	        
-	        <h3>
+    <div class="row myPanel" style=" margin:10px; margin-bottom: 50px; padding: 20px">
+        <div class="col-sm-12">
+	        <h3> 
 	         		{{new.title}}
-	         		<span class="glyphicon glyphicon-star pull-right" aria-hidden="true" (click)="void"></span>
-	         		<br>
-	        </h3>
-	    	<div class="col-sm-4">
-	    	<h5>THE PRODUCT</h5>
+	        
+	        <div class="pull-right">
+			    <span class="glyphicon glyphicon-triangle-top" aria-hidden="true" (click)="void"></span>
+			        {{new.upvote}}
+	        </div>
+			<br>
+			</h3>
+	        
+	    </div>
+	   	<div class="col-sm-4">
+	    	<h5>PRODUCT</h5>
 				<iframe style="width: 100%" [src]="new.video | safe" frameborder="0" allowfullscreen></iframe>
-			</div>
-			<div class="col-sm-4">
-			<h5>HOW IT'S SUSTAINABLE</h5>
-				<a *ngIf="new.label" target="_blank" class="btn btn-success" href="{{new.label}}">Why to trust</a>
-			</div>
-			<div class="col-sm-4">
-			<h5>HOW TO GET IT</h5>
-				<a target="_blank" class="btn btn-primary" href="{{new.link}}">Product Link</a>
-			</div>
-
 		</div>
+		<div class="col-sm-4">
+			<h5>HOW IT'S SUSTAINABLE</h5>
+			<p>{{new.green}}</p>
+			<a *ngIf="new.label" target="_blank" href="{{new.label}}">More Details</a>
+		</div>
+		<div class="col-sm-4">
+			<h5>STATS & WHERE TO GET</h5>
+			<p>{{new.details}}</p>
+			<p>{{new.details2}}</p>
+			<p>{{new.details3}}</p>
+			<a target="_blank" class="btn btn-primary" href="{{new.link}}">Amazon ${{new.price}}</a>
+		</div>
+		<div class="col-sm-12" >
+			<h6 style="text-align: right">
+				<span class="glyphicon glyphicon-user" aria-hidden="true" (click)="void"></span> 
+				{{new.user}}
+				<br>
+				<span class="glyphicon glyphicon-comment" aria-hidden="true" (click)="void"></span>
+				{{new.upvote}}
+			</h6>
+		</div>
+		
     </div>
 
 </div>
