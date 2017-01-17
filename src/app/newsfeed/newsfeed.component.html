@@ -1,7 +1,7 @@
 <div style="padding-top:100px; padding-bottom: 100px">
 	
-    <h2 >Recently added Sustainable* Brands</h2>
-    <p>Compare product videos, prices and why to trust the companies behind them.</p>
+    <h2>Find, Share & Compare Sustainable* Companies.</h2>
+    <p>Superjuice is a catalog of sustainable companies that anyone can add to, comment on, vote on or share their experiences with. It is here to help consumers find sustainable companies to buy from, compare their certifications and judge their trustworthiness.</p>
 </div>
  
 <app-sign-up></app-sign-up>
@@ -11,10 +11,10 @@
     <div class="row myPanel" style=" margin:10px; margin-bottom: 50px; padding: 20px">
         <div class="col-sm-12">
 	        <h3> 
-	         		{{new.title}}
+	         	{{new.category}} | {{new.title}}
 	        <div class="pull-right" (click)="new.upvote = new.upvote + 1">
 			    <span class="glyphicon glyphicon-triangle-top" aria-hidden="true"></span>
-			        {{new.upvote}}
+			    {{new.upvote}}
 	        </div>
 			<br>
 			</h3>
@@ -29,21 +29,20 @@
 			</div>
 		</div>
 		<div class="col-sm-6">
-			<p><b>Sustainability</b> | {{new.sust1}}</p>
+			<p><b>Sustainability & Ethics</b> | {{new.sust1}} <a target="_blank" href="{{new.sustlink}}">CSR Site</a></p>
 			<p><b>Best For</b> | {{new.bestfor}}</p>
 			<p><b>Product Range</b> | {{new.range}}</p>
 			<p><b>Price Range</b> | {{new.price}}</p>
 			<p>{{new.intro}}</p>
-			<a target="_blank" href="{{new.sustlink}}">CSR Site</a>
 			<a target="_blank" class="btn btn-primary" href="{{new.productlink}}">Go to site</a>
 		</div>
 		<div class="col-sm-12" >
 		<br>
 			<h6 style="text-align: right">
-				<span class="glyphicon glyphicon-user" aria-hidden="true" (click)="void"></span> 
-				{{new.user}}
-				<span class="glyphicon glyphicon-comment" aria-hidden="true" (click)="void"></span>
-				{{new.comment1}}
+				<div>
+					<span class="glyphicon glyphicon-comment" aria-hidden="true" (click)="void"></span>
+					{{new.comments1}}
+				</div>
 			</h6>
 		</div>
 		
