@@ -30,23 +30,23 @@ export class DataService {
     const headers = new Headers({
       'Content-Type': 'application/json'
     });
-    return this.http.post('https://superjuice-1cb15.firebaseio.com/news.json', body, {headers: headers})
+    return this.http.post('https://superjuice-1cb15.firebaseio.com/products.json', body, {headers: headers})
   }
 
 
 
 
-  fetchESCOs() {
-    return this.af.database.list('/escos', {
-          query: {
-            orderByChild: 'name',
-          } 
-        });
-  }
+  // fetchESCOs() {
+  //   return this.af.database.list('/escos', {
+  //         query: {
+  //           orderByChild: 'name',
+  //         } 
+  //       });
+  // }
 
   fetchNews() {
     return this.af.database
-              .list('/news', {
+              .list('/products', {
                     query: {
                       limitToLast: 10,
                     } 
@@ -58,7 +58,7 @@ export class DataService {
 
 
   fetchData(type: string) {
-    return this.af.database.list('/news', {
+    return this.af.database.list('/products', {
           query: {
             orderByChild: 'category',
             equalTo: type,

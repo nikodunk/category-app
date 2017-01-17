@@ -1,6 +1,6 @@
 <div style="padding-top:100px; padding-bottom: 100px">
 	
-    <h2 >Newest Sustainable* Products</h2>
+    <h2 >Recently added Sustainable* Products</h2>
     <p>Compare product videos, prices and why to trust the companies behind them.</p>
 </div>
  
@@ -12,7 +12,6 @@
         <div class="col-sm-12">
 	        <h3> 
 	         		{{new.title}}
-	        
 	        <div class="pull-right">
 			    <span class="glyphicon glyphicon-triangle-top" aria-hidden="true" (click)="void"></span>
 			        {{new.upvote}}
@@ -26,16 +25,17 @@
 				<iframe style="width: 100%" [src]="new.video | safe" frameborder="0" allowfullscreen></iframe>
 		</div>
 		<div class="col-sm-4">
-			<h5>HOW IT'S SUSTAINABLE</h5>
-			<p>{{new.green}}</p>
-			<a *ngIf="new.label" target="_blank" href="{{new.label}}">More Details</a>
+			<h5>SUSTAINABILITY*</h5>
+			<p>{{new.green1}}</p>
+			<p>{{new.green2}}</p>
+			<a *ngIf="new.green3" target="_blank" href="{{new.green2}}">More Details</a>
 		</div>
 		<div class="col-sm-4">
 			<h5>STATS & WHERE TO GET</h5>
-			<p>{{new.details}}</p>
-			<p>{{new.details2}}</p>
-			<p>{{new.details3}}</p>
-			<a target="_blank" class="btn btn-primary" href="{{new.link}}">Amazon ${{new.price}}</a>
+			<p>{{new.detail1}}</p>
+			<p>{{new.detail2}}</p>
+			<p>{{new.detail3}}</p>
+			<a target="_blank" class="btn btn-primary" href="{{new.link}}">Get now for ${{new.price}}</a>
 		</div>
 		<div class="col-sm-12" >
 		<br>
@@ -53,4 +53,4 @@
 </div>
 
 
-*By "green", we mean products with a socially or environmentally responsible component, or help accelerate the transition to a carbon-free economy.
+*By "sustainable" we mean products with a socially or environmentally responsible component, or help accelerate  transitioning to a carbon-free economy.

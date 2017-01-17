@@ -16,7 +16,7 @@
 					<td scope="column" valign="top" class="myHeader h5"></td>
 					<td scope="column" valign="top" class="myHeader h5"></td>
 					<td scope="column" valign="top" class="myHeader h5">Source</td>
-					<td scope="column" valign="top" class="myHeader h5">Trust</td>
+					<td scope="column" valign="top" class="myHeader h5">Certified</td>
 					<td scope="column" valign="top" class="myHeader h5">Example Bill***</td>
 					<td scope="column" valign="top" class="myHeader h5">Early Cancel**</td>
 					<td scope="column" valign="top" class="myHeader h5">c/kWh**</td>
@@ -29,7 +29,7 @@
                     	<img src="{{esco.img}}" style="height:30px">
                     </td>
                     <td scope="row" style="vertical-align: middle">
-						{{esco.name}}
+						{{esco.title}}
 					</td>
 					<td scope="column" style="margin: 0px;">
 						<div *ngIf="esco.video">
@@ -38,12 +38,12 @@
                             </div>
                         </div>
                     </td>
-					<td scope="column" style="vertical-align: middle">{{esco.source }}</td>
-					<td *ngIf="esco.label == 'Green-e'" scope="column" style="vertical-align: middle"><a href="https://www.green-e.org/about" target="_blank" ><img src="/assets/green-e.png" style="height: 40px"></a></td>
-                    <td *ngIf="esco.label == 'No'" scope="column" style="vertical-align: middle">{{esco.label}}</td>
-                    <td scope="column" style="vertical-align: middle">{{(esco.cpk * 500 + 83.57) | currency:'USD':true:'1.0-0'}}</td>
-					<td scope="column" style="vertical-align: middle">${{esco.fee}}</td>
-					<td scope="column" style="vertical-align: middle">{{esco.cpk | currency:'USD':true:'1.2-4' }}</td>
+					<td scope="column" style="vertical-align: middle">{{esco.green1 }}</td>
+					<td *ngIf="esco.green2 == 'Green-e'" scope="column" style="vertical-align: middle"><a href="https://www.green-e.org/about" target="_blank" ><img src="/assets/green-e.png" style="height: 40px"></a></td>
+                    <td *ngIf="esco.green2 == 'No'" scope="column" style="vertical-align: middle">{{esco.green2}}</td>
+                    <td scope="column" style="vertical-align: middle">{{(esco.detail1 * 500 + 83.57) | currency:'USD':true:'1.0-0'}}</td>
+					<td scope="column" style="vertical-align: middle">${{esco.detail2}}</td>
+					<td scope="column" style="vertical-align: middle">{{esco.detail1 | currency:'USD':true:'1.2-4' }}</td>
 					<td scope="column" style="vertical-align: middle; color:grey">
 						<a href="{{esco.url}}" target="_blank" class="btn btn-primary">Sign Up</a>
 					</td>

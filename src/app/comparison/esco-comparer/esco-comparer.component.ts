@@ -19,7 +19,7 @@ export class EscoComparerComponent implements OnInit {
 
   ngOnInit() {
 
-    this.escos = this.dataService.fetchESCOs()
+    this.escos = this.dataService.fetchData('esco')
 
   };
   
