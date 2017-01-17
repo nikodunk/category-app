@@ -1,6 +1,6 @@
 <div style="padding-top:100px; padding-bottom: 100px">
 	
-    <h2 >Recently added Sustainable* Products</h2>
+    <h2 >Recently added Sustainable* Brands</h2>
     <p>Compare product videos, prices and why to trust the companies behind them.</p>
 </div>
  
@@ -12,39 +12,38 @@
         <div class="col-sm-12">
 	        <h3> 
 	         		{{new.title}}
-	        <div class="pull-right">
-			    <span class="glyphicon glyphicon-triangle-top" aria-hidden="true" (click)="void"></span>
+	        <div class="pull-right" (click)="new.upvote = new.upvote + 1">
+			    <span class="glyphicon glyphicon-triangle-top" aria-hidden="true"></span>
 			        {{new.upvote}}
 	        </div>
 			<br>
 			</h3>
 	    <br>
 	    </div>
-	   	<div class="col-sm-4">
-	    	<h5>PRODUCT</h5>
-				<iframe style="width: 100%" [src]="new.video | safe" frameborder="0" allowfullscreen></iframe>
+	   	<div class="col-sm-6">
+			<div class="embed-responsive embed-responsive-16by9">
+				<iframe 
+				class="embed-responsive-item"
+				[src]="new.video1 | safe"
+				allowfullscreen></iframe>
+			</div>
 		</div>
-		<div class="col-sm-4">
-			<h5>SUSTAINABILITY*</h5>
-			<p>{{new.green1}}</p>
-			<p>{{new.green2}}</p>
-			<a *ngIf="new.green3" target="_blank" href="{{new.green2}}">More Details</a>
-		</div>
-		<div class="col-sm-4">
-			<h5>STATS & WHERE TO GET</h5>
-			<p>{{new.detail1}}</p>
-			<p>{{new.detail2}}</p>
-			<p>{{new.detail3}}</p>
-			<a target="_blank" class="btn btn-primary" href="{{new.link}}">Get now for ${{new.price}}</a>
+		<div class="col-sm-6">
+			<p><b>Sustainability</b> | {{new.sust1}}</p>
+			<p><b>Best For</b> | {{new.bestfor}}</p>
+			<p><b>Product Range</b> | {{new.range}}</p>
+			<p><b>Price Range</b> | {{new.price}}</p>
+			<p>{{new.intro}}</p>
+			<a target="_blank" href="{{new.sustlink}}">CSR Site</a>
+			<a target="_blank" class="btn btn-primary" href="{{new.productlink}}">Go to site</a>
 		</div>
 		<div class="col-sm-12" >
 		<br>
 			<h6 style="text-align: right">
 				<span class="glyphicon glyphicon-user" aria-hidden="true" (click)="void"></span> 
 				{{new.user}}
-				<br>
 				<span class="glyphicon glyphicon-comment" aria-hidden="true" (click)="void"></span>
-				{{new.upvote}}
+				{{new.comment1}}
 			</h6>
 		</div>
 		

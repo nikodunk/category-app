@@ -10,7 +10,7 @@ import { AngularFire, FirebaseListObservable } from 'angularfire2';
 export class DataService {
 
   email = null;
-  product = new Object;
+  brand = new Object;
 
 
   constructor(private http: Http, private af:AngularFire) { };
@@ -25,14 +25,13 @@ export class DataService {
   	return this.http.post('https://superjuice-1cb15.firebaseio.com/emails.json', body, {headers: headers})
   }
 
-  storeProduct(){
-    const body=JSON.stringify(this.product);
+  storeBrand(){
+    const body=JSON.stringify(this.brand);
     const headers = new Headers({
       'Content-Type': 'application/json'
     });
-    return this.http.post('https://superjuice-1cb15.firebaseio.com/products.json', body, {headers: headers})
+    return this.http.post('https://superjuice-1cb15.firebaseio.com/brands.json', body, {headers: headers})
   }
-
 
 
 
@@ -46,7 +45,7 @@ export class DataService {
 
   fetchNews() {
     return this.af.database
-              .list('/products', {
+              .list('/brands', {
                     query: {
                       limitToLast: 10,
                     } 
@@ -58,7 +57,7 @@ export class DataService {
 
 
   fetchData(type: string) {
-    return this.af.database.list('/products', {
+    return this.af.database.list('/brands', {
           query: {
             orderByChild: 'category',
             equalTo: type,

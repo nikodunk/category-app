@@ -9,16 +9,16 @@ import { DataService } from '../services/data.service'
 export class SubmitterComponent implements OnInit {
 
 	submitted = false;
-  product: any;
+  brand: any;
 
   constructor(private dataservice: DataService) { 
   }
 
 
-  onSubmit(product) {
-    product.video = 'https://www.youtube.com/embed/' + product.video.slice(-11);
-    this.dataservice.product = product
-  	this.dataservice.storeProduct().subscribe();
+  onSubmit(brand) {
+    brand.video1 = 'https://www.youtube.com/embed/' + brand.video1.slice(-11);
+    this.dataservice.brand = brand
+  	this.dataservice.storeBrand().subscribe();
   	this.submitted = !this.submitted
   }
 

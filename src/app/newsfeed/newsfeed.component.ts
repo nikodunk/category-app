@@ -15,7 +15,11 @@ export class NewsfeedComponent implements OnInit {
   	constructor(private dataService: DataService) { }
     
 
-
+  	upvote(upvote: number){
+  		upvote = upvote + 1
+  		console.log(upvote);
+  		this.news.upvote = upvote
+  	}
 
 	ngOnInit() {
 

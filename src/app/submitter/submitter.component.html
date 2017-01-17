@@ -2,29 +2,64 @@
 <div class="myPanel" style="">
 					<form (ngSubmit)="onSubmit(f.value)" #f="ngForm">
 		                  <div style="margin:40px" *ngIf="!this.submitted">
-			      	          	<h2>Submit New Product</h2>
-			      	          	<p>Enter a new green product into the catalog.</p>
+			      	          	<h2>Submit Brand</h2>
+			      	          	<p>Enter a sustainable brand into the catalog.</p>
 			      	          	<br>
 			      	          	<br>
+			      	          	<div class="form-group">
+					      	          	<label for="title">Name</label>
+					                    <input 
+					                    	style="margin-bottom: 10px" 
+					                    	ngModel
+					                    	name="title"
+					                    	type="text"
+					                    	class="form-control"
+					                    	placeholder="Enter Product Name, if different from video review"
+				                    	/>
+			                    </div>
 			                    <div>
 				      	          	<label for="title">Video</label>
 				                    <input 
 				                    	style="margin-bottom: 10px" 
 				                    	ngModel
 				                    	required
-				                    	name="video"
+				                    	name="video1"
 				                    	type="text"
 				                    	class="form-control"
 				                    	placeholder="Product Video or Video Review Link (ie. youtube, vimeo)"
 				                    	/>
 			                    </div>
 			                    <div class="form-group">
-				      	          	<label for="title">Why to Trust</label>
+				      	          	<label for="title">Sustainability</label>
 				                    <input 
 				                    	style="margin-bottom: 10px" 
 				                    	ngModel
 				                    	required
-				                    	name="label"
+				                    	name="sust1"
+				                    	type="text"
+				                    	class="form-control"
+				                    	placeholder=""
+				                    	/>
+			                    </div>
+			                    <div class="form-group">
+				      	          	<label for="title">Best For</label>
+				                    <input 
+				                    	style="margin-bottom: 10px" 
+				                    	ngModel
+				                    	required
+				                    	name="bestfor"
+				                    	type="text"
+				                    	class="form-control"
+				                    	placeholder=""
+				                    	/>
+			                    </div>
+			                    <div class="form-group">
+				      	          	<label for="title">Sustainability Link</label>
+				                    <input 
+				                    	style="margin-bottom: 10px" 
+				                    	ngModel
+				                    	required
+				                    	name="sustlink"
 				                    	type="text"
 				                    	class="form-control"
 				                    	placeholder="CSR Page / Independent Label Link. Why is this thing 'green'? Who's backing up their claim?"
@@ -35,15 +70,58 @@
 				                    <input 
 				                    	style="margin-bottom: 10px" 
 				                    	ngModel
-				                    	name="link"
+				                    	name="productlink"
 				                    	type="text"
 				                    	required
 				                    	class="form-control"
 				                    	placeholder="Amazon Product Link, link to a page to purchase."
 				                    	/>
 			                    </div>
-
-			                    
+			                    <div class="form-group">
+					      	          	<label for="title">User</label>
+					                    <input 
+					                    	style="margin-bottom: 10px" 
+					                    	ngModel
+					                    	name="user"
+					                    	type="text"
+					                    	class="form-control"
+					                    	placeholder="Enter your email so we know who submitted this, please!"
+				                    	/>
+			                    </div>
+			                    <div class="form-group">
+					      	          		<label for="title">Range</label>
+					                    	<input 
+					                    	style="margin-bottom: 10px" 
+					                    	ngModel
+					                    	name="range"
+					                    	type="text"
+					                    	class="form-control"
+					                    	placeholder="Enter Product Category (ie. apparel, beauty, solar)"
+					                    	/>
+			                    </div>
+			                    <div class="form-group">
+					      	          		<label for="title"> Price Range</label>
+					                    	<input 
+					                    	style="margin-bottom: 10px" 
+					                    	ngModel
+					                    	name="price"
+					                    	type="text"
+					                    	class="form-control"
+					                    	placeholder="Enter the rough price at the given link, we will automate this ASAP"
+					                    	/>
+			                    </div>
+			                    <div class="form-group">
+				      	          	<label for="title">Intro</label>
+				                    <input 
+				                    	style="margin-bottom: 10px" 
+				                    	ngModel
+				                    	required
+				                    	name="intro"
+				                    	type="text"
+				                    	class="form-control"
+				                    	placeholder="Intro"
+				                    	/>
+			                    </div>
 
 			                    <a data-toggle="collapse" href="#collapseExample">
   								More Options
@@ -54,50 +132,31 @@
 
 								<div class="collapse" id="collapseExample">
 									<br>
-								  	<div class="form-group">
-					      	          	<label for="title">Name</label>
+									<div class="form-group">
+					      	          	<label for="title">Comments</label>
 					                    <input 
 					                    	style="margin-bottom: 10px" 
 					                    	ngModel
-					                    	name="title"
+					                    	name="comments1"
 					                    	type="text"
 					                    	class="form-control"
-					                    	placeholder="Enter Product Name, if different from video review"
-				                    	/>
-			                    	</div>
-			                    	<div class="form-group">
-					      	          	<label for="title">Email</label>
+					                    	placeholder="Intro"
+					                    	/>
+				                    </div>
+				                    <div class="form-group">
+					      	          	<label for="title">Comments</label>
 					                    <input 
 					                    	style="margin-bottom: 10px" 
 					                    	ngModel
-					                    	name="email"
-					                    	type="text"
+					                    	name="upvote"
+					                    	type="number"
 					                    	class="form-control"
-					                    	placeholder="Enter your email so we know who submitted this, please!"
-				                    	/>
-			                    	</div>
-			                    	<div class="form-group">
-					      	          		<label for="title">Category</label>
-					                    	<input 
-					                    	style="margin-bottom: 10px" 
-					                    	ngModel
-					                    	name="category"
-					                    	type="text"
-					                    	class="form-control"
-					                    	placeholder="Enter Product Category (ie. apparel, beauty, solar)"
+					                    	placeholder="0"
 					                    	/>
-			                    	</div>	
-			                    	<div class="form-group">
-					      	          		<label for="title">List Price</label>
-					                    	<input 
-					                    	style="margin-bottom: 10px" 
-					                    	ngModel
-					                    	name="price"
-					                    	type="text"
-					                    	class="form-control"
-					                    	placeholder="Enter the rough price at the given link, we will automate this ASAP"
-					                    	/>
-			                    	</div>		
+				                    </div>
+			                    	
+			                    		
+			                    			
 								</div>
 
 								<br>
