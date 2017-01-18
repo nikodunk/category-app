@@ -4,7 +4,6 @@ import { Routes, RouterModule } from '@angular/router';
 import { AboutComponent } from './about/about.component'
 import { EscoComparerComponent } from './comparison/esco-comparer/esco-comparer.component';
 import { NewsfeedComponent } from './newsfeed/newsfeed.component';
-import { SolarComparerComponent } from './comparison/solar-comparer/solar-comparer.component';
 import { SubmitterComponent } from './submitter/submitter.component';
 import { ApparelComparerComponent } from './comparison/apparel-comparer/apparel-comparer.component';
 
@@ -32,10 +31,6 @@ const routes: Routes = [
     path: 'escos',
     component: EscoComparerComponent
   },
-  {
-    path: 'solar',
-    component: SolarComparerComponent
-  },  
   {
     path: 'apparel',
     component: ApparelComparerComponent

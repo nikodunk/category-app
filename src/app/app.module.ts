@@ -17,7 +17,6 @@ import { KeypipePipe } from './keypipe.pipe';
 import { SafePipe } from './safe.pipe';
 import { NewsfeedComponent } from './newsfeed/newsfeed.component';
 import { firebaseConfig } from '../environments/firebase.config';
-import { SolarComparerComponent } from './comparison/solar-comparer/solar-comparer.component';
 import { SubmitterComponent } from './submitter/submitter.component';
 import { ApparelComparerComponent } from './comparison/apparel-comparer/apparel-comparer.component'
 
@@ -34,7 +33,6 @@ import { ApparelComparerComponent } from './comparison/apparel-comparer/apparel-
     KeypipePipe,
     SafePipe,
     NewsfeedComponent,
-    SolarComparerComponent,
     SubmitterComponent,
     ApparelComparerComponent
   ],
