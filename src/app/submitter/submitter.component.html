@@ -7,7 +7,7 @@
 			      	          	<br>
 			      	          	<br>
 			      	          	<div class="form-group">
-					      	          	<label for="title">Name</label>
+					      	          	<label for="title">Company Name</label>
 					                    <input 
 					                    	style="margin-bottom: 10px" 
 					                    	ngModel
@@ -18,7 +18,7 @@
 				                    	/>
 			                    </div>
 			                    <div>
-				      	          	<label for="title">Video</label>
+				      	          	<label for="title">Video Link</label>
 				                    <input 
 				                    	style="margin-bottom: 10px" 
 				                    	ngModel
@@ -27,6 +27,30 @@
 				                    	type="text"
 				                    	class="form-control"
 				                    	placeholder="Product Video or Video Review Link (ie. youtube, vimeo)"
+				                    	/>
+			                    </div>
+			                    <div class="form-group">
+				      	          	<label for="title">Sustainability Link</label>
+				                    <input 
+				                    	style="margin-bottom: 10px" 
+				                    	ngModel
+				                    	required
+				                    	name="sustlink"
+				                    	type="text"
+				                    	class="form-control"
+				                    	placeholder="CSR Page / Independent Label Link. Why is this thing 'green'? Who's backing up their claim?"
+				                    	/>
+			                    </div>
+			                    <div class="form-group">
+				      	          	<label for="title">Product Link</label>
+				                    <input 
+				                    	style="margin-bottom: 10px" 
+				                    	ngModel
+				                    	name="productlink"
+				                    	type="text"
+				                    	required
+				                    	class="form-control"
+				                    	placeholder="Amazon Product Link, link to a page to purchase."
 				                    	/>
 			                    </div>
 			                    <div class="form-group">
@@ -54,31 +78,7 @@
 				                    	/>
 			                    </div>
 			                    <div class="form-group">
-				      	          	<label for="title">Sustainability Link</label>
-				                    <input 
-				                    	style="margin-bottom: 10px" 
-				                    	ngModel
-				                    	required
-				                    	name="sustlink"
-				                    	type="text"
-				                    	class="form-control"
-				                    	placeholder="CSR Page / Independent Label Link. Why is this thing 'green'? Who's backing up their claim?"
-				                    	/>
-			                    </div>
-			                    <div class="form-group">
-				      	          	<label for="title">Link</label>
-				                    <input 
-				                    	style="margin-bottom: 10px" 
-				                    	ngModel
-				                    	name="productlink"
-				                    	type="text"
-				                    	required
-				                    	class="form-control"
-				                    	placeholder="Amazon Product Link, link to a page to purchase."
-				                    	/>
-			                    </div>
-			                    <div class="form-group">
-					      	          		<label for="title">Range</label>
+					      	          		<label for="title">Product Range</label>
 					                    	<input 
 					                    	style="margin-bottom: 10px" 
 					                    	ngModel
@@ -100,7 +100,7 @@
 					                    	/>
 			                    </div>
 			                    <div class="form-group">
-				      	          	<label for="title">Intro</label>
+				      	          	<label for="title">Blurb</label>
 				                    <input 
 				                    	style="margin-bottom: 10px" 
 				                    	ngModel
@@ -111,6 +111,19 @@
 				                    	placeholder="Intro"
 				                    	/>
 			                    </div>
+			                    <div class="form-group">
+					      	          	<label for="title">Category</label>
+					                    <input 
+					                    	style="margin-bottom: 10px" 
+					                    	ngModel
+					                    	name="category"
+					                    	type="text"
+					                    	class="form-control"
+					                    	placeholder="Please enter a category"
+				                    	/>
+			                    </div>
+
+
 
 			                    <a data-toggle="collapse" href="#collapseExample">
   								More Options
@@ -154,17 +167,7 @@
 					                    	placeholder="The User Number"
 				                    	/>
 			                    	</div>
-			                    	<div class="form-group">
-					      	          	<label for="title">Category</label>
-					                    <input 
-					                    	style="margin-bottom: 10px" 
-					                    	ngModel
-					                    	name="category"
-					                    	type="text"
-					                    	class="form-control"
-					                    	placeholder="Please enter a category"
-				                    	/>
-			                    	</div>
+			                    	
 			                    	
 			                    		
 			                    			
