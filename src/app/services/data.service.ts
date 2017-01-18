@@ -33,6 +33,7 @@ export class DataService {
     return this.http.post('https://superjuice-1cb15.firebaseio.com/brands.json', body, {headers: headers})
   }
 
+  
 
 
   // fetchESCOs() {
@@ -45,11 +46,7 @@ export class DataService {
 
   fetchNews() {
     return this.af.database
-              .list('/brands', {
-                    query: {
-                      limitToLast: 10,
-                    } 
-                  })
+              .list('/brands')
               .map((array) => array.reverse()) as FirebaseListObservable<any[]>;
 
   }

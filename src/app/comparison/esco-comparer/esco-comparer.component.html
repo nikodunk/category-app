@@ -9,9 +9,9 @@
 </div>
       	
 
-<div *ngFor="let esco of escos | async" >
+<div *ngFor="let esco of escos | async, let i = index" >
 
-    <div class="row myPanel" style=" margin:10px; margin-bottom: 50px; padding: 20px">
+    <div class="row myPanel" *ngIf="i<visibilityLimit" style=" margin:10px; margin-bottom: 50px; padding: 20px">
         <div class="col-sm-12">
 	        <h3> 
 	         	{{esco.category}} | {{esco.title}}
@@ -52,7 +52,9 @@
     </div>
 
 </div>
-
+<div style="text-align:center; padding: 2rem">
+	<a class="btn btn-default"(click)="this.visibilityExpander()" *ngIf="visibilityLimit<15">Load More</a>
+</div>
 
 <div class="myPanel" style="width: 50%; margin-top:100px; margin-bottom:80px; padding: 30px"><h3 style="text-align: center;">Is a great sustainable company missing? Submit it <a routerLink="/submit">here</a>!</h3></div>
     		

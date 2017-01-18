@@ -15,7 +15,11 @@ export class ApparelComparerComponent implements OnInit {
 
   constructor(private dataService: DataService) { }
   
+  visibilityLimit = 5;
 
+    visibilityExpander () {
+           this.visibilityLimit = this.visibilityLimit + 3;
+    }
 
  
 

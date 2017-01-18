@@ -6,17 +6,16 @@
  
 <app-sign-up></app-sign-up>
 
-<div *ngFor="let new of news | async" >
+<div *ngFor="let new of news | async, let i = index" >
 
-    <div class="row myPanel" style=" margin:10px; margin-bottom: 50px; padding: 20px">
+    <div class="row myPanel" *ngIf="i<visibilityLimit" style=" margin:10px; margin-bottom: 50px; padding: 20px">
         <div class="col-sm-12">
 	        <h3> 
 	         	{{new.category}} | {{new.title}}
-	        <div class="pull-right" (click)="new.upvote = new.upvote + 1">
+	        <div class="pull-right btn btn-default" (click)="upVote(new.upvote, new.uid)">
 			    <span class="glyphicon glyphicon-triangle-top" aria-hidden="true"></span>
 			    {{new.upvote}}
 	        </div>
-			<br>
 			</h3>
 	    <br>
 	    </div>
@@ -39,7 +38,7 @@
 		<div class="col-sm-12" >
 		<br>
 			<h6 style="text-align: right">
-				<div>
+				<div class="btn btn-default">
 					<span class="glyphicon glyphicon-comment" aria-hidden="true" (click)="void"></span>
 					{{new.comments1}}
 				</div>
@@ -48,6 +47,10 @@
 		
     </div>
 
+</div>
+
+<div style="text-align:center; padding: 2rem">
+	<a class="btn btn-default"(click)="this.visibilityExpander()" *ngIf="visibilityLimit<15">Load More</a>
 </div>
 
 

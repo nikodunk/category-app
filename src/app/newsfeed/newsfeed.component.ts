@@ -15,11 +15,26 @@ export class NewsfeedComponent implements OnInit {
   	constructor(private dataService: DataService) { }
     
 
-  	upvote(upvote: number){
+  
+    visibilityLimit = 5;
+
+    visibilityExpander () {
+           this.visibilityLimit = this.visibilityLimit + 3;
+    }
+
+
+
+
+  	upVote(upvote: number, uid: string){
   		upvote = upvote + 1
   		console.log(upvote);
-  		this.news.upvote = upvote
+  		this.news.uid.upvote = upvote
   	}
+
+    addComment(comment: string, uid: string){
+    this.news.push(comment)
+    console.log(this.news)
+  }
 
 	ngOnInit() {
 
