@@ -1,55 +1,51 @@
 <div style="padding-top:100px; padding-bottom:80px">
 
-    <h2>The Ethical Apparel Comparison Tool</h2>
-    <p>Find the best sustainably made wear.</p>
+    <h2>Sustainable Apparel Companies</h2>
     <div >
     </div>
 </div>
       	
 
-    <div class="table">
+<div *ngFor="let app of apparel | async" >
 
-			<table class="table table-hover">
-				<tr>
-					<td scope="column" valign="top" class="myHeader h5">Info</td>
-					<td scope="column" valign="top" class="myHeader h5"></td>
-					<td scope="column" valign="top" class="myHeader h5">Trust</td>
-					<td scope="column" valign="top" class="myHeader h5">Made In</td>
-					<td scope="column" valign="top" class="myHeader h5">Material</td>
-					<td scope="column" valign="top" class="myHeader h5">Price</td>
-					<td scope="column" valign="top" class="myHeader h5"></td>
-				</tr>
-				<tr *ngFor="let item of apparel | async" 
-					[ngClass]="{recommendedClass: item.recommended}"
-					style="margin:0px" >
-                    <td scope="row" style="vertical-align: middle">
-						{{item.title}}
-					</td>
-					<td scope="column" style="margin: 0px;">
-						<div *ngIf="item.video">
-                            <div>
-                                <iframe width="200" height="100" [src]="item.video | safe" frameborder="0" allowfullscreen></iframe>
-                            </div>
-                        </div>
-                    </td>
-					<td scope="column" style="vertical-align: middle">
-						<a target="_blank" class="btn btn-success" href="{{item.label}}">Why to trust</a>
-					</td>
-					<td scope="column" style="vertical-align: middle">{{item.detail1}}</td>
-					<td scope="column" style="vertical-align: middle">{{item.detail2}}</td>
-					<td scope="column" style="vertical-align: middle">${{item.price}}</td>
-					<td scope="column" style="vertical-align: middle; color:grey">
-						<a href="{{item.link}}" target="_blank" class="btn btn-primary">Product Link</a>
-					</td>
-				</tr>
-
-				
-			</table>
-    		</div>
-
-
-    		
+    <div class="row myPanel" style=" margin:10px; margin-bottom: 50px; padding: 20px">
+        <div class="col-sm-12">
+	        <h3> 
+	         	{{app.category}} | {{app.title}}
+	        <div class="pull-right" (click)="app.upvote = app.upvote + 1">
+			    <span class="glyphicon glyphicon-triangle-top" aria-hidden="true"></span>
+			    {{app.upvote}}
+	        </div>
 			<br>
-			<br>
-			<br>
-			<hr>
+			</h3>
+	    <br>
+	    </div>
+	   	<div class="col-sm-6">
+			<div class="embed-responsive embed-responsive-16by9">
+				<iframe 
+				class="embed-responsive-item"
+				[src]="app.video1 | safe"
+				allowfullscreen></iframe>
+			</div>
+		</div>
+		<div class="col-sm-6">
+			<p><b>Sustainability & Ethics</b> | {{app.sust1}} <a target="_blank" href="{{app.sustlink}}">CSR Site</a></p>
+			<p><b>Best For</b> | {{app.bestfor}}</p>
+			<p><b>Product Range</b> | {{app.range}}</p>
+			<p><b>Price Range</b> | {{app.price}}</p>
+			<p>{{app.intro}}</p>
+			<a target="_blank" class="btn btn-primary" href="{{app.productlink}}">Go to site</a>
+		</div>
+		<div class="col-sm-12" >
+		<br>
+			<h6 style="text-align: right">
+				<div>
+					<span class="glyphicon glyphicon-comment" aria-hidden="true" (click)="void"></span>
+					{{app.comments1}}
+				</div>
+			</h6>
+		</div>
+		
+    </div>
+
+</div>

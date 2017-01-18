@@ -21,7 +21,7 @@ export class ApparelComparerComponent implements OnInit {
 
   ngOnInit() {
 
-    this.apparel = this.dataService.fetchData('apparel')
+    this.apparel = this.dataService.fetchData('Apparel')
 
   };
 

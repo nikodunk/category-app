@@ -57,7 +57,8 @@ export class DataService {
 
 
   fetchData(type: string) {
-    return this.af.database.list('/brands', {
+    return this.af.database
+          .list('/brands', {
           query: {
             orderByChild: 'category',
             equalTo: type,
