@@ -15,10 +15,6 @@
       <div class="modal-header">
         <h3 class="modal-title" id="exampleModalLabel">
         	{{this.selectedItem.title}} | {{this.selectedItem.category}}
-        	<button type="button" class="close pull-right" style="padding:10px" data-dismiss="modal" aria-label="Close">
-          		<span aria-hidden="true">&times;</span>
-        	</button>
-        	&nbsp;&nbsp;&nbsp;
         	<button class="btn btn-default pull-right" (click)="upVote(new.upvote, new.uid)">
 			    Upvote
 			    <span class="glyphicon glyphicon-triangle-top" aria-hidden="true"></span>{{this.selectedItem.upvote}}
@@ -76,10 +72,7 @@
 			<td *ngIf="i<visibilityLimit">
 					<div class="col-sm-2" valign="top" style="color:grey; padding: 10px">
 						<div class="embed-responsive embed-responsive-4by3">
-							<!-- <img src="https://img.youtube.com/vi/< + new.video1 + >/default.jpg"> -->
-							<iframe 
-							[src]="new.video1 | safe"
-							allowfullscreen></iframe>
+							 <img src="https://img.youtube.com/vi/{{new.videotag}}/default.jpg">
 						</div>
 					</div> 
 					<div class="col-sm-10">
