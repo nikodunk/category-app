@@ -60,3 +60,17 @@ body {
 }
 
 
+.modal {
+  background: rgba(0,0,0,0.6);
+}
+
+
+
+
+.hoverButton {
+  display: none; 
+}
+
+tr:hover .hoverButton {
+   display: inline; 
+}

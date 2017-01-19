@@ -1,11 +1,12 @@
-<div style="padding-top:100px; padding-bottom:80px">
-
-    <h2>Sustainable & Ethical Apparel Companies</h2>
-    <p>The Leaderboard to find the best sustainable and ethical apparel companies</p>
-    <div >
-    </div>
+<div style="padding-top:100px; padding-bottom: 100px">
+	
+    <h2>Find, Share & Compare Sustainable* Companies.</h2>
+    <p>Superjuice is a catalog of sustainable companies that anyone can add to, comment on, vote on or share their experiences with. It is here to help consumers find sustainable companies to buy from, compare their certifications and judge their trustworthiness.</p>
 </div>
-      	
+ 
+<app-sign-up></app-sign-up>
+<br>
+<h4>Submitted Today</h4>
 
 <div *ngIf="selectedItem" class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-lg" role="document">
@@ -115,4 +116,5 @@
 	<a class="btn btn-default"(click)="this.visibilityExpander()" *ngIf="visibilityLimit<15">Load More</a>
 </div>
 
-<div class="myPanel" style="width: 50%; margin-top:100px; margin-bottom:80px; padding: 30px"><h3 style="text-align: center;">Is a great sustainable company missing? Submit it <a routerLink="/Submit">here</a>!</h3></div>
+
+*By "sustainable" we mean products with a socially or environmentally responsible component, or help accelerate  transitioning to a carbon-free economy.

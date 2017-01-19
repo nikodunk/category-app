@@ -1,8 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService } from '../../services/data.service'
 
-declare var jQuery:any;
-
 
 @Component({
   selector: 'app-esco-comparer',
@@ -11,28 +9,21 @@ declare var jQuery:any;
 })
 export class EscoComparerComponent implements OnInit {
 
-  
+  escos: any;
 
   constructor(private dataService: DataService) { }
   
-  news: any;
   visibilityLimit = 5;
-  selectedItem: any;
 
     visibilityExpander () {
            this.visibilityLimit = this.visibilityLimit + 3;
     }
 
-   postOpen(selectedItem){
-      jQuery("#myModal").modal("show");
-      this.selectedItem = selectedItem
-      
-
-    }
+ 
 
   ngOnInit() {
 
-    this.news = this.dataService.fetchData('Energy')
+    this.escos = this.dataService.fetchData('Energy')
 
   };
   

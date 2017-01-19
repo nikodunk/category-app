@@ -1,0 +1,13 @@
+.myHeader { 
+		border-top: none; 
+		vertical-align: bottom;
+	}
+
+
+#myFrame { width: 200px; height: 100px; }
+
+
+.recommendedClass {
+
+    border-right: 6px solid #f0ad4e;
+}	

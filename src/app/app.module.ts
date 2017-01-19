@@ -18,7 +18,8 @@ import { SafePipe } from './safe.pipe';
 import { NewsfeedComponent } from './newsfeed/newsfeed.component';
 import { firebaseConfig } from '../environments/firebase.config';
 import { SubmitterComponent } from './submitter/submitter.component';
-import { ApparelComparerComponent } from './comparison/apparel-comparer/apparel-comparer.component'
+import { ApparelComparerComponent } from './comparison/apparel-comparer/apparel-comparer.component';
+import { RecentlistComponent } from './recentlist/recentlist.component'
 
 
 
@@ -34,7 +35,8 @@ import { ApparelComparerComponent } from './comparison/apparel-comparer/apparel-
     SafePipe,
     NewsfeedComponent,
     SubmitterComponent,
-    ApparelComparerComponent
+    ApparelComparerComponent,
+    RecentlistComponent
   ],
   imports: [
     BrowserModule,

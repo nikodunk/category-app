@@ -1,0 +1,57 @@
+<div style="padding-top:100px; padding-bottom:80px">
+
+    <h2>Sustainable & Ethical Apparel Companies</h2>
+    <p>The Leaderboard to find the best sustainable and ethical apparel companies</p>
+    <div >
+    </div>
+</div>
+      	
+
+<div *ngFor="let app of apparel | async, let i = index" >
+
+    <div class="row myPanel" *ngIf="i<visibilityLimit" style="margin:10px; margin-bottom: 50px; padding: 20px">
+        <div class="col-sm-12">
+	        <h3> 
+	         	{{app.category}} | {{app.title}}
+	        <div class="pull-right" (click)="app.upvote = app.upvote + 1">
+			    <span class="glyphicon glyphicon-triangle-top" aria-hidden="true"></span>
+			    {{app.upvote}}
+	        </div>
+			<br>
+			</h3>
+	    <br>
+	    </div>
+	   	<div class="col-sm-6">
+			<div class="embed-responsive embed-responsive-16by9">
+				<iframe 
+				class="embed-responsive-item"
+				[src]="app.video1 | safe"
+				allowfullscreen></iframe>
+			</div>
+		</div>
+		<div class="col-sm-6">
+			<p><b>Sustainability & Ethics</b> | {{app.sust1}} <a target="_blank" href="{{app.sustlink}}">CSR Site</a></p>
+			<p><b>Best For</b> | {{app.bestfor}}</p>
+			<p><b>Product Range</b> | {{app.range}}</p>
+			<p><b>Price Range</b> | {{app.price}}</p>
+			<p>{{app.intro}}</p>
+			<a target="_blank" class="btn btn-primary" href="{{app.productlink}}">Go to site</a>
+		</div>
+		<div class="col-sm-12" >
+		<br>
+			<h6 style="text-align: right">
+				<div>
+					<span class="glyphicon glyphicon-comment" aria-hidden="true" (click)="void"></span>
+					{{app.comments1}}
+				</div>
+			</h6>
+		</div>
+		
+    </div>
+    
+</div>
+<div style="text-align:center; padding: 2rem">
+	<a class="btn btn-default"(click)="this.visibilityExpander()" *ngIf="visibilityLimit<15">Load More</a>
+</div>
+
+<div class="myPanel" style="width: 50%; margin-top:100px; margin-bottom:80px; padding: 30px"><h3 style="text-align: center;">Is a great sustainable company missing? Submit it <a routerLink="/submit">here</a>!</h3></div>
