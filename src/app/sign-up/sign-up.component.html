@@ -1,6 +1,6 @@
-<div class="myPanel" style="border-right: 5px solid #3d6fbd; text-align: center; padding: 20px">
-                  <div  *ngIf="!this.submitted">
-	      	          	<form style="margin: 0; padding: 0;" id="contact" class="form-inline">
+<div class="myPanel" style="border-right: 5px solid #3d6fbd; padding: 30px">
+                  <div  *ngIf="!this.submitted" class="row">
+<!-- 	      	          	<form style="margin: 0; padding: 0;" id="contact" class="form-inline">
 	      	          	<p>
 	      	          			<b>Get the best sustainable products in your inbox, weekly.</b>
 	      	          			&nbsp; &nbsp;
@@ -10,16 +10,39 @@
 		                        name="email" 
 		                        type="text" 
 		                        style="display: inline;"
-		                        class="form-control" 
+		                        class="form-control pull-right" 
 		                        placeholder="Enter your email"/>
 		                        
 		      		            <input class="btn btn-success btn-sm" value="SUBSCRIBE" (click)="onStore()">
 		      		            
 	      		            
 	       				</p>
-	       				</form>
+	       				</form> -->
+	       			<div class="col-sm-7">
+	       				<p><b>Get the best sustainable products in your inbox, weekly.</b></p>
+        			</div>
+        			<div class="col-sm-5">
+        				<div class="input-group pull-right">
+			            	<input 
+			            	[(ngModel)]="dataService.email" 
+			            	name="email"
+			            	type="text" 
+			            	style="width: 100%" 
+			            	class="form-control pull-right" 
+			            	placeholder="Enter your email" />
+			            	<span class="input-group-addon btn btn-success success" (click)="onStore()">SUBSCRIBE</span>
+        				</div>
+        			</div>
+
 
                   </div>
+
+                    
+
+                  	<!-- <div class="input-group">
+			            	<input type="text" class="form-control" value="1" />
+			            	<span class="input-group-addon">Update</span>
+        			</div> -->
                   <div style="margin:20px" *ngIf="this.submitted">
                   		<h4 style="text-align:center">Thanks! You're signed up.</h4>
                   </div>

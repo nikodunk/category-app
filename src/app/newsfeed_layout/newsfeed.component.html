@@ -4,7 +4,11 @@
     <p>Superjuice is a catalog of sustainable companies that anyone can add to, comment on, vote on or share their experiences with. It is here to help consumers find sustainable companies to buy from, compare their certifications and judge their trustworthiness.</p>
 </div>
  
-<app-sign-up></app-sign-up>
+<div class="row">
+        <div class="col-sm-12">
+			<app-sign-up></app-sign-up>
+		</div>
+</div>
 
 <div *ngFor="let new of news | async, let i = index" >
 

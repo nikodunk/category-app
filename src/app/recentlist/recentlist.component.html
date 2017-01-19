@@ -14,10 +14,6 @@
       <div class="modal-header">
         <h3 class="modal-title" id="exampleModalLabel">
         	{{this.selectedItem.title}} | {{this.selectedItem.category}}
-        	<button type="button" class="close pull-right" style="padding:10px" data-dismiss="modal" aria-label="Close">
-          		<span aria-hidden="true">&times;</span>
-        	</button>
-        	&nbsp;&nbsp;&nbsp;
         	<button class="btn btn-default pull-right" (click)="upVote(new.upvote, new.uid)">
 			    Upvote
 			    <span class="glyphicon glyphicon-triangle-top" aria-hidden="true"></span>{{this.selectedItem.upvote}}
