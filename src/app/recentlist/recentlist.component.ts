@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService } from '../services/data.service'
 
+
 declare var jQuery:any;
+
 
 @Component({
   selector: 'app-recentlist',
@@ -24,8 +26,6 @@ export class RecentlistComponent implements OnInit {
     postOpen(selectedItem){
       jQuery("#myModal").modal("show");
       this.selectedItem = selectedItem
-      
-
     }
 
   	upVote(upvote: number, uid: string){
@@ -42,7 +42,6 @@ export class RecentlistComponent implements OnInit {
 	ngOnInit() {
 
 	  	    this.news = this.dataService.fetchNews()
-          
 
 	}
 

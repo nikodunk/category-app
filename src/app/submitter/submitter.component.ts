@@ -17,6 +17,7 @@ export class SubmitterComponent implements OnInit {
 
   onSubmit(brand) {
     brand.video1 = 'https://www.youtube.com/embed/' + brand.video1.slice(-11);
+    brand.videotag = brand.video1.slice(-11);
     this.dataservice.brand = brand
   	this.dataservice.storeBrand().subscribe();
   	this.submitted = !this.submitted
