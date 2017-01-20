@@ -33,7 +33,8 @@ export class EscoComparerComponent implements OnInit {
   ngOnInit() {
 
     this.news = this.dataService.fetchData('Energy')
-
+    this.postOpen('asdf')
+    
   };
   
 }

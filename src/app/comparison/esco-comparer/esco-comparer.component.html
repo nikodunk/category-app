@@ -65,46 +65,45 @@
 
 
 
-<div class="table-responsive myPanel">	
-	<table class="table table-hover table-sm">
-		<tr class="postRow" *ngFor="let new of news | async, let i = index" (click)="postOpen(new)" 
-			style="cursor:pointer">
-			<td *ngIf="i<visibilityLimit">
-					<div class="col-sm-2" valign="top" style="color:grey; padding: 10px">
-						<div class="embed-responsive embed-responsive-4by3">
-							 <img src="https://img.youtube.com/vi/{{new.videotag}}/default.jpg">
-						</div>
+	
+	<div class="myPanel" style="">
+		<div *ngFor="let new of news | async, let i = index" (click)="postOpen(new)" style="cursor:pointer" class="myRow">
+			 
+				<div class="row" style="padding:10px" *ngIf="i<visibilityLimit">
+					<div class="col-xs-3 col-sm-2" >
+							 <img style="width:100%; margin-top:20%" src="https://img.youtube.com/vi/{{new.videotag}}/default.jpg">
 					</div> 
-					<div class="col-sm-10">
+					<div class="col-xs-9 col-sm-10">
 						<h3>{{new.title}}</h3>
 						<p>{{new.sust1}}</p>
-	         			<div class="btn btn-default" (click)="upVote(new.upvote, new.uid)">
+	         			<div class="btn btn-default btn-sm" (click)="upVote(new.upvote, new.uid)">
 			    			<span class="glyphicon glyphicon-triangle-top" aria-hidden="true"></span>{{new.upvote}}
 	        			</div>
-	        			<div class="btn btn-default" (click)="postOpen(new)">
+	        			<div class="btn btn-default btn-sm">
 							<span class="glyphicon glyphicon-comment" style="color:grey" aria-hidden="true" (click)="void"></span>
 							{{new.comments1}}
 						</div>
-						<div class="btn btn-default hoverButton" style="color:grey" (click)="postOpen(new)">
+						<div class="btn btn-default hoverButton btn-sm" style="color:grey" (click)="postOpen(new)">
 							Expand
 						</div>
 						<a 
-							class="btn btn-default hoverButton" style="color:grey" target="_blank" href="{{new.productlink}}">Go To Site
+							class="btn btn-default hoverButton btn-sm" style="color:grey" target="_blank" href="{{new.productlink}}">Go To Site
 						</a>
-						<div class="pull-right btn btn-default" [routerLink]=new.category >
+						<div class="pull-right btn btn-default btn-sm" style="color:grey" [routerLink]=new.category >
 			    			{{new.category}}
 	        			</div>
-	        			<div class="pull-right btn btn-default" *ngIf="new.category2">
+	        			<div class="pull-right btn btn-default btn-sm" *ngIf="new.category2">
 			    			{{new.category2}}
 	        			</div>
-	        			<div class="pull-right btn btn-default" *ngIf="new.category3">
+	        			<div class="pull-right btn btn-default btn-sm" *ngIf="new.category3">
 			    			{{new.category3}}
 	        			</div>
 					</div>
-			</td>
-		</tr>
-	</table>
-</div>
+				</div> 
+				<hr style="padding:0px; margin:0px">
+			
+		</div>
+	</div>
 
 <div style="text-align:center; padding: 2rem">
 	<a class="btn btn-default"(click)="this.visibilityExpander()" *ngIf="visibilityLimit<15">Load More</a>

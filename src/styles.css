@@ -6,24 +6,9 @@ body {
 */	font-family: 'Roboto', sans-serif;
   	font-size:1.5rem;
   	font-weight: 300;
+    margin-bottom: 60px;
 }
 
-
-
-.myPanel {
-	margin-top: 10px; 
-  margin-bottom:10px;
-	border-style:solid; 
-	border-width: 0.5px; 
-	border-color:lightgrey; 
-	border-radius:3px; 
-}
-
-
-mark {
-    background-color: #dff0d8;
-    color: black;
-}
 
 h1, .h1,
 h2, .h2,
@@ -38,43 +23,23 @@ h6, .h6 {
 
 
 
-body {
-  /* Margin bottom by footer height */
-  margin-bottom: 60px;
-}
-
-
-.footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  background-color: #3d6fbd;
-  padding:0px;
-  margin: 0px;
-}
-
-
 .btn-primary {
   background-color: #3d6fbd;
   border-color: #3d6fbd ;
 }
 
 
-.modal {
-  background: rgba(0,0,0,0.6);
-}
-
-
-
-
 .hoverButton {
   display: none; 
 }
 
-tr:hover .hoverButton {
+.myRow:hover .hoverButton {
    display: inline; 
 }
 
+.myRow:hover {
+   background-color: #f9f9f9
+}
 
 
 .input-group-addon.success {
@@ -82,3 +47,14 @@ tr:hover .hoverButton {
     background-color: rgb(92, 184, 92);
     border-color: rgb(76, 174, 76);
 }
+
+
+.myPanel {
+  margin-top: 10px; 
+  margin-bottom:10px;
+  border-style:solid; 
+  border-width: 0.5px; 
+  border-color:lightgrey; 
+  border-radius:3px; 
+}
+

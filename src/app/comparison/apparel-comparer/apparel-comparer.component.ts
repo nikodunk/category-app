@@ -34,6 +34,7 @@ export class ApparelComparerComponent implements OnInit {
   ngOnInit() {
 
     this.news = this.dataService.fetchData('Apparel')
+    this.postOpen('asdf')
 
   };
 
