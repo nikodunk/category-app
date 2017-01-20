@@ -2,8 +2,8 @@
 
 body {
 	
-/*	background-color: #fafafa;
-*/	font-family: 'Roboto', sans-serif;
+	 background-color: #fafafa;
+	 font-family: 'Roboto', sans-serif;
   	font-size:1.5rem;
   	font-weight: 300;
     margin-bottom: 60px;
@@ -56,5 +56,6 @@ h6, .h6 {
   border-width: 0.5px; 
   border-color:lightgrey; 
   border-radius:3px; 
+  background-color:white;
 }
 
