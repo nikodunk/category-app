@@ -55,10 +55,9 @@
 					Comments
 				</h5>
 				<div class="panel">
-						{{this.selectedItem.comments1}}
+						<!-- {{this.selectedItem.comments1}} -->
+						<disqus [shortname]="superjuice-cc" [identifier]=this.selectedItem.title></disqus>
 				</div>
-				<disqus [shortname]="superjuice" [identifier]="this.selectedItem.title" ></disqus>
-				<!-- <a class="btn btn-default pull-right">Comment</a> -->
 			</div>
 		</div>
       </div>
