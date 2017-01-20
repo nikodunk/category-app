@@ -41,17 +41,16 @@
 		</div> 
 		</div>
 		<div class="row">
-			<div class="col-sm-12" >
+			<!-- <div class="col-sm-12" >
 				<h5>
 					<span class="glyphicon glyphicon-comment" aria-hidden="true" (click)="void"></span> 
 					Comments
 				</h5>
 				<div class="panel">
-						<!-- {{this.selectedItem.comments1}} -->
-						<disqus [shortname]="'superjuice-cc'" [identifier]="selectedItem.title"></disqus>
+						 {{this.selectedItem.comments1}}
+						
 				</div>
-				<a class="btn btn-default pull-right">Comment</a>
-			</div>
+			</div> -->
 		</div>
       </div>
       <div class="modal-footer">
@@ -91,10 +90,10 @@
 						<div class="pull-right btn btn-default btn-sm" style="color:grey" [routerLink]=new.category >
 			    			{{new.category}}
 	        			</div>
-	        			<div class="pull-right btn btn-default btn-sm" *ngIf="new.category2">
+	        			<div class="pull-right btn btn-default btn-sm" style="color:grey" *ngIf="new.category2">
 			    			{{new.category2}}
 	        			</div>
-	        			<div class="pull-right btn btn-default btn-sm" *ngIf="new.category3">
+	        			<div class="pull-right btn btn-default btn-sm" style="color:grey" *ngIf="new.category3">
 			    			{{new.category3}}
 	        			</div>
 					</div>
@@ -108,4 +107,9 @@
 	<a class="btn btn-default"(click)="this.visibilityExpander()" *ngIf="visibilityLimit<15">Load More</a>
 </div>
 
-<div class="myPanel" style="width: 50%; margin-top:100px; margin-bottom:80px; padding: 30px"><h3 style="text-align: center;">Is a great sustainable company missing? Submit it <a routerLink="/Submit">here</a>!</h3></div>
+<div class="myPanel" style="width: 50%; margin-top:100px; margin-bottom:80px; padding: 30px"><h3 style="text-align: center;">Is a great sustainable company missing? <a class="btn btn-primary" routerLink="/Submit">Submit it here!</a></h3></div>
+
+
+
+
+<disqus [shortname]="'superjuice-cc'" [identifier]="selectedItem.title"></disqus>
