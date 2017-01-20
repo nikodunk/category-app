@@ -4,7 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import {PathLocationStrategy, LocationStrategy} from '@angular/common';
 import { AngularFireModule } from 'angularfire2';
-
+import {DisqusModule} from "ng2-awesome-disqus";
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -41,7 +41,8 @@ import { RecentlistComponent } from './recentlist/recentlist.component'
     FormsModule,
     HttpModule,
     AppRoutingModule,
-    AngularFireModule.initializeApp(firebaseConfig)
+    AngularFireModule.initializeApp(firebaseConfig),
+    DisqusModule
   ],
   providers: [{ provide: LocationStrategy, useClass: PathLocationStrategy}, DataService],
   bootstrap: [AppComponent]

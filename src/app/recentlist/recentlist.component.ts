@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService } from '../services/data.service'
-
+import {DisqusModule} from "ng2-awesome-disqus";
 
 declare var jQuery:any;
 
@@ -14,7 +14,7 @@ export class RecentlistComponent implements OnInit {
 
   	news: any;
 
-  	constructor(private dataService: DataService) { }
+  	constructor(private dataService: DataService, private disqus: DisqusModule) { }
     
     selectedItem: any;
     visibilityLimit = 5;
