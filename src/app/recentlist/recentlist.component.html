@@ -49,16 +49,17 @@
 		</div> 
 		</div>
 		<div class="row">
-			<!-- <div class="col-sm-12" >
+			 <div class="col-sm-12" >
 				<h5>
 					<span class="glyphicon glyphicon-comment" aria-hidden="true" (click)="void"></span> 
 					Comments
 				</h5>
 				<div class="panel">
-						 {{this.selectedItem.comments1}}
+						 <!-- {{this.selectedItem.comments1}} -->
+						 <disqus [shortname]="'superjuice-cc'" [identifier]="selectedItem.title" [url]="'superjuice.cc/' + selectedItem.title" [lang]="'en'"    ></disqus>
 						
 				</div>
-			</div> -->
+			</div> 
 		</div>
       </div>
       <div class="modal-footer">
@@ -120,7 +121,7 @@
 *By "sustainable" we mean products with a socially or environmentally responsible component, or help accelerate  transitioning to a carbon-free economy.
 
 
-<disqus [shortname]="'superjuice-cc'" [identifier]="selectedItem.title"></disqus>
+<!-- <disqus [shortname]="'superjuice-cc'" [identifier]="selectedItem.title"></disqus> -->
 
 
 
