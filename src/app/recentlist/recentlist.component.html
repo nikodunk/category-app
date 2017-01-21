@@ -15,22 +15,22 @@
 
 
 
-<div *ngIf="selectedItem" class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-	
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
    <div class="modal-dialog modal-lg" role="document">
     <div class="modal-content">
-	<app-details></app-details>   
-<!--   <div class="modal-header">
-        <h3 class="modal-title" id="exampleModalLabel">
+   		<div class="modal-header">
+        <<!-- h3 class="modal-title" id="exampleModalLabel">
         	{{this.selectedItem.title}} | {{this.selectedItem.category}}
         	<button class="btn btn-default pull-right" (click)="upVote(new.upvote, new.uid)">
 			    Upvote
 			    <span class="glyphicon glyphicon-triangle-top" aria-hidden="true"></span>{{this.selectedItem.upvote}}
 	        </button>
-        </h3>
+        </h3> -->
       </div>
       <div class="modal-body">
-      <div class="row">
+      
+      <router-outlet></router-outlet>
+      <!-- <div class="row">
          <div class="col-sm-6">
 			 <div class="embed-responsive embed-responsive-16by9">
 				 <iframe 
@@ -62,11 +62,14 @@
 						
 				</div>
 			</div>
-		</div>
+		</div> -->
+
+
+
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-      </div>-->
+      </div>
     </div>
   </div> 
 </div>
@@ -76,7 +79,7 @@
 
 	
 	<div class="myPanel" style="">
-		<div *ngFor="let new of news | async, let i = index" (click)="postOpen(new)" style="cursor:pointer" class="myRow">
+		<div *ngFor="let new of news | async, let i = index" [routerLink]="new.title" (click)="postOpen()" style="cursor:pointer" class="myRow">
 			 
 				<div class="row" style="padding:10px" *ngIf="i<visibilityLimit">
 					<div class="col-xs-3 col-sm-2" >

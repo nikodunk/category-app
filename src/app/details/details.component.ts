@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { DataService } from '../services/data.service'
 import {DisqusModule} from "ng2-awesome-disqus";
 
 
@@ -10,10 +9,7 @@ import {DisqusModule} from "ng2-awesome-disqus";
 })
 export class DetailsComponent implements OnInit {
 
-  constructor(private dataService: DataService, private disqus: DisqusModule) { }
-
-  
-
+  constructor() { }
 
   ngOnInit() {
   }

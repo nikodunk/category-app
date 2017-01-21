@@ -23,26 +23,24 @@ export class RecentlistComponent implements OnInit {
            this.visibilityLimit = this.visibilityLimit + 3;
     }
 
-    postOpen(selectedItem){
+    postOpen(){
       jQuery("#myModal").modal("show");
-      this.selectedItem = selectedItem
     }
 
-  	upVote(upvote: number, uid: string){
-  		upvote = upvote + 1
-  		console.log(upvote);
-  		this.news.uid.upvote = upvote
-  	}
+  	// upVote(upvote: number, uid: string){
+  	// 	upvote = upvote + 1
+  	// 	console.log(upvote);
+  	// 	this.news.uid.upvote = upvote
+  	// }
 
-    addComment(comment: string, uid: string){
-    this.news.push(comment)
-    console.log(this.news)
-  }
+  //   addComment(comment: string, uid: string){
+  //   this.news.push(comment)
+  //   console.log(this.news)
+  // }
 
 	ngOnInit() {
 
 	  	    this.news = this.dataService.fetchNews()
-          this.postOpen('asdf')
 
 	}
 
