@@ -16,9 +16,11 @@
 
 
 <div *ngIf="selectedItem" class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-lg" role="document">
+	
+   <div class="modal-dialog modal-lg" role="document">
     <div class="modal-content">
-      <div class="modal-header">
+	<app-details></app-details>   
+<!--   <div class="modal-header">
         <h3 class="modal-title" id="exampleModalLabel">
         	{{this.selectedItem.title}} | {{this.selectedItem.category}}
         	<button class="btn btn-default pull-right" (click)="upVote(new.upvote, new.uid)">
@@ -55,7 +57,7 @@
 					Comments
 				</h5>
 				<div class="panel">
-						 <!-- {{this.selectedItem.comments1}} -->
+						 {{this.selectedItem.comments1}} 
 						 <disqus [shortname]="'superjuice-cc'" [identifier]="selectedItem.title" [url]="'http://superjuice.cc/asdf'" [lang]="'en'"    ></disqus>
 						
 				</div>
@@ -64,9 +66,9 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-      </div>
+      </div>-->
     </div>
-  </div>
+  </div> 
 </div>
 
 
