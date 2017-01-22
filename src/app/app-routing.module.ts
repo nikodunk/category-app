@@ -15,11 +15,6 @@ const routes: Routes = [
     redirectTo: 'New',
     pathMatch: 'full'
   },
-  // {
-  //   path: '*',
-  //   redirectTo: 'About',
-  //   pathMatch: 'full'
-  // },
   {
     path: 'About',
     component: AboutComponent

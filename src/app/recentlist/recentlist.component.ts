@@ -23,6 +23,7 @@ export class RecentlistComponent implements OnInit {
     
     selectedItem: any;
     visibilityLimit = 5;
+    myUrl: any;
  
     visibilityExpander () {
            this.visibilityLimit = this.visibilityLimit + 3;
@@ -31,6 +32,7 @@ export class RecentlistComponent implements OnInit {
     postOpen(selectedItem){
       jQuery("#myModal").modal("show");
       this.selectedItem = selectedItem
+    
       // this.location.go('/'+ this.selectedItem.title)
       // console.log(this.location.path())
     }
