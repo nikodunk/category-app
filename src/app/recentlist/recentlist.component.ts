@@ -49,7 +49,7 @@ export class RecentlistComponent implements OnInit {
 	ngOnInit() {
 
 	  	    this.news = this.dataService.fetchNews()
-          // this.postOpen('asdf')
+          this.postOpen('asdf')
           
 
 	}
