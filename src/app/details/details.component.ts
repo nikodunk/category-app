@@ -1,6 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import {DisqusModule} from "ng2-awesome-disqus";
-
+import {Location} from '@angular/common';
+ 
 
 @Component({
   selector: 'app-details',
@@ -13,11 +14,13 @@ export class DetailsComponent implements OnInit {
 	
 	@Input() selectedItem: any;
 
-  constructor() { }
+  constructor(private location: Location) { }
 
   ngOnInit() {
-  	console.log(this.selectedItem)
-
+    
+  	
+  	
+    
 
 }
 }

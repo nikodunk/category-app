@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { DataService } from '../services/data.service'
 import {DisqusModule} from "ng2-awesome-disqus";
 import { DetailsComponent } from '../details/details.component'
+import { Location } from '@angular/common'
 
 declare var jQuery:any;
 
@@ -15,7 +16,10 @@ export class RecentlistComponent implements OnInit {
 
   	news: any;
 
-  	constructor(private dataService: DataService, private disqus: DisqusModule, private details: DetailsComponent) { }
+  	constructor(  private dataService: DataService,
+                  private disqus: DisqusModule, 
+                  private details: DetailsComponent,
+                  private location: Location) { }
     
     selectedItem: any;
     visibilityLimit = 5;
@@ -27,6 +31,8 @@ export class RecentlistComponent implements OnInit {
     postOpen(selectedItem){
       jQuery("#myModal").modal("show");
       this.selectedItem = selectedItem
+      this.location.go('/'+ this.selectedItem.title)
+      console.log(this.location.path())
     }
 
   	// upVote(upvote: number, uid: string){
