@@ -7,58 +7,15 @@
 </div>
       	
 
-<div *ngIf="selectedItem" class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div *ngIf="selectedItem" id="myModal" class="modal fade" tabindex="-1" role="dialog">
   <div class="modal-dialog modal-lg" role="document">
     <div class="modal-content">
-      <div class="modal-header">
-        <h3 class="modal-title" id="exampleModalLabel">
-        	{{this.selectedItem.title}} | {{this.selectedItem.category}}
-        	<button class="btn btn-default pull-right" (click)="upVote(new.upvote, new.uid)">
-			    Upvote
-			    <span class="glyphicon glyphicon-triangle-top" aria-hidden="true"></span>{{this.selectedItem.upvote}}
-	        </button>
-        </h3>
-      </div>
-      <div class="modal-body">
-      <div class="row">
-         <div class="col-sm-6">
-			 <div class="embed-responsive embed-responsive-16by9">
-				 <iframe 
-					class="embed-responsive-item"
-					[src]="this.selectedItem.video1 | safe"
-					allowfullscreen>
-				</iframe>
-			</div>
-		</div>
-		 <div class="col-sm-6">
-			<p><b>Sustainability & Ethics</b> | {{this.selectedItem.sust1}}</p>
-			<p><b>Best For</b> | {{this.selectedItem.bestfor}}</p>
-			<p><b>Product Range</b> | {{this.selectedItem.range}}</p>
-			<p><b>Price Range</b> | {{this.selectedItem.price}}</p>
-			<p>{{this.selectedItem.intro}}</p>
-			<a class="btn btn-info" target="_blank" href="{{this.selectedItem.sustlink}}">Sustainability & Ethics</a>
-			<a target="_blank" class="btn btn-primary" href="{{this.selectedItem.productlink}}">Go To Site</a>
-		</div> 
-		</div>
-		<div class="row">
-			<!-- <div class="col-sm-12" >
-				<h5>
-					<span class="glyphicon glyphicon-comment" aria-hidden="true" (click)="void"></span> 
-					Comments
-				</h5>
-				<div class="panel">
-						 {{this.selectedItem.comments1}}
-						
-				</div>
-			</div> -->
-		</div>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-      </div>
-    </div>
-  </div>
-</div>
+      
+         <app-details [selectedItem]="selectedItem"></app-details> 
+      
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
 
 
 
@@ -74,11 +31,11 @@
 					<div class="col-xs-9 col-sm-10">
 						<h3>{{new.title}}</h3>
 						<p>{{new.sust1}}</p>
-	         			<div class="btn btn-default btn-sm" (click)="upVote(new.upvote, new.uid)">
+	         			<!-- <div class="btn btn-default btn-sm" (click)="upVote(new.upvote, new.uid)">
 			    			<span class="glyphicon glyphicon-triangle-top" aria-hidden="true"></span>{{new.upvote}}
-	        			</div>
+	        			</div> -->
 	        			<div class="btn btn-default btn-sm">
-							<span class="glyphicon glyphicon-comment" style="color:grey" aria-hidden="true" (click)="void"></span>
+							<span class="glyphicon glyphicon-comment" aria-hidden="true" (click)="void"></span>
 							{{new.comments1}}
 						</div>
 						<div class="btn btn-default hoverButton btn-sm" style="color:grey" (click)="postOpen(new)">
@@ -108,8 +65,3 @@
 </div>
 
 <div class="myPanel" style="width: 50%; margin-top:100px; margin-bottom:80px; padding: 30px"><h3 style="text-align: center;">Is a great sustainable company missing? <a class="btn btn-primary" routerLink="/Submit">Submit it here!</a></h3></div>
-
-
-
-
-<disqus [shortname]="'superjuice-cc'" [identifier]="selectedItem.title"></disqus>

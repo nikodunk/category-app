@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService } from '../services/data.service'
 import {DisqusModule} from "ng2-awesome-disqus";
+import { DetailsComponent } from '../details/details.component'
 
 declare var jQuery:any;
 
@@ -14,7 +15,7 @@ export class RecentlistComponent implements OnInit {
 
   	news: any;
 
-  	constructor(private dataService: DataService, private disqus: DisqusModule) { }
+  	constructor(private dataService: DataService, private disqus: DisqusModule, private details: DetailsComponent) { }
     
     selectedItem: any;
     visibilityLimit = 5;
@@ -23,8 +24,9 @@ export class RecentlistComponent implements OnInit {
            this.visibilityLimit = this.visibilityLimit + 3;
     }
 
-    postOpen(){
+    postOpen(selectedItem){
       jQuery("#myModal").modal("show");
+      this.selectedItem = selectedItem
     }
 
   	// upVote(upvote: number, uid: string){
@@ -41,6 +43,8 @@ export class RecentlistComponent implements OnInit {
 	ngOnInit() {
 
 	  	    this.news = this.dataService.fetchNews()
+          this.postOpen('null')
+          
 
 	}
 

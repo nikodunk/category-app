@@ -20,7 +20,6 @@ import { SubmitterComponent } from './submitter/submitter.component';
 import { ApparelComparerComponent } from './comparison/apparel-comparer/apparel-comparer.component';
 import { RecentlistComponent } from './recentlist/recentlist.component';
 import { DetailsComponent } from './details/details.component';
-import { DetailsStartComponent } from './details/details-start.component'
 
 
 
@@ -38,7 +37,6 @@ import { DetailsStartComponent } from './details/details-start.component'
     ApparelComparerComponent,
     RecentlistComponent,
     DetailsComponent,
-    DetailsStartComponent,
     
   ],
   imports: [
@@ -49,7 +47,7 @@ import { DetailsStartComponent } from './details/details-start.component'
     AngularFireModule.initializeApp(firebaseConfig),
     DisqusModule
   ],
-  providers: [{ provide: LocationStrategy, useClass: PathLocationStrategy}, DataService],
+  providers: [{ provide: LocationStrategy, useClass: PathLocationStrategy}, DataService, DetailsComponent],
   bootstrap: [AppComponent]
 })
 

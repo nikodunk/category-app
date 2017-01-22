@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import {DisqusModule} from "ng2-awesome-disqus";
 
 
@@ -9,9 +9,15 @@ import {DisqusModule} from "ng2-awesome-disqus";
 })
 export class DetailsComponent implements OnInit {
 
+	
+	
+	@Input() selectedItem: any;
+
   constructor() { }
 
   ngOnInit() {
-  }
+  	console.log(this.selectedItem)
 
+
+}
 }
