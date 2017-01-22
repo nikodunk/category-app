@@ -42,13 +42,14 @@
 						 
 						
 				</div> -->
-				<div class="fb-comments" data-href="http://www.superjuice.cc" data-numposts="5"></div>
+				<disqus [shortname]="'superjuice-cc'" [identifier]="this.selectedItem" 
+    [url]="this.selectedItem" [categoryId]="this.selectedItem" [lang]="'en'" [removeOnDestroy]="true"></disqus>
 			</div>
 		</div>
 
 
 </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-default" data-dismiss="modal" (click)="this.selectedItem = null">Close</button>
         
 </div>
