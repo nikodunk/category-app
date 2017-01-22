@@ -31,8 +31,8 @@ export class RecentlistComponent implements OnInit {
     postOpen(selectedItem){
       jQuery("#myModal").modal("show");
       this.selectedItem = selectedItem
-      this.location.go('/'+ this.selectedItem.title)
-      console.log(this.location.path())
+      // this.location.go('/'+ this.selectedItem.title)
+      // console.log(this.location.path())
     }
 
   	// upVote(upvote: number, uid: string){
@@ -49,7 +49,7 @@ export class RecentlistComponent implements OnInit {
 	ngOnInit() {
 
 	  	    this.news = this.dataService.fetchNews()
-          this.postOpen('null')
+          this.postOpen('asdf')
           
 
 	}
