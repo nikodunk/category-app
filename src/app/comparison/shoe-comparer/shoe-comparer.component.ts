@@ -7,15 +7,15 @@ declare var jQuery:any;
 
 
 @Component({
-  selector: 'app-esco-comparer',
-  templateUrl: './esco-comparer.component.html',
-  styleUrls: ['./esco-comparer.component.css']
+  selector: 'app-shoe-comparer',
+  templateUrl: './shoe-comparer.component.html'
 })
-export class EscoComparerComponent implements OnInit {
+export class ShoeComparerComponent implements OnInit {
 
   
+  
 
-      news: any;
+  news: any;
 
     constructor(  private dataService: DataService,
                   private disqus: DisqusModule, 
@@ -48,13 +48,12 @@ export class EscoComparerComponent implements OnInit {
   //   console.log(this.news)
   // }
 
-
   ngOnInit() {
 
-          this.news = this.dataService.fetchData('Energy')
+          this.news = this.dataService.fetchData('Shoes')
           this.postOpen('asdf')
           
 
   }
-  
+
 }

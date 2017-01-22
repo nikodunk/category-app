@@ -7,6 +7,7 @@ import { EscoComparerComponent } from './comparison/esco-comparer/esco-comparer.
 import { SubmitterComponent } from './submitter/submitter.component';
 import { ApparelComparerComponent } from './comparison/apparel-comparer/apparel-comparer.component';
 import { RecentlistComponent } from './recentlist/recentlist.component'
+import { ShoeComparerComponent } from './comparison/shoe-comparer/shoe-comparer.component';
 
 
 const routes: Routes = [
@@ -34,6 +35,10 @@ const routes: Routes = [
   {
     path: 'Apparel',
     component: ApparelComparerComponent
+  },
+  {
+    path: 'Shoes',
+    component: ShoeComparerComponent
   }
 ];
 

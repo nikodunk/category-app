@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { DataService } from '../services/data.service'
 import {DisqusModule} from "ng2-awesome-disqus";
 import { DetailsComponent } from '../details/details.component'
-import { Location } from '@angular/common'
 
 declare var jQuery:any;
 
@@ -18,15 +17,14 @@ export class RecentlistComponent implements OnInit {
 
   	constructor(  private dataService: DataService,
                   private disqus: DisqusModule, 
-                  private details: DetailsComponent,
-                  private location: Location) { }
+                  private details: DetailsComponent) { }
     
     selectedItem: any;
     visibilityLimit = 5;
     myUrl: any;
  
     visibilityExpander () {
-           this.visibilityLimit = this.visibilityLimit + 3;
+           this.visibilityLimit = this.visibilityLimit + 5;
     }
 
     postOpen(selectedItem){

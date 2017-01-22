@@ -1,7 +1,7 @@
 <div style="padding-top:100px; padding-bottom:80px">
 
-    <h2>Sustainable & Ethical Apparel Companies</h2>
-    <p>The Leaderboard to find the best sustainable and ethical apparel companies</p>
+    <h2>Sustainable & Ethical Fashion Companies</h2>
+    <p>The user-submitted directory of the best sustainable fashion companies</p>
     <div >
     </div>
 </div>
@@ -34,11 +34,12 @@
 	         			<!-- <div class="btn btn-default btn-sm" (click)="upVote(new.upvote, new.uid)">
 			    			<span class="glyphicon glyphicon-triangle-top" aria-hidden="true"></span>{{new.upvote}}
 	        			</div> -->
-	        			<div class="btn btn-default btn-sm">
-							<span class="glyphicon glyphicon-comment" aria-hidden="true" (click)="void"></span>
+	        			<!-- <div class="btn btn-default btn-sm">
+							
 							{{new.comments1}}
-						</div>
-						<div class="btn btn-default hoverButton btn-sm" style="color:grey" (click)="postOpen(new)">
+						</div> -->
+						<div class="btn btn-default btn-sm" style="color:grey" (click)="postOpen(new)">
+						<span class="glyphicon glyphicon-facetime-video" aria-hidden="true" style="color:grey" (click)="void"></span>
 							Expand
 						</div>
 						<a 
@@ -59,9 +60,15 @@
 			
 		</div>
 	</div>
+	
+
 
 <div style="text-align:center; padding: 2rem">
-	<a class="btn btn-default"(click)="this.visibilityExpander()" *ngIf="visibilityLimit<15">Load More</a>
+	<a class="btn btn-default"(click)="this.visibilityExpander()" >Load More</a>
 </div>
 
-<div class="myPanel" style="width: 50%; margin-top:100px; margin-bottom:80px; padding: 30px"><h3 style="text-align: center;">Is a great sustainable company missing? <a class="btn btn-primary" routerLink="/Submit">Submit it here!</a></h3></div>
+ 
+<div class="myPanel" style="width: 50%; margin-top:100px; margin-bottom:80px; padding: 30px"><h3 style="text-align: center;">Is a great sustainable company missing? <br><br><a class="btn btn-success" routerLink="/Submit">Submit it here !</a></h3></div>
+    		
+
+<disqus [shortname]="'superjuice-cc'" [identifier]="selectedItem.title"></disqus>

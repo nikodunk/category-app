@@ -1,7 +1,7 @@
 <div style="padding-top:100px; padding-bottom:80px">
 
-    <h2>Energy Companies (ESCOs)</h2>
-    <p>The Leaderboard to find the best sustainable energy service companies</p>
+    <h2>Sustainable Energy Companies (ESCOs)</h2>
+    <p>The user-submitted directory of sustainable energy service companies</p>
     <br>
     <div >
         <p class="blog-post-meta">Energy Service Companies are a great way to get renewable energy in your home without installing any hardware: These companies will sell you green energy from remote wind farms and solar power plants. But there are a lot of shady sales tactics reported from this business and some hidden fees. Also – how green is the energy really? Find out in our comparison of the best Energy Service Companies below.</p>
@@ -24,7 +24,7 @@
 
 	
 	<div class="myPanel" style="">
-		<a *ngFor="let new of news | async, let i = index" [href]="new.title" (click)="postOpen(new)" style="cursor:pointer" class="myRow">
+		<div *ngFor="let new of news | async, let i = index" (click)="postOpen(new)" style="cursor:pointer" class="myRow">
 			 
 				<div class="row" style="padding:10px" *ngIf="i<visibilityLimit">
 					<div class="col-xs-3 col-sm-2" >
@@ -36,11 +36,12 @@
 	         			<!-- <div class="btn btn-default btn-sm" (click)="upVote(new.upvote, new.uid)">
 			    			<span class="glyphicon glyphicon-triangle-top" aria-hidden="true"></span>{{new.upvote}}
 	        			</div> -->
-	        			<div class="btn btn-default btn-sm">
-							<span class="glyphicon glyphicon-comment" aria-hidden="true" (click)="void"></span>
+	        			<!-- <div class="btn btn-default btn-sm">
+							
 							{{new.comments1}}
-						</div>
-						<div class="btn btn-default hoverButton btn-sm" style="color:grey" (click)="postOpen(new)">
+						</div> -->
+						<div class="btn btn-default btn-sm" style="color:grey" (click)="postOpen(new)">
+						<span class="glyphicon glyphicon-facetime-video" aria-hidden="true" style="color:grey" (click)="void"></span>
 							Expand
 						</div>
 						<a 
@@ -55,18 +56,21 @@
 	        			<div class="pull-right btn btn-default btn-sm" style="color:grey" *ngIf="new.category3">
 			    			{{new.category3}}
 	        			</div>
-					</div>
+	        		</div>
 				</div> 
 				<hr style="padding:0px; margin:0px">
 			
-		</a>
+		</div>
 	</div>
+	
+
 
 <div style="text-align:center; padding: 2rem">
-	<a class="btn btn-default"(click)="this.visibilityExpander()" *ngIf="visibilityLimit<15">Load More</a>
+	<a class="btn btn-default"(click)="this.visibilityExpander()" >Load More</a>
 </div>
 
-<div class="myPanel" style="width: 50%; margin-top:100px; margin-bottom:80px; padding: 30px"><h3 style="text-align: center;">Is a great sustainable company missing? <a class="btn btn-primary" routerLink="/Submit">Submit it here !</a></h3></div>
+ 
+<div class="myPanel" style="width: 50%; margin-top:100px; margin-bottom:80px; padding: 30px"><h3 style="text-align: center;">Is a great sustainable company missing? <br><br><a class="btn btn-success" routerLink="/Submit">Submit it here !</a></h3></div>
     		
 		
 			<hr>
@@ -75,3 +79,4 @@
 			<p>** For 12 month plans</p>
 			<hr>
 
+<disqus [shortname]="'superjuice-cc'" [identifier]="selectedItem.title"></disqus>
