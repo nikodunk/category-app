@@ -22,7 +22,6 @@ import { RecentlistComponent } from './recentlist/recentlist.component';
 import { DetailsComponent } from './details/details.component';
 import { SolarComparerComponent } from './comparison/solar-comparer/solar-comparer.component';
 import { ShoeComparerComponent } from './comparison/shoe-comparer/shoe-comparer.component';
-import { FetchdataPipe } from './fetchdata.pipe';
 import { SortPipe } from './sort.pipe';
 import { FilterPipe } from './filter.pipe';
 import { ReversePipe } from './reverse.pipe';
@@ -45,7 +44,6 @@ import { ReversePipe } from './reverse.pipe';
     DetailsComponent,
     SolarComparerComponent,
     ShoeComparerComponent,
-    FetchdataPipe,
     SortPipe,
     FilterPipe,
     ReversePipe,

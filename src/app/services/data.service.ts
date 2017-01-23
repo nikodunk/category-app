@@ -45,6 +45,15 @@ fetchPosts(){
   
 
 
+
+  storeVote(){
+    const body=JSON.stringify(this.brand);
+    const headers = new Headers({
+      'Content-Type': 'application/json'
+    });
+    return this.http.put('https://superjuice-1cb15.firebaseio.com/brands/.json', body, {headers: headers})
+  }
+
   // fetchESCOs() {
   //   return this.af.database.list('/escos', {
   //         query: {
