@@ -27,8 +27,14 @@
 			<p><b>Product Range</b> | {{this.selectedItem.range}}</p>
 			<p><b>Price Range</b> | {{this.selectedItem.price}}</p>
 			<p>{{this.selectedItem.intro}}</p>
+			
+			<a *ngIf="selectedItem.greene" target="_blank" href="www.green-e.org"><img src="assets/green-e.gif" height="30px"></a>
+			<a *ngIf="selectedItem.organic" style="display:inline" target="_blank" href="https://www.ams.usda.gov/rules-regulations/organic"><img src="assets/organic.gif" height="30px"></a>
+			<a *ngIf="selectedItem.fairtrade" style="display:inline" target="_blank" href="http://fairtradeusa.org/cooplink"><img src="assets/fairtrade.gif" height="30px"></a>
+			
 			<a class="btn btn-info" target="_blank" href="{{this.selectedItem.sustlink}}">Sustainability & Ethics</a>
 			<a target="_blank" class="btn btn-primary" href="{{this.selectedItem.productlink}}">Go To Site</a>
+			
 		</div> 
 		</div>
 		<div class="row">
