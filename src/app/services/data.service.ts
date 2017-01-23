@@ -33,6 +33,15 @@ export class DataService {
     return this.http.post('https://superjuice-1cb15.firebaseio.com/brands.json', body, {headers: headers})
   }
 
+
+fetchPosts(){
+    const body=JSON.stringify(this.brand);
+    const headers = new Headers({
+      'Content-Type': 'application/json'
+    });
+    return this.http.get('https://superjuice-1cb15.firebaseio.com/brands.json')
+      .map(data => data.json())
+  }
   
 
 
@@ -44,24 +53,23 @@ export class DataService {
   //       });
   // }
 
-  fetchNews() {
-    return this.af.database
-              .list('/brands')
-              .map((array) => array.reverse()) as FirebaseListObservable<any[]>;
+  // fetchNews() {
+  //   return this.af.database
+  //             .list('/brands')
+  //             .map((array) => array.reverse()) as FirebaseListObservable<any[]>;
 
-  }
+  // }
 
 
-
-  fetchData(type: string) {
-    return this.af.database
-          .list('/brands', {
-          query: {
-            orderByChild: 'category',
-            equalTo: type,
-          } 
-        });
-  }
+  // fetchData(type: string) {
+  //   return this.af.database
+  //         .list('/brands', {
+  //         query: {
+  //           orderByChild: 'category',
+  //           equalTo: type,
+  //         } 
+  //       });
+  // }
 
   
   

@@ -1,6 +1,7 @@
-<div class="modal-header">
+<div *ngIf="this.selectedItem.value">
+	<div  class="modal-header">
         <h3 class="modal-title" id="exampleModalLabel">
-        	{{this.selectedItem.title}} | {{this.selectedItem.category}}
+        	{{this.selectedItem.value.title}} | {{this.selectedItem.value.category}}
         	<!-- <button class="btn btn-default pull-right" (click)="upVote(new.upvote, new.uid)">
 			    Upvote
 			    <span class="glyphicon glyphicon-triangle-top" aria-hidden="true"></span>{{this.selectedItem.upvote}}
@@ -11,33 +12,33 @@
 
 
 
- <div class="row">
+  <div class="row">
          <div class="col-sm-6">
 			 <div class="embed-responsive embed-responsive-16by9">
 				 <iframe 
 					class="embed-responsive-item"
-					[src]="this.selectedItem.video1 | safe"
+					[src]="this.selectedItem.value.video1 | safe"
 					allowfullscreen>
 				</iframe>
 			</div>
 		</div>
 		 <div class="col-sm-6">
-			<p><b>Sustainability & Ethics</b> | {{this.selectedItem.sust1}}</p>
-			<p><b>Best For</b> | {{this.selectedItem.bestfor}}</p>
-			<p><b>Product Range</b> | {{this.selectedItem.range}}</p>
-			<p><b>Price Range</b> | {{this.selectedItem.price}}</p>
-			<p>{{this.selectedItem.intro}}</p>
+			<p><b>Sustainability & Ethics</b> | {{this.selectedItem.value.sust1}}</p>
+			<p><b>Best For</b> | {{this.selectedItem.value.bestfor}}</p>
+			<p><b>Product Range</b> | {{this.selectedItem.value.range}}</p>
+			<p><b>Price Range</b> | {{this.selectedItem.value.price}}</p>
+			<p>{{this.selectedItem.value.intro}}</p>
 			
-			<a *ngIf="selectedItem.greene" target="_blank" href="www.green-e.org"><img src="assets/green-e.gif" height="30px"></a>
-			<a *ngIf="selectedItem.organic" style="display:inline" target="_blank" href="https://www.ams.usda.gov/rules-regulations/organic"><img src="assets/organic.gif" height="30px"></a>
-			<a *ngIf="selectedItem.fairtrade" style="display:inline" target="_blank" href="http://fairtradeusa.org/cooplink"><img src="assets/fairtrade.gif" height="30px"></a>
+			<a *ngIf="selectedItem.value.greene" target="_blank" href="www.green-e.org"><img src="assets/green-e.gif" height="30px"></a>
+			<a *ngIf="selectedItem.value.organic" style="display:inline" target="_blank" href="https://www.ams.usda.gov/rules-regulations/organic"><img src="assets/organic.gif" height="30px"></a>
+			<a *ngIf="selectedItem.value.fairtrade" style="display:inline" target="_blank" href="http://fairtradeusa.org/cooplink"><img src="assets/fairtrade.gif" height="30px"></a>
 			
-			<a class="btn btn-info" target="_blank" href="{{this.selectedItem.sustlink}}">Sustainability & Ethics</a>
-			<a target="_blank" class="btn btn-primary" href="{{this.selectedItem.productlink}}">Go To Site</a>
+			<a class="btn btn-info" target="_blank" href="{{this.selectedItem.value.sustlink}}">Sustainability & Ethics</a>
+			<a target="_blank" class="btn btn-primary" href="{{this.selectedItem.value.productlink}}">Go To Site</a>
 			
 		</div> 
-		</div>
-		<div class="row">
+</div> 
+<div class="row">
 			 <div class="col-sm-12" >
 				<!-- <h5>
 					<span class="glyphicon glyphicon-comment" aria-hidden="true" (click)="void"></span> 
@@ -50,11 +51,12 @@
 				</div> -->
 				
 			</div>
-		</div>
+</div>
 
 
 </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
         
+</div>
 </div>

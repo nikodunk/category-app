@@ -15,7 +15,7 @@ export class ShoeComparerComponent implements OnInit {
   
   
 
-  news: any;
+        news: any;
 
     constructor(  private dataService: DataService,
                   private disqus: DisqusModule, 
@@ -32,26 +32,17 @@ export class ShoeComparerComponent implements OnInit {
     postOpen(selectedItem){
       jQuery("#myModal").modal("show");
       this.selectedItem = selectedItem
+      
     
-      // this.location.go('/'+ this.selectedItem.title)
-      // console.log(this.location.path())
+      
     }
 
-    // upVote(upvote: number, uid: string){
-    //   upvote = upvote + 1
-    //   console.log(upvote);
-    //   this.news.uid.upvote = upvote
-    // }
-
-  //   addComment(comment: string, uid: string){
-  //   this.news.push(comment)
-  //   console.log(this.news)
-  // }
+    
 
   ngOnInit() {
 
-          this.news = this.dataService.fetchData('Shoes')
-          this.postOpen('asdf')
+          this.dataService.fetchPosts().subscribe(data => this.news = data)
+           this.postOpen('asdf')
           
 
   }

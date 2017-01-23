@@ -22,44 +22,45 @@
 
 	
 	<div class="myPanel" style="">
-		<div *ngFor="let new of news | async, let i = index" (click)="postOpen(new)" style="cursor:pointer" class="myRow">
+		<div *ngFor="let new of news | keypipe | filter: 'Shoes' | sort, let i = index"  (click)="postOpen(new)" style="cursor:pointer" class="myRow">
 			 
-				<div class="row" style="padding:10px" *ngIf="i<visibilityLimit">
-					<div class="col-xs-3 col-sm-2" >
-							 <img style="width:100%; margin-top:20%" src="https://img.youtube.com/vi/{{new.videotag}}/default.jpg">
+				<div class="row" style="padding:10px" *ngIf="this.visibilityLimit > i">
+					 <div class="col-xs-3 col-sm-2" >
+
+							 <img style="width:100%; margin-top:20%" src="https://img.youtube.com/vi/{{new.value.videotag}}/default.jpg">
 					</div> 
 					<div class="col-xs-9 col-sm-10">
-						<h3>{{new.title}}</h3>
-						<p>{{new.sust1}}</p>
-	         			 <!-- <div class="btn btn-default btn-sm" (click)="upVote(new.upvote, new.uid)">
-			    			<span class="glyphicon glyphicon-triangle-top" aria-hidden="true"></span>{{new.upvote}}
-	        			</div>  -->
+						<h3>{{new.value.title}}</h3>
+						 <p>{{new.value.sust1}}</p> 
+	         			  <div class="btn btn-default btn-sm" (click)="void">
+			    			<span class="glyphicon glyphicon-triangle-top" aria-hidden="true"></span>{{new.value.upvote}} Upvotes
+	        			</div>  
 	        			<!-- <div class="btn btn-default btn-sm">
 							
-							{{new.comments1}}
+							{{new.value.comments1}}
 						</div> -->
-						<p *ngIf="new.greene" style="display:inline"><a target="_blank" href="www.green-e.org"><img src="assets/green-e.gif" height="30px"></a></p>
-						<p *ngIf="new.organic" style="display:inline"><a target="_blank" href="https://www.ams.usda.gov/rules-regulations/organic"><img src="assets/organic.gif" height="30px"></a></p>
-						<p *ngIf="new.fairtrade" style="display:inline"><a target="_blank" href="http://fairtradeusa.org/cooplink"><img src="assets/fairtrade.gif" height="30px"></a></p>
+						<p *ngIf="new.value.greene" style="display:inline"><a target="_blank" href="www.green-e.org"><img src="assets/green-e.gif" height="30px"></a></p>
+						<p *ngIf="new.value.organic" style="display:inline"><a target="_blank" href="https://www.ams.usda.gov/rules-regulations/organic"><img src="assets/organic.gif" height="30px"></a></p>
+						<p *ngIf="new.value.fairtrade" style="display:inline"><a target="_blank" href="http://fairtradeusa.org/cooplink"><img src="assets/fairtrade.gif" height="30px"></a></p>
 						
-						<div class="btn btn-default btn-sm" style="color:grey" (click)="postOpen(new)">
+						<div class="btn btn-default btn-sm hoverButton" style="color:grey" (click)="postOpen(new.value)">
 						<span class="glyphicon glyphicon-facetime-video" aria-hidden="true" style="color:grey"></span>
 							Expand
 						</div>
 						
 						<a 
-							class="btn btn-default hoverButton btn-sm" style="color:grey" target="_blank" href="{{new.productlink}}">Go To Site
+							class="btn btn-default hoverButton btn-sm" style="color:grey" target="_blank" href="{{new.value.productlink}}">Go To Site
 						</a>
 
-						<div class="pull-right btn btn-default btn-sm" style="color:grey" [routerLink]=new.category >
-			    			{{new.category}}
+						<div class="pull-right btn btn-default btn-sm" style="color:grey" [routerLink]=new.value.category >
+			    			{{new.value.category}}
 	        			</div>
-	        			<div class="pull-right btn btn-default btn-sm" style="color:grey" *ngIf="new.category2">
-			    			{{new.category2}}
+	        			<div class="pull-right btn btn-default btn-sm" style="color:grey" *ngIf="new.value.category2">
+			    			{{new.value.category2}}
 	        			</div>
-	        			<div class="pull-right btn btn-default btn-sm" style="color:grey" *ngIf="new.category3">
-			    			{{new.category3}}
-	        			</div>
+	        			<div class="pull-right btn btn-default btn-sm" style="color:grey" *ngIf="new.value.category3">
+			    			{{new.value.category3}}
+	        			</div> 
 	        		</div>
 				</div> 
 				<hr style="padding:0px; margin:0px">
