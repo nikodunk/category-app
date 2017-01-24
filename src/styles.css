@@ -60,6 +60,13 @@ h6, .h6 {
   box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, .05);
 }
 
-ul .disqus-footer {
-  display:none;
-}
+
+@media screen and (max-width: 768px){
+      .hoverButton{display:none !important;}
+      div.pull-right.btn.btn{display:none !important;}
+      div.container{margin:0px !important;
+                    padding:0px !important;}
+      .hoverButton{display:none !important;} 
+      div.col-md-8.col-md-offset-2{margin:5px !important;
+                                    padding:0px !important;}
+    }

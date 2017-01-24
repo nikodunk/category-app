@@ -2,8 +2,9 @@
 
 <div style="padding-top:100px; padding-bottom: 100px">
 	
-    <h2>Find, Share & Compare Sustainable* Companies.</h2>
-    <p>Superjuice is a catalog of sustainable companies that anyone can add to, comment on, vote on or share their experiences with. It is here to help consumers find sustainable companies to buy from, compare their certifications and judge their trustworthiness.</p>
+    <!-- <h2>Find, Share & Compare Sustainable* Companies.</h2> -->
+    <h2>Let's Stack Sustainable* Companies!</h2>
+    <p>Superjuice is a catalog of sustainable companies that anyone can rank, review and add to. It's inspired by the Whole Earth Catalog. It takes the pain out of green buying decisions by providing a quick overview of trustworthiness, certifications, and others' experiences.</p>
 </div>
  
 <app-sign-up></app-sign-up>
@@ -30,13 +31,13 @@
 		<div *ngFor="let new of news  | keypipe | reverse, let i = index"  (click)="postOpen(new)" style="cursor:pointer" class="myRow">
 			 
 				<div class="row" style="padding:10px" *ngIf="this.visibilityLimit > i">
-					 <div class="col-xs-3 col-sm-2" >
+					 <div class="col-xs-4 col-sm-2" >
 
-							 <img style="width:100%; margin-top:20%" src="https://img.youtube.com/vi/{{new.value.videotag}}/default.jpg">
+						<img style="width:100%; margin-top:20%" src="https://img.youtube.com/vi/{{new.value.videotag}}/default.jpg">
 					</div> 
-					<div class="col-xs-9 col-sm-10">
+					<div class="col-xs-8 col-sm-10">
 						<h3>{{new.value.title}}</h3>
-						 <p>{{new.value.sust1}}</p> 
+						 <p style="color:grey">{{new.value.sust1}}</p> 
 	         			  <div class="btn btn-default btn-sm" (click)="upVote(new)">
 			    			<span class="glyphicon glyphicon-triangle-top" aria-hidden="true"></span>{{new.value.upvote}} Upvotes
 	        			</div>  
