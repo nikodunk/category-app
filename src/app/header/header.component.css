@@ -21,4 +21,12 @@ span.glyphicon-plus-sign {
     font-size: 1.2em;
     padding: 0px;
     margin: 0px;
+    color:#5cb85c;
+}
+
+
+
+
+span.glyphicon-plus-sign:hover {
+    color:#3dff3d;
 }

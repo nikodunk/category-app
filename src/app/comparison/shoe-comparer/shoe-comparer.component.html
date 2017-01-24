@@ -1,6 +1,6 @@
 <div style="padding-top:100px; padding-bottom:80px">
 
-    <h2>Sustainable & Ethical Footwear Companies</h2>
+    <h2>More Sustainable & Ethical Footwear Companies</h2>
     <p>The user-submitted directory of sustainable and ethical footwear companies</p>
     <div >
     </div>
@@ -25,13 +25,13 @@
 		<div *ngFor="let new of news | keypipe | filter: 'Shoes' | sort, let i = index"  (click)="postOpen(new)" style="cursor:pointer" class="myRow">
 			 
 				<div class="row" style="padding:10px" *ngIf="this.visibilityLimit > i">
-					 <div class="col-xs-3 col-sm-2" >
+					 <div class="col-xs-4 col-sm-2" >
 
-							 <img style="width:100%; margin-top:20%" src="https://img.youtube.com/vi/{{new.value.videotag}}/default.jpg">
+						<img style="width:100%; margin-top:20%" src="https://img.youtube.com/vi/{{new.value.videotag}}/default.jpg">
 					</div> 
-					<div class="col-xs-9 col-sm-10">
+					<div class="col-xs-8 col-sm-10">
 						<h3>{{new.value.title}}</h3>
-						 <p>{{new.value.sust1}}</p> 
+						 <p style="color:grey">{{new.value.sust1}}</p> 
 	         			  <div class="btn btn-default btn-sm" (click)="upVote(new)">
 			    			<span class="glyphicon glyphicon-triangle-top" aria-hidden="true"></span>{{new.value.upvote}} Upvotes
 	        			</div>  
@@ -82,4 +82,19 @@
 <div class="myPanel" style=" margin-top:100px; margin-bottom:80px; padding: 30px"><h3 style="text-align: center;">Is a great sustainable company missing? <br><br> <a class="btn btn-success" routerLink="/Submit">Submit it here !</a></h3></div>
     		
 
-<!-- <disqus [shortname]="'superjuice-cc'" [identifier]="selectedItem.title"></disqus> -->
+<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+  <div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="headingThree">
+      <h4 class="panel-title">
+        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+          Comments
+        </a>
+      </h4>
+    </div>
+    <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+      <div class="panel-body">
+        <disqus [shortname]="'superjuice-cc'" [identifier]="'great'"></disqus>
+      </div>
+    </div>
+  </div>
+</div>
