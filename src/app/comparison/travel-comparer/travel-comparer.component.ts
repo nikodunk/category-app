@@ -8,11 +8,11 @@ declare var jQuery:any;
 
 
 @Component({
-  selector: 'app-solar-comparer',
-  templateUrl: './solar-comparer.component.html',
-  styleUrls: ['./solar-comparer.component.css']
+  selector: 'app-travel-comparer',
+  templateUrl: './travel-comparer.component.html',
+  styleUrls: ['./travel-comparer.component.css']
 })
-export class SolarComparerComponent implements OnInit {
+export class TravelComparerComponent implements OnInit {
 
   
   

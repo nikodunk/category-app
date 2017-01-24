@@ -25,6 +25,15 @@ import { ShoeComparerComponent } from './comparison/shoe-comparer/shoe-comparer.
 import { SortPipe } from './sort.pipe';
 import { FilterPipe } from './filter.pipe';
 import { ReversePipe } from './reverse.pipe';
+import { EyewearComparerComponent } from './comparison/eyewear-comparer/eyewear-comparer.component';
+import { CosmeticComparerComponent } from './comparison/cosmetic-comparer/cosmetic-comparer.component';
+import { SkincareComparerComponent } from './comparison/skincare-comparer/skincare-comparer.component';
+import { FoodComparerComponent } from './comparison/food-comparer/food-comparer.component';
+import { TransportComparerComponent } from './comparison/transport-comparer/transport-comparer.component';
+import { HomeComparerComponent } from './comparison/home-comparer/home-comparer.component';
+import { FinanceComparerComponent } from './comparison/finance-comparer/finance-comparer.component';
+import { TravelComparerComponent } from './comparison/travel-comparer/travel-comparer.component';
+import { CleaningComparerComponent } from './comparison/cleaning-comparer/cleaning-comparer.component';
 
 
 
@@ -47,6 +56,15 @@ import { ReversePipe } from './reverse.pipe';
     SortPipe,
     FilterPipe,
     ReversePipe,
+    EyewearComparerComponent,
+    CosmeticComparerComponent,
+    SkincareComparerComponent,
+    FoodComparerComponent,
+    TransportComparerComponent,
+    HomeComparerComponent,
+    FinanceComparerComponent,
+    TravelComparerComponent,
+    CleaningComparerComponent,
     
   ],
   imports: [

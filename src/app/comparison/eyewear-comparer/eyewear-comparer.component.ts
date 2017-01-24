@@ -4,15 +4,16 @@ import {DisqusModule} from "ng2-awesome-disqus";
 import { DetailsComponent } from '../../details/details.component'
 import { KeypipePipe } from '../../keypipe.pipe'
 
+
 declare var jQuery:any;
 
 
 @Component({
-  selector: 'app-solar-comparer',
-  templateUrl: './solar-comparer.component.html',
-  styleUrls: ['./solar-comparer.component.css']
+  selector: 'app-eyewear-comparer',
+  templateUrl: './eyewear-comparer.component.html',
+  styleUrls: ['./eyewear-comparer.component.css']
 })
-export class SolarComparerComponent implements OnInit {
+export class EyewearComparerComponent implements OnInit {
 
   
   
