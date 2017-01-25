@@ -28,7 +28,7 @@
 
 	
 	<div class="myPanel" style="">
-		<div *ngFor="let new of news  | keypipe | reverse, let i = index"  (click)="postOpen(new)" style="cursor:pointer" class="myRow">
+		<div *ngFor="let new of news  | keypipe | reverse, let i = index"  (click)="postOpen(new).stopPropagation()" style="cursor:pointer" class="myRow">
 			 
 				<div class="row" style="padding:10px" *ngIf="this.visibilityLimit > i">
 					 <div class="col-xs-4 col-sm-2" >
@@ -38,7 +38,7 @@
 					<div class="col-xs-8 col-sm-10">
 						<h3>{{new.value.title}}</h3>
 						 <p style="color:grey">{{new.value.sust1}}</p> 
-	         			  <div class="btn btn-default btn-sm" (click)="upVote(new)">
+	         			  <div class="btn btn-default btn-sm" (click)="upVote(new,$event)">
 			    			<span class="glyphicon glyphicon-triangle-top" aria-hidden="true"></span>{{new.value.upvote}} Upvotes
 	        			</div>  
 	        			<!-- <div class="btn btn-default btn-sm">
