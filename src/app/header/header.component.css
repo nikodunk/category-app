@@ -30,3 +30,12 @@ span.glyphicon-plus-sign {
 span.glyphicon-plus-sign:hover {
     color:#3dff3d;
 }
+
+
+
+
+@media (min-width: 768px) {
+  ul.nav li.dropdown:hover > ul.dropdown-menu {
+    display: block;
+  }
+}

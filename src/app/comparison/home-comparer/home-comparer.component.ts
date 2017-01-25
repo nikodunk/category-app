@@ -24,11 +24,11 @@ export class HomeComparerComponent implements OnInit {
                   private details: DetailsComponent) { }
     
     selectedItem: any;
-    visibilityLimit = 5;
+    visibilityLimit = 15;
     myUrl: any;
  
     visibilityExpander () {
-           this.visibilityLimit = this.visibilityLimit + 5;
+           this.visibilityLimit = this.visibilityLimit + 10;
     }
 
     postOpen(selectedItem){
