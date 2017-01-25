@@ -24,7 +24,7 @@
 
 	
 	<div class="myPanel" style="">
-		<div *ngFor="let new of news | keypipe | filter: 'Energy' | sort, let i = index"  (click)="postOpen(new)" style="cursor:pointer" class="myRow">
+		<div *ngFor="let new of news | keypipe | filter: 'Power' | sort, let i = index"  (click)="postOpen(new)" style="cursor:pointer" class="myRow">
 			 
 				<div class="row" style="padding:10px" *ngIf="this.visibilityLimit > i">
 					 <div class="col-xs-4 col-sm-2" >
