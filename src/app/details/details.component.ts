@@ -2,6 +2,7 @@ import { Component, OnInit, Input } from '@angular/core';
 import {DisqusModule} from "ng2-awesome-disqus";
 import {Location} from '@angular/common';
  
+declare var jQuery:any;
 
 @Component({
   selector: 'app-details',
@@ -19,7 +20,11 @@ export class DetailsComponent implements OnInit {
 
 	}
 
-
+  stopVideo(){
+    jQuery("#myModal").on('hidden.bs.modal', function (e) {
+    jQuery("#myModal iframe").attr("src", jQuery("#myModal iframe").attr("src"));
+});
+  }
 
 
 

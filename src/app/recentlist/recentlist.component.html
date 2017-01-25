@@ -1,15 +1,13 @@
 
 
-<div style="padding-top:100px; padding-bottom: 100px">
+<div style="padding-top:60px; padding-bottom: 60px">
 	
     <!-- <h2>Find, Share & Compare Sustainable* Companies.</h2> -->
-    <h2>Let's Rank Sustainable* Brands!</h2>
-    <p>Superjuice is a catalog of sustainable companies that anyone can rank, review and add to. It's inspired by the Whole Earth Catalog. It takes the pain out of green buying decisions by providing a quick overview of trustworthiness, certifications, and others' experiences.</p>
+    <h2>Let's Find The Best Sustainable* Brands!</h2>
+    <p>Superjuice is a catalog of sustainable companies that anyone can rank, review and add to. It's inspired by Stewart Brand's <a href="https://en.wikipedia.org/wiki/Whole_Earth_Catalog">Whole Earth Catalog</a>. It takes the pain out of green buying decisions by providing a quick overview of trustworthiness, certifications, and others' experiences.</p>
 </div>
  
-<app-sign-up></app-sign-up>
-<br>
-<h4>Submitted Today</h4>
+
 
 
 
@@ -26,9 +24,78 @@
 
 
 
+
+<!--.....................................................................-->
+<h4>This Week's Featured Video</h4>
+
+<div class="myPanel" style="">
+		<div *ngFor="let new of news | keypipe | filter: 'Shoes' | sort, let i = index"  (click)="postOpen(new)" style="cursor:pointer" class="myRow">
+			 
+				<div class="row" style="padding:10px" *ngIf="1 > i">
+					 <div class="col-sm-6" >
+
+						<div class="embed-responsive embed-responsive-16by9">
+							 <iframe 
+							 	id="yt-player"
+								class="embed-responsive-item"
+								[src]="new.value.video1 | safe"
+								allowfullscreen>
+							</iframe>
+						</div>
+
+					</div> 
+					<div class="col-xs-8 col-sm-6">
+						<h3>{{new.value.title}}</h3>
+						 <p style="color:grey">{{new.value.sust1}}</p> 
+	         			  <div class="btn btn-default btn-sm" (click)="upVote(new,$event)">
+			    			<span class="glyphicon glyphicon-triangle-top" aria-hidden="true"></span>{{new.value.upvote}} Upvotes
+	        			</div>  
+	        			<!-- <div class="btn btn-default btn-sm">
+							
+							{{new.value.comments1}}
+						</div> -->
+						<p *ngIf="new.value.greene" style="display:inline"><a target="_blank" href="www.green-e.org"><img src="assets/green-e.gif" height="30px"></a></p>
+						<p *ngIf="new.value.organic" style="display:inline"><a target="_blank" href="https://www.ams.usda.gov/rules-regulations/organic"><img src="assets/organic.gif" height="30px"></a></p>
+						<p *ngIf="new.value.fairtrade" style="display:inline"><a target="_blank" href="http://fairtradeusa.org/cooplink"><img src="assets/fairtrade.gif" height="30px"></a></p>
+						
+						<div class="btn btn-default btn-sm hoverButton" style="color:grey" (click)="postOpen(new.value)">
+						<span class="glyphicon glyphicon-facetime-video" aria-hidden="true" style="color:grey"></span>
+							Expand
+						</div>
+						
+						<a 
+							class="btn btn-default hoverButton btn-sm" style="color:grey" target="_blank" href="{{new.value.productlink}}">Go To Site
+						</a>
+
+						<!-- <div class="pull-right btn btn-default btn-sm" style="color:grey" [routerLink]=new.value.category >
+			    			{{new.value.category}}
+	        			</div>
+	        			<div class="pull-right btn btn-default btn-sm" style="color:grey" *ngIf="new.value.category2">
+			    			{{new.value.category2}}
+	        			</div>
+	        			<div class="pull-right btn btn-default btn-sm" style="color:grey" *ngIf="new.value.category3">
+			    			{{new.value.category3}}
+	        			</div>  -->
+	        		</div>
+				</div> 
+				<hr style="padding:0px; margin:0px">
+			
+		</div>
+	</div>
+<!--.....................................................................-->
+
+
+
+<br>
+<app-sign-up></app-sign-up>
+<br>
+<h4>Submitted Today</h4>
+
+
+
 	
 	<div class="myPanel" style="">
-		<div *ngFor="let new of news  | keypipe | reverse, let i = index"  (click)="postOpen(new).stopPropagation()" style="cursor:pointer" class="myRow">
+		<div *ngFor="let new of news  | keypipe | reverse, let i = index"  (click)="postOpen(new)" style="cursor:pointer" class="myRow">
 			 
 				<div class="row" style="padding:10px" *ngIf="this.visibilityLimit > i">
 					 <div class="col-xs-4 col-sm-2" >

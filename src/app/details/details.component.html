@@ -16,6 +16,7 @@
          <div class="col-sm-6">
 			 <div class="embed-responsive embed-responsive-16by9">
 				 <iframe 
+				 	id="yt-player"
 					class="embed-responsive-item"
 					[src]="this.selectedItem.value.video1 | safe"
 					allowfullscreen>
@@ -28,11 +29,11 @@
 			<p><b>Product Range</b> | {{this.selectedItem.value.range}}</p>
 			<p><b>Price Range</b> | {{this.selectedItem.value.price}}</p>
 			<p>{{this.selectedItem.value.intro}}</p>
-			
+			<br>
 			<a *ngIf="selectedItem.value.greene" target="_blank" href="www.green-e.org"><img src="assets/green-e.gif" height="30px"></a>
 			<a *ngIf="selectedItem.value.organic" style="display:inline" target="_blank" href="https://www.ams.usda.gov/rules-regulations/organic"><img src="assets/organic.gif" height="30px"></a>
 			<a *ngIf="selectedItem.value.fairtrade" style="display:inline" target="_blank" href="http://fairtradeusa.org/cooplink"><img src="assets/fairtrade.gif" height="30px"></a>
-			
+			<hr>
 			<a class="btn btn-info" target="_blank" href="{{this.selectedItem.value.sustlink}}">Sustainability & Ethics</a>
 			<a target="_blank" class="btn btn-success" href="{{this.selectedItem.value.productlink}}">Go To Site</a>
 			
@@ -56,7 +57,8 @@
 
 </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      	<p class="pull-left"><span class="glyphicon glyphicon-user" aria-hidden="true" (click)="void"></span> {{this.selectedItem.value.user}}</p>
+        <button type="button" class="btn btn-default" data-dismiss="modal" (click)="stopVideo()">Close</button>
         
 </div>
 </div>

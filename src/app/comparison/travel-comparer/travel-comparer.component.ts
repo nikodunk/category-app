@@ -40,11 +40,13 @@ export class TravelComparerComponent implements OnInit {
     }
 
 
-    upVote(upvoteItem){
-      console.log(upvoteItem.value.upvote)
+    upVote(upvoteItem, event){
+      // console.log(upvoteItem.value.upvote);
       upvoteItem.value.upvote++;
-      console.log(upvoteItem.value.upvote)
+      // console.log(upvoteItem.value.upvote);
       // upvoteItem.emit({ userVote: this.userVote });
+      event.stopPropagation();
+
     }
     
 

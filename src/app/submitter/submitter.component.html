@@ -2,8 +2,11 @@
 <div class="myPanel" style="">
 					<form (ngSubmit)="onSubmit(f.value)" #f="ngForm">
 		                  <div style="margin:40px" *ngIf="!this.submitted">
-			      	          	<h2>Submit Brand</h2>
-			      	          	<p>Enter a sustainable brand into the catalog.</p>
+			      	          	<h2>
+			      	          		<span class="glyphicon glyphicon-plus-sign" aria-hidden="true">
+			      	          		 </span> Add a Brand
+			      	          	</h2>
+			      	          	<p>Enter a sustainable brand into the catalog!</p>
 			      	          	<br>
 			      	          	<br>
 			      	          	<div class="form-group">
@@ -189,7 +192,7 @@
 								<br>
 			                    		                    
 			      		        <button 
-			      		        	class="btn btn-primary"
+			      		        	class="btn btn-success"
 			      		        	[disabled]="!f.valid"
 			      		        	>
 			      		        	Submit
