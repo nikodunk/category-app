@@ -29,7 +29,7 @@
 <h4>This Week's Featured Video</h4>
 
 <div class="myPanel" style="">
-		<div *ngFor="let new of news | keypipe | filter: 'Shoes' | sort, let i = index"  (click)="postOpen(new)" style="cursor:pointer" class="myRow">
+		<div *ngFor="let new of news | keypipe | filter: 'Banking' | sort, let i = index"  (click)="postOpen(new)" style="cursor:pointer" class="myRow">
 			 
 				<div class="row" style="padding:10px" *ngIf="1 > i">
 					 <div class="col-sm-6" >
@@ -170,7 +170,7 @@
 *By "sustainable" we mean products with a socially or environmentally responsible component, or help accelerate the transition to a carbon-free economy.
 
 
- <!-- <disqus [shortname]="'superjuice-cc'" [identifier]="selectedItem.title"></disqus> -->
+ 
 
-
+<disqus [shortname]="'superjuice-cc'" [identifier]="'great'"></disqus>
 
