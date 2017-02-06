@@ -43,11 +43,7 @@ export class CleaningComparerComponent implements OnInit {
 
 
     upVote(upvoteItem, event){
-      // console.log(upvoteItem.value.upvote);
-      upvoteItem.value.upvote++;
-      // console.log(upvoteItem.value.upvote);
-      // upvoteItem.emit({ userVote: this.userVote });
-      event.stopPropagation();
+      this.dataService.upVote(upvoteItem, event)
 
     }
     

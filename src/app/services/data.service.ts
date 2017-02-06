@@ -54,31 +54,16 @@ fetchPosts(){
     return this.http.put('https://superjuice-1cb15.firebaseio.com/brands/.json', body, {headers: headers})
   }
 
-  // fetchESCOs() {
-  //   return this.af.database.list('/escos', {
-  //         query: {
-  //           orderByChild: 'name',
-  //         } 
-  //       });
-  // }
+  upVote(upvoteItem, event){
+      if (upvoteItem.value.toggle === true) {return}
+      // console.log(upvoteItem.value.upvote);
+      upvoteItem.value.upvote++;
+      upvoteItem.value.toggle = true;
+      // console.log(upvoteItem.value.upvote);
+      // upvoteItem.emit({ userVote: this.userVote });
+      event.stopPropagation();
 
-  // fetchNews() {
-  //   return this.af.database
-  //             .list('/brands')
-  //             .map((array) => array.reverse()) as FirebaseListObservable<any[]>;
-
-  // }
-
-
-  // fetchData(type: string) {
-  //   return this.af.database
-  //         .list('/brands', {
-  //         query: {
-  //           orderByChild: 'category',
-  //           equalTo: type,
-  //         } 
-  //       });
-  // }
+    }
 
   
   

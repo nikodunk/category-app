@@ -39,12 +39,8 @@ export class EscoComparerComponent implements OnInit {
 
    
 
-           upVote(upvoteItem, event){
-      // console.log(upvoteItem.value.upvote);
-      upvoteItem.value.upvote++;
-      // console.log(upvoteItem.value.upvote);
-      // upvoteItem.emit({ userVote: this.userVote });
-      event.stopPropagation();
+    upVote(upvoteItem, event){
+      this.dataService.upVote(upvoteItem, event)
 
     }
 

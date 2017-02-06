@@ -111,7 +111,7 @@
 					<div class="col-xs-8 col-sm-6">
 						<h3>{{new.value.title}}</h3>
 						 <p style="color:grey">{{new.value.sust1}}</p> 
-	         			  <div class="btn btn-default btn-sm" (click)="upVote(new,$event)">
+	         			  <div class="btn btn-default btn-sm" [ngClass]="{disabled : new.value.toggle}"  (click)="upVote(new,$event)">
 			    			<span class="glyphicon glyphicon-triangle-top" aria-hidden="true"></span>{{new.value.upvote}} Upvotes
 	        			</div>  
 	        			<!-- <div class="btn btn-default btn-sm">
@@ -165,7 +165,7 @@
 					<div class="col-xs-8 col-sm-10">
 						<h3>{{new.value.title}}</h3>
 						 <p style="color:grey">{{new.value.sust1}}</p> 
-	         			  <div class="btn btn-default btn-sm" (click)="upVote(new,$event)">
+	         			  <div class="btn btn-default btn-sm" [ngClass]="{disabled : new.value.toggle}" (click)="upVote(new,$event)">
 			    			<span class="glyphicon glyphicon-triangle-top" aria-hidden="true"></span>{{new.value.upvote}} Upvotes
 	        			</div>  
 	        			<!-- <div class="btn btn-default btn-sm">

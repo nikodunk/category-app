@@ -20,7 +20,7 @@ export class RecentlistComponent implements OnInit {
                   private details: DetailsComponent) { }
     
     selectedItem: any;
-    visibilityLimit = 15;
+    visibilityLimit = 15; 
     myUrl: any;
  
     visibilityExpander () {
@@ -34,11 +34,7 @@ export class RecentlistComponent implements OnInit {
 
 
     upVote(upvoteItem, event){
-      // console.log(upvoteItem.value.upvote);
-      upvoteItem.value.upvote++;
-      // console.log(upvoteItem.value.upvote);
-      // upvoteItem.emit({ userVote: this.userVote });
-      event.stopPropagation();
+      this.dataService.upVote(upvoteItem, event)
 
     }
   	
