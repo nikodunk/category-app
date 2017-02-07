@@ -8,117 +8,72 @@
 </div>
       	
 
+     	
+
 <div *ngIf="selectedItem" id="myModal" class="modal fade" tabindex="-1" role="dialog">
-  <div class="modal-dialog modal-lg" role="document">
-    <div class="modal-content">
-      
-         <app-details [selectedItem]="selectedItem"></app-details> 
-      
-    </div><!-- /.modal-content -->
-  </div><!-- /.modal-dialog -->
-</div><!-- /.modal -->
+	  <div class="modal-dialog modal-lg" role="document">
+	    <div class="modal-content">
+	      
+	         <app-details [selectedItem]="selectedItem"></app-details> 
+	      
+	    </div><!-- /.modal-content -->
+	  </div><!-- /.modal-dialog -->
+	</div><!-- /.modal -->
+
+	<br>
+	<app-sign-up></app-sign-up>
+	<br>
 
 
-<br>
-<app-sign-up></app-sign-up>
-<br>
+	<h5 style="text-align: right">Sort By:
+		<div class="btn-group" data-toggle="buttons">
+		  <label class="btn btn-default active" (click)="this.pricetoggle = false">
+		    <input type="radio" checked autocomplete="off"> Trust Votes
+		  </label>
+		  <label class="btn btn-default" (click)="this.pricetoggle = true">
+		    <input type="radio" autocomplete="off"> Affordability
+		  </label>
+		</div>
+	</h5>
 
-	
-	<div class="myPanel" style="">
+
+
+	<div class="myPanel" *ngIf="!this.pricetoggle">
 		<div *ngFor="let new of news | keypipe | filter: 'Voyage' | sort, let i = index"  (click)="postOpen(new)" style="cursor:pointer" class="myRow">
-			 
+
+
 				<div class="row" style="padding:10px" *ngIf="this.visibilityLimit > i">
-					 <div class="col-xs-4 col-sm-2" >
-
-						<img style="width:100%; margin-top:20%" src="https://img.youtube.com/vi/{{new.value.videotag}}/default.jpg">
-					</div> 
-					<div class="col-xs-8 col-sm-10">
-						<h3>{{new.value.title}}</h3>
-						 <p style="color:grey">{{new.value.sust1}}</p> 
-	         			  <div class="btn btn-default btn-sm" [ngClass]="{disabled : new.value.toggle}" (click)="upVote(new,$event)">
-			    			<span class="glyphicon glyphicon-triangle-top" aria-hidden="true"></span>{{new.value.upvote}} Upvotes
-	        			</div>  
-	        			<!-- <div class="btn btn-default btn-sm">
-							
-							{{new.value.comments1}}
-						</div> -->
-						<p *ngIf="new.value.greene" style="display:inline"><a target="_blank" href="www.green-e.org"><img src="assets/green-e.gif" height="30px"></a></p>
-						<p *ngIf="new.value.organic" style="display:inline"><a target="_blank" href="https://www.ams.usda.gov/rules-regulations/organic"><img src="assets/organic.gif" height="30px"></a></p>
-						<p *ngIf="new.value.fairtrade" style="display:inline"><a target="_blank" href="http://fairtradeusa.org/cooplink"><img src="assets/fairtrade.gif" height="30px"></a></p>
-						<p *ngIf="new.value.oneforone" style="display:inline"><img src="assets/1for1.gif" height="30px"></p>
-						<p *ngIf="new.value.bcorp" style="display:inline"><a target="_blank" href="https://www.bcorporation.net"><img src="assets/bcorp.gif" height="30px"></a></p>
-						<p *ngIf="new.value.carbonfree" style="display:inline"><a target="_blank" href="https://carbonfund.org/product-certification"><img src="assets/carbonfree.gif" height="30px"></a></p>
-						<p *ngIf="new.value.closedloop" style="display:inline"><img src="assets/closedloop.gif" height="30px"></p>
-						<p *ngIf="new.value.fairlabor1" style="display:inline"><a target="_blank" href="http://www.fairlabor.org"><img src="assets/fairlabor1.gif" height="30px"></a></p>
-						<p *ngIf="new.value.fairlabor2" style="display:inline"><a target="_blank" href="http://fairtradeusa.org/certification"><img src="assets/fairlabor2.gif" height="30px"></a></p>
-						<p *ngIf="new.value.local" style="display:inline"><img src="assets/local.gif" height="30px"></p>
-						<p *ngIf="new.value.noncarbon" style="display:inline"><img src="assets/noncarbon.gif" height="30px"></p>
-						<p *ngIf="new.value.noncruelty" style="display:inline"><a target="_blank" href="http://www.peta.org/about-peta/how-is-a-company-certified-as-cruelty-free/"><img src="assets/noncruelty.gif" height="30px"></a></p>
-						<p *ngIf="new.value.nonfur" style="display:inline"><a target="_blank" href="http://www.peta.org/about-peta/how-is-a-company-certified-as-cruelty-free/"><img src="assets/nonfur.gif" height="30px"></a></p>
-						<p *ngIf="new.value.nongmo" style="display:inline"><img src="assets/nongmo.gif" height="30px"></p>
-						<p *ngIf="new.value.nontoxic" style="display:inline"><img src="assets/nontoxic.gif" height="30px"></p>
-						<p *ngIf="new.value.nonwaste" style="display:inline"><img src="assets/nonwaste.gif" height="30px"></p>
-						<p *ngIf="new.value.vegan" style="display:inline"><img src="assets/vegan.gif" height="30px"></p>
-						
-						<div class="btn btn-default btn-sm hoverButton" style="color:grey" (click)="postOpen(new.value)">
-						<span class="glyphicon glyphicon-facetime-video" aria-hidden="true" style="color:grey"></span>
-							Expand
-						</div>
-						
-						<a 
-							class="btn btn-default hoverButton btn-sm" style="color:grey" target="_blank" href="{{new.value.productlink}}">Go To Site
-						</a>
-
-						<div class="pull-right btn btn-default btn-sm" style="color:grey" [routerLink]=new.value.category >
-			    			{{new.value.category}}
-	        			</div>
-	        			<div class="pull-right btn btn-default btn-sm" style="color:grey" *ngIf="new.value.category2">
-			    			{{new.value.category2}}
-	        			</div>
-	        			<div class="pull-right btn btn-default btn-sm" style="color:grey" *ngIf="new.value.category3">
-			    			{{new.value.category3}}
-	        			</div> 
-	        		</div>
+				 	<app-widget [new]="new" [pricetoggle]="pricetoggle"></app-widget>
 				</div> 
-				<hr style="padding:0px; margin:0px">
+				<hr style="padding:0px; margin:0px"> 
+				
 			
 		</div>
 	</div>
-	
+
+	<div class="myPanel" *ngIf="this.pricetoggle">
+		<div *ngFor="let new of news | keypipe | filter: 'Voyage' | pricesort, let i = index"  (click)="postOpen(new)" style="cursor:pointer" class="myRow">
+				<div class="row" style="padding:10px" *ngIf="this.visibilityLimit > i">
+					<app-widget [new]="new" [pricetoggle]="pricetoggle"></app-widget>
+				</div>
+				<hr style="padding:0px; margin:0px"> 
+		</div>
+	</div>
 
 
-<div style="text-align:center; padding: 2rem">
-	<a class="btn btn-default"(click)="this.visibilityExpander()" >
-		<b>Load More</b>
-		<br>
-		<span class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span> 
-	</a>
-</div>
+	<div style="text-align:center; padding: 2rem">
+		<a class="btn btn-default"(click)="this.visibilityExpander()" >
+			<b>Load More</b>
+			<br>
+			<span class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span> 
+		</a>
+	</div>
 
  
-<div class="myPanel" style=" margin-top:100px; margin-bottom:80px; padding: 30px"><h3 style="text-align: center;">Is a great sustainable company missing? <br><br><a class="btn btn-success" routerLink="/Submit"> Add it here !</a></h3></div>
+	<div class="myPanel" style=" margin-top:100px; margin-bottom:80px; padding: 30px">
+		<h3 style="text-align: center;">Is a great sustainable company missing? <br><br>
+			<a class="btn btn-success" routerLink="/Submit"> Add it here !</a>
+		</h3>
+	</div>
     		
-
-
-
-<disqus [shortname]="'superjuice-cc'" [identifier]="'great'"></disqus>
-
-
-
-<!-- <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-  <div class="panel panel-default">
-    <div class="panel-heading" role="tab" id="headingThree">
-      <h4 class="panel-title">
-        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-          Comments
-        </a>
-      </h4>
-    </div>
-    <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
-      <div class="panel-body">
-        <disqus [shortname]="'superjuice-cc'" [identifier]="'great'"></disqus>
-      </div>
-    </div>
-  </div>
-</div>
- -->
+	<disqus [shortname]="'superjuice-cc'" [identifier]="'great'"></disqus>
