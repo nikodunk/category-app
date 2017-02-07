@@ -14,6 +14,7 @@ declare var jQuery:any;
 export class RecentlistComponent implements OnInit {
 
   	news: any;
+    pricetoggle: boolean = false;
 
   	constructor(  private dataService: DataService,
                   private disqus: DisqusModule, 

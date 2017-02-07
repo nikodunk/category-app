@@ -34,6 +34,8 @@ import { HomeComparerComponent } from './comparison/home-comparer/home-comparer.
 import { FinanceComparerComponent } from './comparison/finance-comparer/finance-comparer.component';
 import { TravelComparerComponent } from './comparison/travel-comparer/travel-comparer.component';
 import { CleaningComparerComponent } from './comparison/cleaning-comparer/cleaning-comparer.component';
+import { PricesortPipe } from './pricesort.pipe';
+import { WidgetComponent } from './widget/widget.component';
 
 
 
@@ -65,6 +67,8 @@ import { CleaningComparerComponent } from './comparison/cleaning-comparer/cleani
     FinanceComparerComponent,
     TravelComparerComponent,
     CleaningComparerComponent,
+    PricesortPipe,
+    WidgetComponent,
     
   ],
   imports: [
