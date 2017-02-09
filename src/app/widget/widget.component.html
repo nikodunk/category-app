@@ -8,10 +8,15 @@
 	 <p style="color:grey">{{new.value.sust1}}</p> 
 
 
-	<div class="btn btn-default btn-sm" *ngIf="!this.pricetoggle" [ngClass]="{disabled : new.value.toggle}" (click)="upVote(new,$event)">
-		<span class="glyphicon glyphicon-triangle-top" aria-hidden="true"></span>{{new.value.upvote}} Trust Votes
-	</div>  
-	<div class="btn btn-default btn-sm" *ngIf="this.pricetoggle"><p>{{new.value.price}}</p></div>
+	<div class="btn btn-default btn-sm" style="color:grey" [routerLink]=new.value.category >
+		{{new.value.category}}
+	</div>
+	<!-- <div class="btn btn-default btn-sm" style="color:grey" *ngIf="new.value.category2">
+		{{new.value.category2}}
+	</div>
+	<div class="btn btn-default btn-sm" style="color:grey" *ngIf="new.value.category3">
+		{{new.value.category3}}
+	</div>  -->
 
 	<!-- 
 	<div class="btn btn-default btn-sm">
@@ -45,14 +50,13 @@
 		class="btn btn-default hoverButton btn-sm" style="color:grey" target="_blank" href="{{new.value.productlink}}">Go To Site
 	</a>
 
-	<div class="pull-right btn btn-default btn-sm" style="color:grey" [routerLink]=new.value.category >
-		{{new.value.category}}
-	</div>
-	<div class="pull-right btn btn-default btn-sm" style="color:grey" *ngIf="new.value.category2">
-		{{new.value.category2}}
-	</div>
-	<div class="pull-right btn btn-default btn-sm" style="color:grey" *ngIf="new.value.category3">
-		{{new.value.category3}}
-	</div> 
+	
+
+	<div class="pull-right btn btn-default btn-sm" *ngIf="!this.pricetoggle" [ngClass]="{disabled : new.value.toggle}" (click)="upVote(new,$event)">
+		<span class="glyphicon glyphicon-triangle-top" aria-hidden="true"></span>{{new.value.upvote}} Trust Votes
+	</div>  
+	<div class="pull-right btn btn-default btn-sm" *ngIf="this.pricetoggle"><p>{{new.value.price}}</p></div>
+
+
 </div>
 
