@@ -18,6 +18,7 @@ import { SkincareComparerComponent } from './comparison/skincare-comparer/skinca
 import { SolarComparerComponent } from './comparison/solar-comparer/solar-comparer.component';
 import { TransportComparerComponent } from './comparison/transport-comparer/transport-comparer.component';
 import { TravelComparerComponent } from './comparison/travel-comparer/travel-comparer.component';
+import { TableComponent } from './table/table.component';
 
 
 
@@ -76,7 +77,11 @@ const routes: Routes = [
   },{
     path: 'Travel',
     component: TravelComparerComponent
-  }
+  },
+  {
+    path: 'Table',
+    component: TableComponent
+  },
 ];
 
 @NgModule({

@@ -36,6 +36,7 @@ import { TravelComparerComponent } from './comparison/travel-comparer/travel-com
 import { CleaningComparerComponent } from './comparison/cleaning-comparer/cleaning-comparer.component';
 import { PricesortPipe } from './pricesort.pipe';
 import { WidgetComponent } from './widget/widget.component';
+import { TableComponent } from './table/table.component';
 
 
 
@@ -69,6 +70,7 @@ import { WidgetComponent } from './widget/widget.component';
     CleaningComparerComponent,
     PricesortPipe,
     WidgetComponent,
+    TableComponent,
     
   ],
   imports: [

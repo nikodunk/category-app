@@ -1,0 +1,27 @@
+
+<table class="table">
+				<tr>
+						<td>Category</td>
+						<th>Name</th> 
+						<td>Site</td> <!-- 3 -->
+						<td>Sustainability & Ethics</td> <!-- 2 -->
+						<td>S&E Link</td>
+						<td>Price</td>
+						<td>Info</td>
+						<td>Info Video</td> <!-- 1 -->
+						<td>Comments & Reviews</td>
+
+	        	</tr>
+	        	<tr *ngFor="let new of news | keypipe, let i = index " >
+						<td>{{new.value.category}}</td>
+						<th>{{new.value.title}}</th> 
+						<td> {{new.value.productlink}}</td> <!-- 3 -->
+						<td> {{new.value.sust1}} </td> <!-- 2 -->
+						<td>{{new.value.sustlink}} </td>
+						<td>{{new.value.price}}</td>
+						<td>{{new.value.intro}}</td>
+						<td>{{new.value.video1}}</td> <!-- 1 -->
+
+	        	</tr>
+</table>
+
