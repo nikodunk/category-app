@@ -69,6 +69,13 @@ h6, .h6 {
       .hoverButton{display:none !important;} 
       div.col-md-8.col-md-offset-2{margin:5px !important;
                                     padding:0px !important;}
+      .navbar-text{ display:none; }
+      .navbar { display:none;}
+      .desktopLayout {display:none;}
+    }
+
+@media screen and (min-width: 768px){
+      .mobileLayout {display:none;}
     }
 
 

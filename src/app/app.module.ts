@@ -16,7 +16,7 @@ import { KeypipePipe } from './keypipe.pipe';
 import { SafePipe } from './safe.pipe';
 import { firebaseConfig } from '../environments/firebase.config';
 import { SubmitterComponent } from './submitter/submitter.component';
-import { ApparelComparerComponent } from './comparison/apparel-comparer/apparel-comparer.component';
+import { ComparerComponent } from './comparison/comparer/comparer.component';
 import { DetailsComponent } from './details/details.component';
 import { SortPipe } from './sort.pipe';
 import { FilterPipe } from './filter.pipe';
@@ -39,7 +39,7 @@ import { WidgetBigComponent } from './widget-big/widget-big.component';
     KeypipePipe,
     SafePipe,
     SubmitterComponent,
-    ApparelComparerComponent,
+    ComparerComponent,
     DetailsComponent,
     SortPipe,
     FilterPipe,

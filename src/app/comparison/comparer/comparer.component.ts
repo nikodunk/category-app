@@ -9,11 +9,11 @@ declare var jQuery:any;
 
 
 @Component({
-  selector: 'app-apparel-comparer',
-  templateUrl: './apparel-comparer.component.html',
-  styleUrls: ['./apparel-comparer.component.css']
+  selector: 'app-comparer',
+  templateUrl: './comparer.component.html',
+  styleUrls: ['./comparer.component.css']
 })
-export class ApparelComparerComponent implements OnInit {
+export class ComparerComponent implements OnInit {
 
   
       category = 'Energy'

@@ -1,4 +1,4 @@
- <div class="container">
+ <div class="container desktopLayout">
 	<div class="col-md-8 col-md-offset-2"> 			
 		<div style="text-align:center; padding-top: 20px; padding-bottom: 20px">
 			<h3 style="text-align:center">Where To Get Affordable, Sustainable {{this.category | uppercase}}</h3>
@@ -22,6 +22,54 @@
 				<a type="button" class="btn btn-default" [ngClass]="{'active':category=='Skincare Products'}" aria-label="Left Align" (click)="categorySet('Skincare Products')">
 						💄<br>Makeup
 				</a>
+				<a type="button" class="btn btn-default" [ngClass]="{'active':category=='Food'}" aria-label="Left Align" (click)="categorySet('Food')">
+						🌮<br>Food
+				</a>
+				<a type="button" class="btn btn-default" [ngClass]="{'active':category=='Mobility'}" aria-label="Left Align" (click)="categorySet('Mobility')">
+						🚗<br>Mobility
+				</a>
+				<a type="button" class="btn btn-default" [ngClass]="{'active':category=='Home Goods'}" aria-label="Left Align" (click)="categorySet('Home Goods')">
+						🏠<br>Home
+				</a>
+				<a type="button" class="btn btn-default" [ngClass]="{'active':category=='Finance'}" aria-label="Left Align" (click)="categorySet('Finance')">
+						💰<br>Finance
+				</a>
+				<a type="button" class="btn btn-default" [ngClass]="{'active':category=='Solar'}" aria-label="Left Align" (click)="categorySet('Solar')">
+						☀️️ <br>Solar
+				</a>
+			</div>
+
+		</div>
+	</div>
+</div>
+
+<div class="container mobileLayout">
+	<div class="col-md-8 col-md-offset-2"> 			
+		<div style="text-align:center; padding-top: 20px; padding-bottom: 20px">
+			<h1><img alt="Brand" src="assets/superjuicelogo.png" height="40px"></h1>
+			<h3 style="text-align:center">Where To Get Affordable, Sustainable {{this.category | uppercase}}</h3>
+			<br>
+			<div class="btn-group btn-group-sm btn-group-justified" role="group">
+				<a type="button" class="btn btn-default" [ngClass]="{'active':category=='Energy'}" aria-label="Left Align" (click)="categorySet('Energy')">
+						🔌<br>Energy
+				</a>
+				<a type="button" class="btn btn-default" [ngClass]="{'active':category=='Fashion'}" aria-label="Left Align" (click)="categorySet('Fashion')">
+						👖<br>Fashion
+				</a>
+				<a type="button" class="btn btn-default" [ngClass]="{'active':category=='Shoes'}" aria-label="Left Align" (click)="categorySet('Shoes')">
+						👟<br>Shoes
+				</a>
+				<a type="button" class="btn btn-default" [ngClass]="{'active':category=='Eyewear'}" aria-label="Left Align" (click)="categorySet('Eyewear')">
+						🕶️<br>Eyewear
+				</a>
+				<a type="button" class="btn btn-default" [ngClass]="{'active':category=='Cleaning Products'}" aria-label="Left Align" (click)="categorySet('Cleaning Products')">
+						✨<br>Cleaning
+				</a>
+				<a type="button" class="btn btn-default" [ngClass]="{'active':category=='Skincare Products'}" aria-label="Left Align" (click)="categorySet('Skincare Products')">
+						💄<br>Makeup
+				</a>
+			</div>
+			<div class="btn-group btn-group-sm btn-group-justified" role="group">
 				<a type="button" class="btn btn-default" [ngClass]="{'active':category=='Food'}" aria-label="Left Align" (click)="categorySet('Food')">
 						🌮<br>Food
 				</a>
