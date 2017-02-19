@@ -1,7 +1,7 @@
 <div *ngIf="this.selectedItem.value">
 	<div  class="modal-header">
         <h3 class="modal-title" id="exampleModalLabel">
-        	{{this.selectedItem.value.title}} | {{this.selectedItem.value.category}}
+        	{{this.selectedItem.value.name}} | {{this.selectedItem.value.category}}
         	<!-- <button class="btn btn-default pull-right" (click)="upVote(new.upvote, new.uid)">
 			    Upvote
 			    <span class="glyphicon glyphicon-triangle-top" aria-hidden="true"></span>{{this.selectedItem.upvote}}
@@ -18,40 +18,39 @@
 				 <iframe 
 				 	id="yt-player"
 					class="embed-responsive-item"
-					[src]="this.selectedItem.value.video1 | safe"
+					[src]="this.selectedItem.value.video | safe"
 					allowfullscreen>
 				</iframe>
 			</div>
 		</div>
 		 <div class="col-sm-6">
-			<p><b>Sustainability & Ethics</b> | {{this.selectedItem.value.sust1}}</p>
-			<p><b>Best For</b> | {{this.selectedItem.value.bestfor}}</p>
-			<p><b>Product Range</b> | {{this.selectedItem.value.range}}</p>
+			<p><b>Sustainability & Ethics</b> | {{this.selectedItem.value.sust}}</p>
+<!-- 			<p><b>Best For</b> | {{this.selectedItem.value.bestfor}}</p>
+			<p><b>Product Range</b> | {{this.selectedItem.value.range}}</p> -->
 			<p><b>Price Range</b> | {{this.selectedItem.value.price}}</p>
-			<p>{{this.selectedItem.value.intro}}</p>
+			<p>{{this.selectedItem.value.info}}</p>
 			<br>
 			
-						<p *ngIf="this.selectedItem.value.greene" style="display:inline"><a target="_blank" href="www.green-e.org"><img src="assets/green-e.gif" height="30px"></a></p>
-						<p *ngIf="this.selectedItem.value.organic" style="display:inline"><a target="_blank" href="https://www.ams.usda.gov/rules-regulations/organic"><img src="assets/organic.gif" height="30px"></a></p>
-						<p *ngIf="this.selectedItem.value.fairtrade" style="display:inline"><a target="_blank" href="http://fairtradeusa.org/cooplink"><img src="assets/fairtrade.gif" height="30px"></a></p>
-						<p *ngIf="this.selectedItem.value.oneforone" style="display:inline"><img src="assets/1for1.gif" height="30px"></p>
-						<p *ngIf="this.selectedItem.value.bcorp" style="display:inline"><a target="_blank" href="https://www.bcorporation.net"><img src="assets/bcorp.gif" height="30px"></a></p>
-						<p *ngIf="this.selectedItem.value.carbonfree" style="display:inline"><a target="_blank" href="https://carbonfund.org/product-certification"><img src="assets/carbonfree.gif" height="30px"></a></p>
-						<p *ngIf="this.selectedItem.value.closedloop" style="display:inline"><img src="assets/closedloop.gif" height="30px"></p>
-						<p *ngIf="this.selectedItem.value.fairlabor1" style="display:inline"><a target="_blank" href="http://www.fairlabor.org"><img src="assets/fairlabor1.gif" height="30px"></a></p>
-						<p *ngIf="this.selectedItem.value.fairlabor2" style="display:inline"><a target="_blank" href="http://fairtradeusa.org/certification"><img src="assets/fairlabor2.gif" height="30px"></a></p>
-						<p *ngIf="this.selectedItem.value.local" style="display:inline"><img src="assets/local.gif" height="30px"></p>
-						<p *ngIf="this.selectedItem.value.noncarbon" style="display:inline"><img src="assets/noncarbon.gif" height="30px"></p>
-						<p *ngIf="this.selectedItem.value.noncruelty" style="display:inline"><a target="_blank" href="http://www.peta.org/about-peta/how-is-a-company-certified-as-cruelty-free/"><img src="assets/noncruelty.gif" height="30px"></a></p>
-						<p *ngIf="this.selectedItem.value.nonfur" style="display:inline"><a target="_blank" href="http://www.peta.org/about-peta/how-is-a-company-certified-as-cruelty-free/"><img src="assets/nonfur.gif" height="30px"></a></p>
-						<p *ngIf="this.selectedItem.value.nongmo" style="display:inline"><img src="assets/nongmo.gif" height="30px"></p>
-						<p *ngIf="this.selectedItem.value.nontoxic" style="display:inline"><img src="assets/nontoxic.gif" height="30px"></p>
-						<p *ngIf="this.selectedItem.value.nonwaste" style="display:inline"><img src="assets/nonwaste.gif" height="30px"></p>
-						<p *ngIf="this.selectedItem.value.vegan" style="display:inline"><img src="assets/vegan.gif" height="30px"></p>
+	 <p *ngIf="this.selectedItem.value.cert =='Green-e'" style="display:inline"><a target="_blank" href="www.green-e.org"><img src="assets/green-e.gif" height="30px"></a></p>
+	<p *ngIf="this.selectedItem.value.cert == 'USDA Certified Organic'" style="display:inline"><a target="_blank" href="https://www.ams.usda.gov/rules-regulations/organic"><img src="assets/organic.gif" height="30px"></a></p>
+	<p *ngIf="this.selectedItem.value.cert == 'Fair Trade Certified'" style="display:inline"><a target="_blank" href="http://fairtradeusa.org/cooplink"><img src="assets/fairtrade.gif" height="30px"></a></p>
+	<p *ngIf="this.selectedItem.value.cert == 'B-Corp'" style="display:inline"><a target="_blank" href="https://www.bcorporation.net"><img src="assets/bcorp.gif" height="30px"></a></p>
+	<p *ngIf="this.selectedItem.value.cert == 'Carbon-Free'" style="display:inline"><a target="_blank" href="https://carbonfund.org/product-certification"><img src="assets/carbonfree.gif" height="30px"></a></p>
+	<!-- <p *ngIf="this.selectedItem.value.closedloop" style="display:inline"><img src="assets/closedloop.gif" height="30px"></p> -->
+	<p *ngIf="this.selectedItem.value.cert == 'Fair Labor Certified'" style="display:inline"><a target="_blank" href="http://www.fairlabor.org"><img src="assets/fairlabor1.gif" height="30px"></a></p>
+<!-- 	<p *ngIf="this.selectedItem.value.cert == 'Fair Trade Certified'" style="display:inline"><a target="_blank" href="http://fairtradeusa.org/certification"><img src="assets/fairlabor2.gif" height="30px"></a></p> -->
+	<p *ngIf="this.selectedItem.value.cert == 'Local Production'" style="display:inline"><img src="assets/local.gif" height="30px"></p>
+<!-- 	<p *ngIf="this.selectedItem.value.noncarbon" style="display:inline"><img src="assets/noncarbon.gif" height="30px"></p> -->
+	<p *ngIf="this.selectedItem.value.cert == 'PETA Cruelty Free'" style="display:inline"><a target="_blank" href="http://www.peta.org/about-peta/how-is-a-company-certified-as-cruelty-free/"><img src="assets/noncruelty.gif" height="30px"></a></p>
+<!-- 	<p *ngIf="this.selectedItem.value.nonfur" style="display:inline"><a target="_blank" href="http://www.peta.org/about-peta/how-is-a-company-certified-as-cruelty-free/"><img src="assets/nonfur.gif" height="30px"></a></p> -->
+	<p *ngIf="this.selectedItem.value.cert == 'GMO-Free'" style="display:inline"><img src="assets/nongmo.gif" height="30px"></p>
+	<p *ngIf="this.selectedItem.value.cert == 'EWG A'" style="display:inline"><img src="assets/nontoxic.gif" height="30px"></p>
+	<!-- <p *ngIf="this.selectedItem.value.nonwaste" style="display:inline"><img src="assets/nonwaste.gif" height="30px"></p> -->
+	<p *ngIf="this.selectedItem.value.cert == 'Vegan'" style="display:inline"><img src="assets/vegan.gif" height="30px"></p>
 
 			<hr>
 			<a class="btn btn-info" target="_blank" href="{{this.selectedItem.value.sustlink}}">Sustainability & Ethics</a>
-			<a target="_blank" class="btn btn-success" href="{{this.selectedItem.value.productlink}}">Go To Site</a>
+			<a target="_blank" class="btn btn-success" href="{{this.selectedItem.value.prodlink}}">Go To Site</a>
 			
 		</div> 
 </div> 
@@ -73,7 +72,7 @@
 
 </div>
       <div class="modal-footer">
-      	<p class="pull-left"><span class="glyphicon glyphicon-user" aria-hidden="true" (click)="void"></span> {{this.selectedItem.value.user}}</p>
+<!--       	<p class="pull-left"><span class="glyphicon glyphicon-user" aria-hidden="true" (click)="void"></span> {{this.selectedItem.value.user}}</p> -->
         <button type="button" class="btn btn-default" data-dismiss="modal" (click)="stopVideo()">Close</button>
         
 </div>

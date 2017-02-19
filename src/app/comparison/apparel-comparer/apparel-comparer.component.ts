@@ -16,30 +16,35 @@ declare var jQuery:any;
 export class ApparelComparerComponent implements OnInit {
 
   
-  
-      pricetoggle: false;
+      category = 'Energy'
+      pricetoggle: boolean = true;
       news: any;
+      selectedItem: any;
+      visibilityLimit:number = 15;
+      myUrl: any;
 
-    constructor(  private dataService: DataService,
-                  private disqus: DisqusModule, 
-                  private details: DetailsComponent) { }
+    constructor(  private dataService: DataService) { }
     
-    selectedItem: any;
-    visibilityLimit = 15;
-    myUrl: any;
+    
  
     visibilityExpander () { this.visibilityLimit = this.visibilityLimit + 10; }
+
 
     postOpen(selectedItem){
       jQuery("#myModal").modal("show");
       this.selectedItem = selectedItem
     }
 
+    categorySet(category){
+      this.category = category;
+      this.visibilityLimit = 15;
+    }
+
 
   ngOnInit() {
 
           this.dataService.fetchPosts().subscribe(data => this.news = data)
-           this.postOpen('asdf')
+          this.postOpen('asdf')
   }
 
 }

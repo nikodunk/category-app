@@ -1,82 +1,131 @@
-<div style="padding-top:100px; padding-bottom:80px">
-
-    <h2>More Sustainable & Ethical Fashion Companies</h2>
-    <p>The user-submitted directory of the best sustainable fashion companies</p>
-    <div >
-    <p>It’s been over three years since the Rana Plaza tragedy killed over 1,100 garment workers in Bangladesh and wounded over 2,200 more. The incident left consumers all over the world questioning who made the clothes we wear everyday and what kind of conditions those workers live and work in. </p>
-
-<p>As consumers, we are beginning to realize our responsibility to be conscious about our purchases and to recognize the power of our vocalized objections to make a positive difference for the people that are making the clothes we wear everyday.  </p>
-
-<p>Thankfully, there are an increasing number of brands specifically dedicated to ethical practices throughout their production processes. The companies we have listed below are some of our favorite ethical alternatives to fast fashion companies. Each one has made it a central part of their mission to produce in an ethical way that considers both people and the planet.
-<br><b>Disclaimer:</b> When readers choose to buy from some (but not all) of the listed companies in the catalog, we earn affiliate commissions that support our work.</p>
-    </div>
-</div>
-      	
-
-	<div *ngIf="selectedItem" id="myModal" class="modal fade" tabindex="-1" role="dialog">
-	  <div class="modal-dialog modal-lg" role="document">
-	    <div class="modal-content">
-	      
-	         <app-details [selectedItem]="selectedItem"></app-details> 
-	      
-	    </div><!-- /.modal-content -->
-	  </div><!-- /.modal-dialog -->
-	</div><!-- /.modal -->
-
-	<br>
-	<app-sign-up></app-sign-up>
-	<br>
-
-
-	<h5 style="text-align: right">Sort By:
-		<div class="btn-group" data-toggle="buttons">
-		  <label class="btn btn-default active" (click)="this.pricetoggle = false">
-		    <input type="radio" checked autocomplete="off"> Trust Votes
-		  </label>
-		  <label class="btn btn-default" (click)="this.pricetoggle = true">
-		    <input type="radio" autocomplete="off"> Affordability
-		  </label>
-		</div>
-	</h5>
-
-
-
-	<div class="myPanel" *ngIf="!this.pricetoggle">
-		<div *ngFor="let new of news | keypipe | filter: 'Fashion' | sort, let i = index"  (click)="postOpen(new)" style="cursor:pointer" class="myRow">
-
-
-				<div class="row" style="padding:10px" *ngIf="this.visibilityLimit > i">
-				 	<app-widget [new]="new" [pricetoggle]="pricetoggle"></app-widget>
-				</div> 
-				<hr style="padding:0px; margin:0px"> 
-				
-			
-		</div>
-	</div>
-
-	<div class="myPanel" *ngIf="this.pricetoggle">
-		<div *ngFor="let new of news | keypipe | filter: 'Fashion' | pricesort, let i = index"  (click)="postOpen(new)" style="cursor:pointer" class="myRow">
-				<div class="row" style="padding:10px" *ngIf="this.visibilityLimit > i">
-					<app-widget [new]="new" [pricetoggle]="pricetoggle"></app-widget>
-				</div>
-				<hr style="padding:0px; margin:0px"> 
-		</div>
-	</div>
-
-
-	<div style="text-align:center; padding: 2rem">
-		<a class="btn btn-default"(click)="this.visibilityExpander()" >
-			<b>Load More</b>
+ <div class="container">
+	<div class="col-md-8 col-md-offset-2"> 			
+		<div style="text-align:center; padding-top: 20px; padding-bottom: 20px">
+			<h3 style="text-align:center">Where To Get Affordable, Sustainable {{this.category | uppercase}}</h3>
 			<br>
-			<span class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span> 
-		</a>
+			<div class="btn-group btn-group-sm btn-group-justified" role="group">
+				<a type="button" class="btn btn-default" [ngClass]="{'active':category=='Energy'}" aria-label="Left Align" (click)="categorySet('Energy')">
+						🔌<br>Energy
+				</a>
+				<a type="button" class="btn btn-default" [ngClass]="{'active':category=='Fashion'}" aria-label="Left Align" (click)="categorySet('Fashion')">
+						👖<br>Fashion
+				</a>
+				<a type="button" class="btn btn-default" [ngClass]="{'active':category=='Shoes'}" aria-label="Left Align" (click)="categorySet('Shoes')">
+						👟<br>Shoes
+				</a>
+				<a type="button" class="btn btn-default" [ngClass]="{'active':category=='Eyewear'}" aria-label="Left Align" (click)="categorySet('Eyewear')">
+						🕶️<br>Eyewear
+				</a>
+				<a type="button" class="btn btn-default" [ngClass]="{'active':category=='Cleaning Products'}" aria-label="Left Align" (click)="categorySet('Cleaning Products')">
+						✨<br>Cleaning
+				</a>
+				<a type="button" class="btn btn-default" [ngClass]="{'active':category=='Skincare Products'}" aria-label="Left Align" (click)="categorySet('Skincare Products')">
+						💄<br>Makeup
+				</a>
+				<a type="button" class="btn btn-default" [ngClass]="{'active':category=='Food'}" aria-label="Left Align" (click)="categorySet('Food')">
+						🌮<br>Food
+				</a>
+				<a type="button" class="btn btn-default" [ngClass]="{'active':category=='Mobility'}" aria-label="Left Align" (click)="categorySet('Mobility')">
+						🚗<br>Mobility
+				</a>
+				<a type="button" class="btn btn-default" [ngClass]="{'active':category=='Home Goods'}" aria-label="Left Align" (click)="categorySet('Home Goods')">
+						🏠<br>Home
+				</a>
+				<a type="button" class="btn btn-default" [ngClass]="{'active':category=='Finance'}" aria-label="Left Align" (click)="categorySet('Finance')">
+						💰<br>Finance
+				</a>
+				<a type="button" class="btn btn-default" [ngClass]="{'active':category=='Solar'}" aria-label="Left Align" (click)="categorySet('Solar')">
+						☀️️ <br>Solar
+				</a>
+			</div>
+
+		</div>
+	</div>
+</div>
+
+<div class="container">
+	<div class="col-md-8 col-md-offset-2"> 
+
+     
+		<br>
+		<br>
+				
+
+		<h5 style="text-align:right">Sort By
+				<div class="btn-group btn-group-sm" data-toggle="buttons">
+				  <label class="btn btn-default active" (click)="this.pricetoggle = true">
+				    <input type="radio" autocomplete="off">Most Affordable
+				  </label>
+				  <label class="btn btn-default" (click)="this.pricetoggle = false">
+				    <input type="radio" checked autocomplete="off">Most Trusted
+				  </label>
+				</div>
+		</h5>
+
+		
+		<div *ngIf="!this.pricetoggle">
+			<div class="myPanel">
+				<div *ngFor="let new of news | keypipe | filter: category | sort, let i = index"  (click)="postOpen(new)" style="cursor:pointer" class="myRow">
+					<div class="row" style="padding:10px" *ngIf="i < 1">
+					 	<app-widget-big [new]="new" [pricetoggle]="pricetoggle"></app-widget-big>
+					</div>
+				</div>
+			</div>
+			<div class="myPanel">
+				<div *ngFor="let new of news | keypipe | filter: category | sort, let i = index"  (click)="postOpen(new)" style="cursor:pointer" class="myRow">
+
+
+					<div class="row" style="padding:10px" *ngIf="0 < i && i < this.visibilityLimit">
+					 	<app-widget [new]="new" [pricetoggle]="pricetoggle"></app-widget>
+					</div> 
+					<hr style="padding:0px; margin:0px"> 
+				</div>
+			</div>
+		</div>
+
+		<div *ngIf="this.pricetoggle">
+			<div class="myPanel">
+				<div *ngFor="let new of news | keypipe | filter: category | pricesort, let i = index"  (click)="postOpen(new)" style="cursor:pointer" class="myRow">
+					<div class="row" style="padding:10px" *ngIf="i < 1">
+					 	<app-widget-big [new]="new" [pricetoggle]="pricetoggle"></app-widget-big>
+					</div>
+				</div>
+			</div>
+			<div class="myPanel">
+				<div *ngFor="let new of news | keypipe | filter: category | pricesort, let i = index"  (click)="postOpen(new)" style="cursor:pointer" class="myRow">
+						<div class="row" style="padding:10px" *ngIf="0 < i && i < this.visibilityLimit">
+							<app-widget [new]="new" [pricetoggle]="pricetoggle"></app-widget>
+						</div>
+						<hr style="padding:0px; margin:0px"> 
+				</div>
+			</div>
+		</div>
+
+		<div style="text-align:center; padding: 2rem">
+			<a class="btn btn-default"(click)="this.visibilityExpander()" >
+				<b>Load More</b>
+				<br>
+				<span class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span> 
+			</a>
+		</div>
+
+		<div style="padding-top:100px">
+			<app-sign-up></app-sign-up>
+		</div>
+	
 	</div>
 
- 
-	<div class="myPanel" style=" margin-top:100px; margin-bottom:80px; padding: 30px">
-		<h3 style="text-align: center;">Is a great sustainable company missing? <br><br>
-			<a class="btn btn-success" routerLink="/Submit"> Add it here !</a>
-		</h3>
-	</div>
-    		
-	<disqus [shortname]="'superjuice-cc'" [identifier]="'great'"></disqus>
+</div>
+
+
+
+
+<div *ngIf="selectedItem" id="myModal" class="modal fade" tabindex="-1" role="dialog">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      
+         <app-details [selectedItem]="selectedItem"></app-details> 
+      
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->

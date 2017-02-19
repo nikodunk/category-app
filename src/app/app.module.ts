@@ -12,31 +12,20 @@ import { DataService } from './services/data.service';
 import { AboutComponent } from './about/about.component';
 import { AppRoutingModule, routedComponents } from './app-routing.module';  
 import { SignUpComponent } from './sign-up/sign-up.component';
-import { EscoComparerComponent } from './comparison/esco-comparer/esco-comparer.component';
 import { KeypipePipe } from './keypipe.pipe';
 import { SafePipe } from './safe.pipe';
 import { firebaseConfig } from '../environments/firebase.config';
 import { SubmitterComponent } from './submitter/submitter.component';
 import { ApparelComparerComponent } from './comparison/apparel-comparer/apparel-comparer.component';
-import { RecentlistComponent } from './recentlist/recentlist.component';
 import { DetailsComponent } from './details/details.component';
-import { SolarComparerComponent } from './comparison/solar-comparer/solar-comparer.component';
-import { ShoeComparerComponent } from './comparison/shoe-comparer/shoe-comparer.component';
 import { SortPipe } from './sort.pipe';
 import { FilterPipe } from './filter.pipe';
 import { ReversePipe } from './reverse.pipe';
-import { EyewearComparerComponent } from './comparison/eyewear-comparer/eyewear-comparer.component';
-import { CosmeticComparerComponent } from './comparison/cosmetic-comparer/cosmetic-comparer.component';
-import { SkincareComparerComponent } from './comparison/skincare-comparer/skincare-comparer.component';
-import { FoodComparerComponent } from './comparison/food-comparer/food-comparer.component';
-import { TransportComparerComponent } from './comparison/transport-comparer/transport-comparer.component';
-import { HomeComparerComponent } from './comparison/home-comparer/home-comparer.component';
-import { FinanceComparerComponent } from './comparison/finance-comparer/finance-comparer.component';
-import { TravelComparerComponent } from './comparison/travel-comparer/travel-comparer.component';
-import { CleaningComparerComponent } from './comparison/cleaning-comparer/cleaning-comparer.component';
 import { PricesortPipe } from './pricesort.pipe';
 import { WidgetComponent } from './widget/widget.component';
 import { TableComponent } from './table/table.component';
+import { ContactComponent } from './contact/contact.component';
+import { WidgetBigComponent } from './widget-big/widget-big.component';
 
 
 
@@ -47,30 +36,19 @@ import { TableComponent } from './table/table.component';
     HeaderComponent,
     AboutComponent,
     SignUpComponent,
-    EscoComparerComponent,
     KeypipePipe,
     SafePipe,
     SubmitterComponent,
     ApparelComparerComponent,
-    RecentlistComponent,
     DetailsComponent,
-    SolarComparerComponent,
-    ShoeComparerComponent,
     SortPipe,
     FilterPipe,
     ReversePipe,
-    EyewearComparerComponent,
-    CosmeticComparerComponent,
-    SkincareComparerComponent,
-    FoodComparerComponent,
-    TransportComparerComponent,
-    HomeComparerComponent,
-    FinanceComparerComponent,
-    TravelComparerComponent,
-    CleaningComparerComponent,
     PricesortPipe,
     WidgetComponent,
     TableComponent,
+    ContactComponent,
+    WidgetBigComponent,
     
   ],
   imports: [
