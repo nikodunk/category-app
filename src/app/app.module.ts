@@ -16,16 +16,16 @@ import { KeypipePipe } from './keypipe.pipe';
 import { SafePipe } from './safe.pipe';
 import { firebaseConfig } from '../environments/firebase.config';
 import { SubmitterComponent } from './submitter/submitter.component';
-import { ComparerComponent } from './comparison/comparer/comparer.component';
-import { DetailsComponent } from './details/details.component';
+import { ComparerComponent } from './comparison/list/comparer.component';
+import { DetailsComponent } from './comparison/details/details.component';
 import { SortPipe } from './sort.pipe';
 import { FilterPipe } from './filter.pipe';
 import { ReversePipe } from './reverse.pipe';
 import { PricesortPipe } from './pricesort.pipe';
-import { WidgetComponent } from './widget/widget.component';
+import { WidgetComponent } from './comparison/widget/widget.component';
 import { TableComponent } from './table/table.component';
 import { ContactComponent } from './contact/contact.component';
-import { WidgetBigComponent } from './widget-big/widget-big.component';
+import { WidgetBigComponent } from './comparison/widget-big/widget-big.component';
 
 
 

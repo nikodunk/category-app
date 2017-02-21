@@ -1,11 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService } from '../../services/data.service'
-import {DisqusModule} from "ng2-awesome-disqus";
-import { DetailsComponent } from '../../details/details.component'
+import { DisqusModule} from "ng2-awesome-disqus";
+import { DetailsComponent } from '../details/details.component'
 import { KeypipePipe } from '../../keypipe.pipe'
 
 
 declare var jQuery:any;
+        const buttons = []
 
 
 @Component({
@@ -20,7 +21,7 @@ export class ComparerComponent implements OnInit {
       pricetoggle: boolean = true;
       news: any;
       selectedItem: any;
-      visibilityLimit:number = 15;
+      visibilityLimit:number = 50;
       myUrl: any;
 
     constructor(  private dataService: DataService) { }
@@ -37,14 +38,14 @@ export class ComparerComponent implements OnInit {
 
     categorySet(category){
       this.category = category;
-      this.visibilityLimit = 15;
+      // this.visibilityLimit = 15;
     }
 
 
   ngOnInit() {
 
           this.dataService.fetchPosts().subscribe(data => this.news = data)
-          this.postOpen('asdf')
+          this.postOpen('el')
   }
 
 }

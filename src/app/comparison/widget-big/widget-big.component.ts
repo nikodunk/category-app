@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { DataService } from '../services/data.service'
-import { KeypipePipe } from '../keypipe.pipe'
+import { DataService } from '../../services/data.service'
+import { KeypipePipe } from '../../keypipe.pipe'
 
 
 declare var jQuery:any;

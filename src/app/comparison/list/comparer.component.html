@@ -1,0 +1,211 @@
+ <div class="container desktopLayout">
+	<div class="col-md-8 col-md-offset-2"> 			
+		<div style="text-align:center; padding-top: 20px; padding-bottom: 20px">
+			<h3 style="text-align:center">Where To Get Affordable, Sustainable {{this.category | uppercase}}</h3>
+			<br>
+			<div class="btn-group btn-group-justified myPanel" role="group">
+				<a type="button" class="btn btn-default app_button" role="button" [ngClass]="{'active':category=='Energy'}" aria-label="Left Align" (click)="categorySet('Energy')">
+						<!-- 🔌 -->
+						<span class="glyphicon glyphicon-flash" aria-hidden="true"></span>
+						<br>Energy
+				</a>
+				<a type="button" class="btn btn-default app_button" role="button" [ngClass]="{'active':category=='Fashion'}" aria-label="Left Align" (click)="categorySet('Fashion')">
+						<!-- 👖 -->
+						<span class="glyphicon glyphicon-camera" aria-hidden="true"></span>
+						<br>Fashion
+				</a>
+				<a type="button" class="btn btn-default app_button" [ngClass]="{'active':category=='Shoes'}" aria-label="Left Align" (click)="categorySet('Shoes')">
+						<!-- 👟 -->
+						<span class="glyphicon glyphicon-scale" aria-hidden="true"></span>
+						<br>Shoes
+				</a>
+				<a type="button" class="btn btn-default app_button" [ngClass]="{'active':category=='Eyewear'}" aria-label="Left Align" (click)="categorySet('Eyewear')">
+						<!-- 🕶️ -->
+						<span class="glyphicon glyphicon-sunglasses" aria-hidden="true"></span>
+						<br>Eyewear
+				</a>
+				<a type="button" class="btn btn-default app_button" [ngClass]="{'active':category=='Cleaning Products'}" aria-label="Left Align" (click)="categorySet('Cleaning Products')">
+						<!-- ✨ -->
+						<span class="glyphicon glyphicon-grain" aria-hidden="true"></span>
+						<br>Cleaning
+				</a>
+				<a type="button" class="btn btn-default app_button" [ngClass]="{'active':category=='Skincare Products'}" aria-label="Left Align" (click)="categorySet('Skincare Products')">
+						<!-- 💄 -->
+						<span class="glyphicon glyphicon-tint" aria-hidden="true"></span>
+						<br>Makeup
+				</a>
+				<a type="button" class="btn btn-default app_button" [ngClass]="{'active':category=='Food'}" aria-label="Left Align" (click)="categorySet('Food')">
+						<!-- 🌮 -->
+						<span class="glyphicon glyphicon-ice-lolly-tasted" aria-hidden="true"></span>
+						<br>Food
+				</a>
+				<a type="button" class="btn btn-default app_button" [ngClass]="{'active':category=='Mobility'}" aria-label="Left Align" (click)="categorySet('Mobility')">
+						<!-- 🚗 -->
+						<span class="glyphicon glyphicon-road" aria-hidden="true"></span>
+						<br>Mobility
+				</a>
+				<a type="button" class="btn btn-default app_button" [ngClass]="{'active':category=='Home Goods'}" aria-label="Left Align" (click)="categorySet('Home Goods')">
+						<!-- 🏠 -->
+						<span class="glyphicon glyphicon-home" aria-hidden="true"></span>
+						<br>Home
+				</a>
+				<a type="button" class="btn btn-default app_button" [ngClass]="{'active':category=='Finance'}" aria-label="Left Align" (click)="categorySet('Finance')">
+						<!-- 💰 -->
+						<span class="glyphicon glyphicon-piggy-bank" aria-hidden="true"></span>
+						<br>Finance
+				</a>
+				<a type="button" class="btn btn-default app_button" [ngClass]="{'active':category=='Solar'}" aria-label="Left Align" (click)="categorySet('Solar')">
+						<!-- ☀️️  -->
+						<span class="glyphicon glyphicon-certificate" aria-hidden="true"></span>
+						<br>Solar
+				</a>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="container mobileLayout">
+	<div class="col-md-8 col-md-offset-2"> 			
+		<div style="text-align:center; padding-top: 20px; padding-bottom: 20px">
+			<h1><img alt="Brand" src="assets/superjuicelogo.png" height="40px"></h1>
+			<h3 style="text-align:center">Where To Get Affordable, Sustainable {{this.category | uppercase}}</h3>
+			<br>
+			<div class="myPanel">
+				<div class="btn-group btn-group-justified" role="group">
+					<a type="button" class="btn btn-default app_button" role="button" [ngClass]="{'active':category=='Energy'}" aria-label="Left Align" (click)="categorySet('Energy')">
+							<!-- 🔌 -->
+							<span class="glyphicon glyphicon-flash" aria-hidden="true"></span>
+							<br>Energy
+					</a>
+					<a type="button" class="btn btn-default app_button" role="button" [ngClass]="{'active':category=='Fashion'}" aria-label="Left Align" (click)="categorySet('Fashion')">
+							<!-- 👖 -->
+							<span class="glyphicon glyphicon-camera" aria-hidden="true"></span>
+							<br>Fashion
+					</a>
+					<a type="button" class="btn btn-default app_button" [ngClass]="{'active':category=='Shoes'}" aria-label="Left Align" (click)="categorySet('Shoes')">
+							<!-- 👟 -->
+							<span class="glyphicon glyphicon-scale" aria-hidden="true"></span>
+							<br>Shoes
+					</a>
+					<a type="button" class="btn btn-default app_button" [ngClass]="{'active':category=='Eyewear'}" aria-label="Left Align" (click)="categorySet('Eyewear')">
+							<!-- 🕶️ -->
+							<span class="glyphicon glyphicon-sunglasses" aria-hidden="true"></span>
+							<br>Eyewear
+					</a>
+					<a type="button" class="btn btn-default app_button" [ngClass]="{'active':category=='Cleaning Products'}" aria-label="Left Align" (click)="categorySet('Cleaning Products')">
+							<!-- ✨ -->
+							<span class="glyphicon glyphicon-grain" aria-hidden="true"></span>
+							<br>Cleaning
+					</a>
+					<a type="button" class="btn btn-default app_button" [ngClass]="{'active':category=='Skincare Products'}" aria-label="Left Align" (click)="categorySet('Skincare Products')">
+							<!-- 💄 -->
+							<span class="glyphicon glyphicon-tint" aria-hidden="true"></span>
+							<br>Makeup
+					</a>
+				</div>
+				<hr style="margin:0px">
+				<div class="btn-group btn-group-sm btn-group-justified" role="group">
+					<a type="button" class="btn btn-default app_button" [ngClass]="{'active':category=='Food'}" aria-label="Left Align" (click)="categorySet('Food')">
+							<!-- 🌮 -->
+							<span class="glyphicon glyphicon-ice-lolly-tasted" aria-hidden="true"></span>
+							<br>Food
+					</a>
+					<a type="button" class="btn btn-default app_button" [ngClass]="{'active':category=='Mobility'}" aria-label="Left Align" (click)="categorySet('Mobility')">
+							<!-- 🚗 -->
+							<span class="glyphicon glyphicon-road" aria-hidden="true"></span>
+							<br>Mobility
+					</a>
+					<a type="button" class="btn btn-default app_button" [ngClass]="{'active':category=='Home Goods'}" aria-label="Left Align" (click)="categorySet('Home Goods')">
+							<!-- 🏠 -->
+							<span class="glyphicon glyphicon-home" aria-hidden="true"></span>
+							<br>Home
+					</a>
+					<a type="button" class="btn btn-default app_button" [ngClass]="{'active':category=='Finance'}" aria-label="Left Align" (click)="categorySet('Finance')">
+							<!-- 💰 -->
+							<span class="glyphicon glyphicon-piggy-bank" aria-hidden="true"></span>
+							<br>Finance
+					</a>
+					<a type="button" class="btn btn-default app_button" [ngClass]="{'active':category=='Solar'}" aria-label="Left Align" (click)="categorySet('Solar')">
+							<!-- ☀️️  -->
+							<span class="glyphicon glyphicon-certificate" aria-hidden="true"></span>
+							<br>Solar
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="container">
+	<div class="col-md-8 col-md-offset-2"> 
+		
+		<br>
+		<br>
+
+		<div class="myPanel">
+			<p style="padding: 1rem; margin-bottom: 0px; color:grey">Top Choices Sorted By
+					  <a style="text-decoration: none; cursor: pointer" (click)="this.pricetoggle = true" [ngClass]="{'bold':this.pricetoggle}">Most Affordable</a> | 
+					  <a style="text-decoration: none; cursor: pointer" (click)="this.pricetoggle = false" [ngClass]="{'bold':!this.pricetoggle}">Most Trusted</a>
+			</p>
+
+			<hr style="padding:0px; margin:0px">
+			<div *ngIf="!this.pricetoggle">
+					<div *ngFor="let new of news | keypipe | filter: category | sort, let i = index, let last = last"  (click)="postOpen(new)" style="cursor:pointer" class="myRow">
+						<div class="row" style="padding:10px" *ngIf="i < 1">
+						 	<app-widget-big [new]="new" [pricetoggle]="pricetoggle"></app-widget-big>
+						</div>
+					</div>
+					<div *ngFor="let new of news | keypipe | filter: category | sort, let i = index, let last = last"  (click)="postOpen(new)" style="cursor:pointer" class="myRow">
+
+
+						<div class="row" style="padding:10px" *ngIf="0 < i && i < this.visibilityLimit">
+						 	<app-widget [new]="new" [pricetoggle]="pricetoggle"></app-widget>
+						</div> 
+						<hr style="padding:0px; margin:0px"> 
+					</div>
+			</div>
+
+			<div *ngIf="this.pricetoggle">
+				
+					<div *ngFor="let new of news | keypipe | filter: category | pricesort, let i = index, let last = last"  (click)="postOpen(new)" style="cursor:pointer" class="myRow">
+						<div class="row" style="padding:10px" *ngIf="i < 1">
+						 	<app-widget-big [new]="new" [pricetoggle]="pricetoggle"></app-widget-big>
+						</div>
+					</div>
+					<div *ngFor="let new of news | keypipe | filter: category | pricesort, let i = index, let last = last"  (click)="postOpen(new)" style="cursor:pointer" class="myRow">
+							<div class="row" style="padding:10px" *ngIf="0 < i && i < this.visibilityLimit">
+								<app-widget [new]="new" [pricetoggle]="pricetoggle"></app-widget>
+							</div>
+							<hr style="padding:0px; margin:0px"> 
+					</div>
+			</div>
+		</div>
+
+		<!-- <div style="text-align:center; padding: 2rem">
+			<a class="btn btn-default"(click)="this.visibilityExpander()" *ngIf="!last">
+				<b>Load More</b>
+				<br>
+				<span class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span> 
+			</a>
+		</div> -->
+
+		<div style="padding-top:100px">
+			<app-sign-up></app-sign-up>
+		</div>
+	
+	</div>
+
+</div>
+
+
+
+
+<div *ngIf="selectedItem" id="myModal" class="modal fade" tabindex="-1" role="dialog">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      
+         <app-details [selectedItem]="selectedItem"></app-details> 
+      
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->

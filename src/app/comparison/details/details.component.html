@@ -28,8 +28,8 @@
 			<p><b>Price Range</b> | {{this.selectedItem.value.price}}</p>
 			<p>{{this.selectedItem.value.info}}</p>
 			<br>
-			
-	 <p *ngIf="this.selectedItem.value.cert =='Green-e'" style="display:inline"><a target="_blank" href="www.green-e.org"><img src="assets/green-e.gif" height="30px"></a></p>
+	<p><b>Certifications:</b></p>		
+	<p *ngIf="this.selectedItem.value.cert =='Green-e'" style="display:inline"><a target="_blank" href="www.green-e.org"><img src="assets/green-e.gif" height="30px"></a></p>
 	<p *ngIf="this.selectedItem.value.cert == 'USDA Certified Organic'" style="display:inline"><a target="_blank" href="https://www.ams.usda.gov/rules-regulations/organic"><img src="assets/organic.gif" height="30px"></a></p>
 	<p *ngIf="this.selectedItem.value.cert == 'Fair Trade Certified'" style="display:inline"><a target="_blank" href="http://fairtradeusa.org/cooplink"><img src="assets/fairtrade.gif" height="30px"></a></p>
 	<p *ngIf="this.selectedItem.value.cert == 'B-Corp'" style="display:inline"><a target="_blank" href="https://www.bcorporation.net"><img src="assets/bcorp.gif" height="30px"></a></p>
@@ -45,7 +45,7 @@
 	<p *ngIf="this.selectedItem.value.cert == 'EWG A'" style="display:inline"><img src="assets/nontoxic.gif" height="30px"></p>
 	<!-- <p *ngIf="this.selectedItem.value.nonwaste" style="display:inline"><img src="assets/nonwaste.gif" height="30px"></p> -->
 	<p *ngIf="this.selectedItem.value.cert == 'Vegan'" style="display:inline"><img src="assets/vegan.gif" height="30px"></p>
-	<p *ngIf="this.selectedItem.value.cert == 'None'" style="display:inline; color:grey">No Certifications</p>
+	<p *ngIf="this.selectedItem.value.cert == 'None'" style="display:inline; color:grey">None</p>
 
 			<hr>
 			<a class="btn btn-info" target="_blank" href="{{this.selectedItem.value.sustlink}}">Sustainability & Ethics</a>
@@ -72,6 +72,7 @@
 </div>
       <div class="modal-footer">
 <!--       	<p class="pull-left"><span class="glyphicon glyphicon-user" aria-hidden="true" (click)="void"></span> {{this.selectedItem.value.user}}</p> -->
+		<div class="fb-share-button pull-left btn btn-default" data-href="http://www.superjuice.cc" data-layout="link" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fwww.superjuice.cc%2F&amp;src=sdkpreparse">Share</a></div>
         <button type="button" class="btn btn-default" data-dismiss="modal" (click)="stopVideo()">Close</button>
         
 </div>

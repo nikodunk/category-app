@@ -4,7 +4,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { AboutComponent } from './about/about.component'
 // import { NewsfeedComponent } from './newsfeed/newsfeed.component';
 import { SubmitterComponent } from './submitter/submitter.component';
-import { ComparerComponent } from './comparison/comparer/comparer.component';
+import { ComparerComponent } from './comparison/list/comparer.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
 import { TableComponent } from './table/table.component';
 import { ContactComponent } from './contact/contact.component';

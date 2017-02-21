@@ -1,41 +1,45 @@
 
 .navbar-brand {
-  color: #3d6fbd;
+  /*color: #3d6fbd;*/
 }
 
 
+.mySubmit {
+  border-style:none;
+}
 
 
 .navbar-default {
-  background-color:white;
+  /*background-color:white;
   border-color: #eaeaea; 
-  box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, .02);
+  box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, .02);*/
   /*padding:0px;
-  margin: 0px;
-  border-style:none;*/
+  margin: 0px;*/
+  border-style:none;
+  background-color: #fafafa;
 }
 
 
-
+/*
 span.glyphicon-plus-sign {
     font-size: 1.2em;
     padding: 0px;
     margin: 0px;
     color:#5cb85c;
-}
+}*/
 
 
-
+/*
 
 span.glyphicon-plus-sign:hover {
     color:#3dff3d;
 }
+*/
 
-
-
+/*
 
 @media (min-width: 768px) {
   ul.nav li.dropdown:hover > ul.dropdown-menu {
     display: block;
   }
-}
+}*/

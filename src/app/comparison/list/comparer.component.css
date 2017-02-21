@@ -1,0 +1,16 @@
+.app_button {
+	border-style: none;
+	padding: 1rem;
+}
+
+
+.app_button:hover {
+	background-color: lightgrey;
+}
+
+
+
+.bold {
+	font-weight: 500;
+	color: grey;
+}
