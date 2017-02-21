@@ -2,7 +2,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService } from '../services/data.service'
 import {DisqusModule} from "ng2-awesome-disqus";
-import { DetailsComponent } from '../details/details.component'
 
 declare var jQuery:any;
 
@@ -18,8 +17,7 @@ export class TableComponent implements OnInit {
     pricetoggle: boolean = false;
 
   	constructor(  private dataService: DataService,
-                  private disqus: DisqusModule, 
-                  private details: DetailsComponent) { }
+                  private disqus: DisqusModule) { }
     
     selectedItem: any;
     visibilityLimit = 15; 

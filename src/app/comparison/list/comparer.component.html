@@ -4,55 +4,55 @@
 			<h3 style="text-align:center">Where To Get Affordable, Sustainable {{this.category | uppercase}}</h3>
 			<br>
 			<div class="btn-group btn-group-justified myPanel" role="group">
+				<a type="button" class="btn btn-default app_button" [ngClass]="{'active':category=='Cleaning Products'}" aria-label="Left Align" (click)="categorySet('Cleaning Products')">
+						<!-- ✨ -->
+						<span class="glyphicon glyphicon-grain" aria-hidden="true"></span>
+						<br>Cleaning
+				</a>
 				<a type="button" class="btn btn-default app_button" role="button" [ngClass]="{'active':category=='Energy'}" aria-label="Left Align" (click)="categorySet('Energy')">
 						<!-- 🔌 -->
 						<span class="glyphicon glyphicon-flash" aria-hidden="true"></span>
 						<br>Energy
-				</a>
-				<a type="button" class="btn btn-default app_button" role="button" [ngClass]="{'active':category=='Fashion'}" aria-label="Left Align" (click)="categorySet('Fashion')">
-						<!-- 👖 -->
-						<span class="glyphicon glyphicon-camera" aria-hidden="true"></span>
-						<br>Fashion
-				</a>
-				<a type="button" class="btn btn-default app_button" [ngClass]="{'active':category=='Shoes'}" aria-label="Left Align" (click)="categorySet('Shoes')">
-						<!-- 👟 -->
-						<span class="glyphicon glyphicon-scale" aria-hidden="true"></span>
-						<br>Shoes
 				</a>
 				<a type="button" class="btn btn-default app_button" [ngClass]="{'active':category=='Eyewear'}" aria-label="Left Align" (click)="categorySet('Eyewear')">
 						<!-- 🕶️ -->
 						<span class="glyphicon glyphicon-sunglasses" aria-hidden="true"></span>
 						<br>Eyewear
 				</a>
-				<a type="button" class="btn btn-default app_button" [ngClass]="{'active':category=='Cleaning Products'}" aria-label="Left Align" (click)="categorySet('Cleaning Products')">
-						<!-- ✨ -->
-						<span class="glyphicon glyphicon-grain" aria-hidden="true"></span>
-						<br>Cleaning
+				<a type="button" class="btn btn-default app_button" role="button" [ngClass]="{'active':category=='Fashion'}" aria-label="Left Align" (click)="categorySet('Fashion')">
+						<!-- 👖 -->
+						<span class="glyphicon glyphicon-camera" aria-hidden="true"></span>
+						<br>Fashion
 				</a>
-				<a type="button" class="btn btn-default app_button" [ngClass]="{'active':category=='Skincare Products'}" aria-label="Left Align" (click)="categorySet('Skincare Products')">
-						<!-- 💄 -->
-						<span class="glyphicon glyphicon-tint" aria-hidden="true"></span>
-						<br>Makeup
+				<a type="button" class="btn btn-default app_button" [ngClass]="{'active':category=='Finance'}" aria-label="Left Align" (click)="categorySet('Finance')">
+						<!-- 💰 -->
+						<span class="glyphicon glyphicon-piggy-bank" aria-hidden="true"></span>
+						<br>Finance
 				</a>
 				<a type="button" class="btn btn-default app_button" [ngClass]="{'active':category=='Food'}" aria-label="Left Align" (click)="categorySet('Food')">
 						<!-- 🌮 -->
 						<span class="glyphicon glyphicon-ice-lolly-tasted" aria-hidden="true"></span>
 						<br>Food
 				</a>
-				<a type="button" class="btn btn-default app_button" [ngClass]="{'active':category=='Mobility'}" aria-label="Left Align" (click)="categorySet('Mobility')">
-						<!-- 🚗 -->
-						<span class="glyphicon glyphicon-road" aria-hidden="true"></span>
-						<br>Mobility
-				</a>
 				<a type="button" class="btn btn-default app_button" [ngClass]="{'active':category=='Home Goods'}" aria-label="Left Align" (click)="categorySet('Home Goods')">
 						<!-- 🏠 -->
 						<span class="glyphicon glyphicon-home" aria-hidden="true"></span>
 						<br>Home
 				</a>
-				<a type="button" class="btn btn-default app_button" [ngClass]="{'active':category=='Finance'}" aria-label="Left Align" (click)="categorySet('Finance')">
-						<!-- 💰 -->
-						<span class="glyphicon glyphicon-piggy-bank" aria-hidden="true"></span>
-						<br>Finance
+				<a type="button" class="btn btn-default app_button" [ngClass]="{'active':category=='Skincare Products'}" aria-label="Left Align" (click)="categorySet('Skincare Products')">
+						<!-- 💄 -->
+						<span class="glyphicon glyphicon-tint" aria-hidden="true"></span>
+						<br>Makeup
+				</a>
+				<a type="button" class="btn btn-default app_button" [ngClass]="{'active':category=='Mobility'}" aria-label="Left Align" (click)="categorySet('Mobility')">
+						<!-- 🚗 -->
+						<span class="glyphicon glyphicon-road" aria-hidden="true"></span>
+						<br>Mobility
+				</a>
+				<a type="button" class="btn btn-default app_button" [ngClass]="{'active':category=='Shoes'}" aria-label="Left Align" (click)="categorySet('Shoes')">
+						<!-- 👟 -->
+						<span class="glyphicon glyphicon-scale" aria-hidden="true"></span>
+						<br>Shoes
 				</a>
 				<a type="button" class="btn btn-default app_button" [ngClass]="{'active':category=='Solar'}" aria-label="Left Align" (click)="categorySet('Solar')">
 						<!-- ☀️️  -->
@@ -72,58 +72,58 @@
 			<br>
 			<div class="myPanel">
 				<div class="btn-group btn-group-justified" role="group">
+					<a type="button" class="btn btn-default app_button" [ngClass]="{'active':category=='Cleaning Products'}" aria-label="Left Align" (click)="categorySet('Cleaning Products')">
+							<!-- ✨ -->
+							<span class="glyphicon glyphicon-grain" aria-hidden="true"></span>
+							<br>Cleaning
+					</a>					
 					<a type="button" class="btn btn-default app_button" role="button" [ngClass]="{'active':category=='Energy'}" aria-label="Left Align" (click)="categorySet('Energy')">
 							<!-- 🔌 -->
 							<span class="glyphicon glyphicon-flash" aria-hidden="true"></span>
 							<br>Energy
-					</a>
-					<a type="button" class="btn btn-default app_button" role="button" [ngClass]="{'active':category=='Fashion'}" aria-label="Left Align" (click)="categorySet('Fashion')">
-							<!-- 👖 -->
-							<span class="glyphicon glyphicon-camera" aria-hidden="true"></span>
-							<br>Fashion
-					</a>
-					<a type="button" class="btn btn-default app_button" [ngClass]="{'active':category=='Shoes'}" aria-label="Left Align" (click)="categorySet('Shoes')">
-							<!-- 👟 -->
-							<span class="glyphicon glyphicon-scale" aria-hidden="true"></span>
-							<br>Shoes
 					</a>
 					<a type="button" class="btn btn-default app_button" [ngClass]="{'active':category=='Eyewear'}" aria-label="Left Align" (click)="categorySet('Eyewear')">
 							<!-- 🕶️ -->
 							<span class="glyphicon glyphicon-sunglasses" aria-hidden="true"></span>
 							<br>Eyewear
 					</a>
-					<a type="button" class="btn btn-default app_button" [ngClass]="{'active':category=='Cleaning Products'}" aria-label="Left Align" (click)="categorySet('Cleaning Products')">
-							<!-- ✨ -->
-							<span class="glyphicon glyphicon-grain" aria-hidden="true"></span>
-							<br>Cleaning
-					</a>
-					<a type="button" class="btn btn-default app_button" [ngClass]="{'active':category=='Skincare Products'}" aria-label="Left Align" (click)="categorySet('Skincare Products')">
-							<!-- 💄 -->
-							<span class="glyphicon glyphicon-tint" aria-hidden="true"></span>
-							<br>Makeup
-					</a>
-				</div>
-				<hr style="margin:0px">
-				<div class="btn-group btn-group-sm btn-group-justified" role="group">
-					<a type="button" class="btn btn-default app_button" [ngClass]="{'active':category=='Food'}" aria-label="Left Align" (click)="categorySet('Food')">
-							<!-- 🌮 -->
-							<span class="glyphicon glyphicon-ice-lolly-tasted" aria-hidden="true"></span>
-							<br>Food
-					</a>
-					<a type="button" class="btn btn-default app_button" [ngClass]="{'active':category=='Mobility'}" aria-label="Left Align" (click)="categorySet('Mobility')">
-							<!-- 🚗 -->
-							<span class="glyphicon glyphicon-road" aria-hidden="true"></span>
-							<br>Mobility
-					</a>
-					<a type="button" class="btn btn-default app_button" [ngClass]="{'active':category=='Home Goods'}" aria-label="Left Align" (click)="categorySet('Home Goods')">
-							<!-- 🏠 -->
-							<span class="glyphicon glyphicon-home" aria-hidden="true"></span>
-							<br>Home
+					<a type="button" class="btn btn-default app_button" role="button" [ngClass]="{'active':category=='Fashion'}" aria-label="Left Align" (click)="categorySet('Fashion')">
+							<!-- 👖 -->
+							<span class="glyphicon glyphicon-camera" aria-hidden="true"></span>
+							<br>Fashion
 					</a>
 					<a type="button" class="btn btn-default app_button" [ngClass]="{'active':category=='Finance'}" aria-label="Left Align" (click)="categorySet('Finance')">
 							<!-- 💰 -->
 							<span class="glyphicon glyphicon-piggy-bank" aria-hidden="true"></span>
 							<br>Finance
+					</a>	
+					<a type="button" class="btn btn-default app_button" [ngClass]="{'active':category=='Food'}" aria-label="Left Align" (click)="categorySet('Food')">
+							<!-- 🌮 -->
+							<span class="glyphicon glyphicon-ice-lolly-tasted" aria-hidden="true"></span>
+							<br>Food
+					</a>									
+				</div>
+				<hr style="margin:0px">
+				<div class="btn-group btn-group-sm btn-group-justified" role="group">
+					<a type="button" class="btn btn-default app_button" [ngClass]="{'active':category=='Home Goods'}" aria-label="Left Align" (click)="categorySet('Home Goods')">
+							<!-- 🏠 -->
+							<span class="glyphicon glyphicon-home" aria-hidden="true"></span>
+							<br>Home
+					</a>
+					<a type="button" class="btn btn-default app_button" [ngClass]="{'active':category=='Skincare Products'}" aria-label="Left Align" (click)="categorySet('Skincare Products')">
+							<!-- 💄 -->
+							<span class="glyphicon glyphicon-tint" aria-hidden="true"></span>
+							<br>Makeup
+					</a>					
+					<a type="button" class="btn btn-default app_button" [ngClass]="{'active':category=='Mobility'}" aria-label="Left Align" (click)="categorySet('Mobility')">
+							<!-- 🚗 -->
+							<span class="glyphicon glyphicon-road" aria-hidden="true"></span>
+							<br>Mobility
+					</a>
+					<a type="button" class="btn btn-default app_button" [ngClass]="{'active':category=='Shoes'}" aria-label="Left Align" (click)="categorySet('Shoes')">
+							<!-- 👟 -->
+							<span class="glyphicon glyphicon-scale" aria-hidden="true"></span>
+							<br>Shoes
 					</a>
 					<a type="button" class="btn btn-default app_button" [ngClass]="{'active':category=='Solar'}" aria-label="Left Align" (click)="categorySet('Solar')">
 							<!-- ☀️️  -->
