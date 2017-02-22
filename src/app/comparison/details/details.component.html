@@ -21,7 +21,8 @@
 		</div>
 		 <div class="col-sm-6">
 			<p><b>Sustainability & Ethics</b> | {{this.selectedItem.value.sust}}</p>
-			<p><b>Price Range</b> | {{this.selectedItem.value.price}}</p>
+			<p *ngIf="this.selectedItem.value.category=='Food'"><b>Price Range</b> | ${{this.selectedItem.value.price}} per meal average</p>
+			<p *ngIf="this.selectedItem.value.category!=='Food'"><b>Price Range</b> | {{this.selectedItem.value.price}}</p>
 			<p>{{this.selectedItem.value.info}}</p>
 			<br>
 	<p><b>Certifications:</b></p>		
