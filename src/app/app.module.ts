@@ -59,7 +59,7 @@ import { WidgetBigComponent } from './comparison/widget-big/widget-big.component
     AngularFireModule.initializeApp(firebaseConfig),
     DisqusModule
   ],
-  providers: [{ provide: LocationStrategy, useClass: PathLocationStrategy}, DataService, DetailsComponent],
+  providers: [{ provide: LocationStrategy, useClass: PathLocationStrategy}, DataService, DetailsComponent, ComparerComponent],
   bootstrap: [AppComponent]
 })
 

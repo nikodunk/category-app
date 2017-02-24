@@ -3,7 +3,7 @@ import { DataService } from '../../services/data.service'
 import { DisqusModule} from "ng2-awesome-disqus";
 import { DetailsComponent } from '../details/details.component'
 import { KeypipePipe } from '../../keypipe.pipe'
-
+import { Router } from '@angular/router'
 
 declare var jQuery:any;
         const buttons = []
@@ -19,10 +19,11 @@ export class ComparerComponent implements OnInit {
   
       category = 'Energy'
       pricetoggle: boolean = true;
-      news: any;
+      news: Array<any>;
       selectedItem: any;
       visibilityLimit:number = 50;
       myUrl: any;
+      newId: any;
 
     constructor(  private dataService: DataService) { }
     
@@ -34,6 +35,7 @@ export class ComparerComponent implements OnInit {
     postOpen(selectedItem){
       jQuery("#myModal").modal("show");
       this.selectedItem = selectedItem
+      
     }
 
     categorySet(category){
@@ -44,7 +46,8 @@ export class ComparerComponent implements OnInit {
 
   ngOnInit() {
 
-          this.dataService.fetchPosts().subscribe(data => this.news = data)
+          this.dataService.fetchPosts().subscribe(data => {this.news = data;
+                                                           console.log(this.news)})
           this.postOpen('el')
   }
 

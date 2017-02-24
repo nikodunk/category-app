@@ -9,6 +9,7 @@ import { SignUpComponent } from './sign-up/sign-up.component';
 import { TableComponent } from './table/table.component';
 import { ContactComponent } from './contact/contact.component';
 
+import { COMPARISON_ROUTES } from './comparison/comparison.routes'
 
 
 
@@ -26,7 +27,8 @@ const routes: Routes = [
     component: ContactComponent
   },{
     path: 'Categories',
-    component: ComparerComponent
+    component: ComparerComponent,
+    children: COMPARISON_ROUTES
   },{
     path: 'Table',
     component: TableComponent

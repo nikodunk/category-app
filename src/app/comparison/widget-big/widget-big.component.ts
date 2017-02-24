@@ -14,7 +14,10 @@ declare var jQuery:any;
 export class WidgetBigComponent implements OnInit {
 
  @Input() new: any;
+ @Input() newId: any;
+
  @Input() pricetoggle: boolean;
+
 
     constructor(private dataService: DataService) { }
     
@@ -30,7 +33,7 @@ export class WidgetBigComponent implements OnInit {
     
 
   ngOnInit() {  
-  	this.new.value.video = 'https://www.youtube.com/embed/'+ this.new.value.videotag;
+  	this.new.video = 'https://www.youtube.com/embed/'+ this.new.videotag;
   }
 
 }

@@ -12,7 +12,7 @@
 						<td>Comments & Reviews</td>
 
 	        	</tr>
-	        	<tr *ngFor="let new of news | keypipe, let i = index " >
+	        	<tr *ngFor="let new of news, let i = index " >
 						<td>{{new.value.category}}</td>
 						<th>{{new.value.title}}</th> 
 						<td> {{new.value.productlink}}</td> <!-- 3 -->

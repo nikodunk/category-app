@@ -14,3 +14,9 @@
 	font-weight: 500;
 	color: grey;
 }
+
+
+
+.modal-backdrop {
+   background-color: red !important;
+}

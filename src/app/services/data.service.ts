@@ -39,10 +39,15 @@ fetchPosts(){
       'Content-Type': 'application/json'
     });
     return this.http.get('https://catalog-daa7b.firebaseio.com/.json')
-      .map(data => data.json())
+      .map(data => {data.json()
+      let keys = [];
+      for (let key in data.json()) {
+        keys.push(data.json()[key]);
+      }
+      return keys;
+  })
 
   }
-  
 
 
 
