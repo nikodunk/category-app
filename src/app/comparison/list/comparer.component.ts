@@ -40,15 +40,33 @@ export class ComparerComponent implements OnInit {
 
     categorySet(category){
       this.category = category;
+      this.news.filter(this.categoryFilter, this.category)
       // this.visibilityLimit = 15;
     }
 
+    categoryFilter(item) {
+              // console.log(item)
+              if (
+                (typeof item.category == 'string' || item.category instanceof String) && 
+                  (item.category.indexOf('Energy') !== -1)) {
+                // console.log(item)
+                return true;
+              }
+                
+                        
+    }
 
   ngOnInit() {
 
-          this.dataService.fetchPosts().subscribe(data => {this.news = data;
-                                                           console.log(this.news)})
+          this.dataService.fetchPosts()
+            .subscribe(data => {this.news = data.filter(this.categoryFilter);
+                                // console.log(this.news);
+                                // console.log(this.news.filter(this.categoryFilter))
+                            }
+                          )
+          
           this.postOpen('el')
+
   }
 
 }
