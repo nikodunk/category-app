@@ -14,7 +14,7 @@ function App() {
   return (
     <BrowserRouter>
       <Header />
-      <div class="container">
+      <div class="container" style={{ maxWidth: 800, margin: '0 auto' }}>
           <Switch>
             <Route path="/about" component={About} />
             <Route path="/contact" component={Contact} />

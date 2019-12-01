@@ -14,10 +14,10 @@ export default function ComparerWidget(props) {
                 <button className="btn btn-outline-dark btn-sm pull-right">
                     { props.item.upvote } Purchased Through Superjuice
                 </button>
-                <button className="btn btn-outline-dark btn-sm pull-right hoverButton" style={{color: 'grey', margin: 2, outlineColor: 'grey'}}>
+                <button className="btn btn-outline-dark btn-sm pull-right hoverButton" style={{color: 'grey', margin: 2, borderColor: 'lightgrey'}}>
                     🎥 More Info
                 </button>
-                <button className="btn btn-outline-dark btn-sm pull-right hoverButton" style={{color: 'grey', margin: 2, outlineColor: 'grey'}} target="_blank" href={props.item.prodlink}>
+                <button className="btn btn-outline-dark btn-sm pull-right hoverButton" style={{color: 'grey', margin: 2, borderColor: 'lightgrey'}} onClick={() => window.open(props.item.productlink)}>
                     Get It Now
                 </button>
             </div>

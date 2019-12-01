@@ -37,48 +37,48 @@ export default function ComparerList() {
         }
 
         return (
-                <div style={{ maxWidth: 800, margin: '0 auto' }}>
+                <div>
                         <div style={{ textAlign: 'center', paddingTop: 20, paddingBottom: 20 }}>
                                 <h3 style={{ textAlign: 'center' }}>Where To Get Affordable, Sustainable {category}</h3>
                                 <br />
                                 <div className="myPanel">
                                         <div className="btn-group btn-group-justified " style={{ display: 'flex', flexWrap: 'wrap' }}>
-                                                <a type="button" className="btn btn-default app_button" onClick={() => setCategory('Cleaning')} >
+                                                <a type="button" className={"btn btn-light app_button " + (category === 'Cleaning' ? 'active' : "")} onClick={() => setCategory('Cleaning')} >
                                                         ✨<br />Cleaning
                                                 </a>
-                                                        <a type="button" className="btn btn-default app_button" onClick={() => setCategory('Power')} >
+                                                        <a type="button" className={"btn btn-light app_button " + (category === 'Power' ? 'active' : "")} onClick={() => setCategory('Power')} >
                                                                 🔌<br />Energy
                                                 </a>
-                                                        <a type="button" className="btn btn-default app_button" onClick={() => setCategory('Eyewear')} >
+                                                        <a type="button" className={"btn btn-light app_button " + (category === 'Eyewear' ? 'active' : "")} onClick={() => setCategory('Eyewear')} >
                                                                 🕶<br />Eyewear
                                                 </a>
-                                                        <a type="button" className="btn btn-default app_button" onClick={() => setCategory('Fashion')} >
+                                                        <a type="button" className={"btn btn-light app_button " + (category === 'Fashion' ? 'active' : "")} onClick={() => setCategory('Fashion')} >
                                                                 👖<br />Fashion
                                                 </a>
-                                                        <a type="button" className="btn btn-default app_button" onClick={() => setCategory('Banking')} >
+                                                        <a type="button" className={"btn btn-light app_button " + (category === 'Banking' ? 'active' : "")} onClick={() => setCategory('Banking')} >
                                                                 💰<br />Finance
                                                 </a>
-                                                        <a type="button" className="btn btn-default app_button" onClick={() => setCategory('Nourishment')}>
+                                                        <a type="button" className={"btn btn-light app_button " + (category === 'Nourishment' ? 'active' : "")} onClick={() => setCategory('Nourishment')}>
                                                                 🌮<br />Food
                                                 </a>
                                         </div>
                                         <div className="btn-group btn-group-justified " style={{ display: 'flex', flexWrap: 'wrap' }}>
-                                                <a type="button" className="btn btn-default app_button" onClick={() => setCategory('Home')} >
+                                                <a type="button" className={"btn btn-light app_button " + (category === 'Home' ? 'active' : "")} onClick={() => setCategory('Home')} >
                                                         🏠<br />Home
                                                 </a>
-                                                <a type="button" className="btn btn-default app_button" onClick={() => setCategory('Makeup')} >
+                                                <a type="button" className={"btn btn-light app_button " + (category === 'Makeup' ? 'active' : "")} onClick={() => setCategory('Makeup')} >
                                                         💄<br />Makeup
                                                 </a>
-                                                <a type="button" className="btn btn-default app_button" onClick={() => setCategory('Transport')} >
+                                                <a type="button" className={"btn btn-light app_button " + (category === 'Transport' ? 'active' : "")} onClick={() => setCategory('Transport')} >
                                                         🚗<br />Mobility
                                                 </a>
-                                                        <a type="button" className="btn btn-default app_button" onClick={() => setCategory('Shoes')}>
+                                                        <a type="button" className={"btn btn-light app_button " + (category === 'Shoes' ? 'active' : "")} onClick={() => setCategory('Shoes')}>
                                                                 👟<br />Shoes
                                                 </a>
-                                                <a type="button" className="btn btn-default app_button" onClick={() => setCategory('Generation')}>
+                                                <a type="button" className={"btn btn-light app_button " + (category === 'Generation' ? 'active' : "")} onClick={() => setCategory('Generation')}>
                                                         ☀️<br />Solar
                                                 </a>
-                                                <a type="button" className="btn btn-default app_button" onClick={() => setCategory('Generation')}>
+                                                <a type="button" className="btn btn-light app_button" onClick={() => setCategory('Generation')}>
                                                         &nbsp;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                                 </a>
                                         </div>
@@ -95,7 +95,7 @@ export default function ComparerList() {
 
 
                         <div style={{ display: filteredItems.length > 5 ? 'inline' : 'none' }}>
-                                <a className="btn btn-default myPanel" onClick={visibilityExpander} >
+                                <a className="btn btn-light myPanel" onClick={visibilityExpander} >
                                         <b>Load More</b><br />˯
                                 </a>
                         </div>
