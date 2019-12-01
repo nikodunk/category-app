@@ -18,6 +18,7 @@ export default function ComparerDetail() {
                         {/* <p><b>Sustainability & Ethics</b> | {{ this.selectedItem.value.sust }}</p> */}
                         <br />
                         <p><b>Certifications:</b></p>
+                        
 
                         <hr />
                         <a class="btn btn-info" target="_blank" href="{{this.selectedItem.value.sustlink}}">Sustainability & Ethics</a>
