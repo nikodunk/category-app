@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/sustable-co-videos/static/css/main.ba31768f.chunk.css",
+    "main.js": "/sustable-co-videos/static/js/main.59543ab9.chunk.js",
+    "main.js.map": "/sustable-co-videos/static/js/main.59543ab9.chunk.js.map",
+    "runtime-main.js": "/sustable-co-videos/static/js/runtime-main.13a4656f.js",
+    "runtime-main.js.map": "/sustable-co-videos/static/js/runtime-main.13a4656f.js.map",
+    "static/js/2.49dc9b64.chunk.js": "/sustable-co-videos/static/js/2.49dc9b64.chunk.js",
+    "static/js/2.49dc9b64.chunk.js.map": "/sustable-co-videos/static/js/2.49dc9b64.chunk.js.map",
+    "index.html": "/sustable-co-videos/index.html",
+    "precache-manifest.db6d54c3e9ea3f722d5adb06e068a9a2.js": "/sustable-co-videos/precache-manifest.db6d54c3e9ea3f722d5adb06e068a9a2.js",
+    "service-worker.js": "/sustable-co-videos/service-worker.js",
+    "static/css/main.ba31768f.chunk.css.map": "/sustable-co-videos/static/css/main.ba31768f.chunk.css.map"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.13a4656f.js",
+    "static/js/2.49dc9b64.chunk.js",
+    "static/css/main.ba31768f.chunk.css",
+    "static/js/main.59543ab9.chunk.js"
+  ]
+}
