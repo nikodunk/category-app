@@ -1,5 +1,6 @@
 import React from 'react'
 import CertificationWidget from '../CertificationWidget'
+import ReactPlayer from 'react-player'
 
 export default function ComparerDetail(props) {
     return (
@@ -15,7 +16,7 @@ export default function ComparerDetail(props) {
             <div class="row">
                 <div class="col-sm-6">
                     <div >
-                        <img style={{ width: '100%' }} src={`https://img.youtube.com/vi/${props.item.videotag}/default.jpg`} />
+                        <ReactPlayer width='100%' url={props.item.video1} playing />
                         <div class="fb-share-button pull-left btn btn-default" data-href="http://www.superjuice.cc" data-layout="link" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fwww.superjuice.cc%2F&amp;src=sdkpreparse">Share</a></div>
                     </div>
                 </div>
