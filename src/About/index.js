@@ -6,12 +6,12 @@ export default function About() {
 
             <div style={{paddingTop:100, paddingBottom:100}}>
                 <img src="superjuicelogo.png" height="80px" style={{margin: 20}} />
-                <h3>
-                    Hi!<br /> We think sustainable buying is too expensive and time-consuming.
-                </h3>
+                <h4>
+                    Hi! We think sustainable buying is too expensive and time-consuming.
+                </h4>
                 <br />
                 <hr />
-                    <h5>Superjuice tries to solve this problem.</h5>
+                    <h4>Superjuice tries to solve this problem.</h4>
                     <p>Inspired by Stewart Brand's <a href="https://en.wikipedia.org/wiki/Whole_Earth_Catalog">Whole Earth Catalog</a>, Superjuice is a price and certification comparison engine.</p>
                     <p><b>Disclaimer:</b> When readers choose to buy from some (but not all) of the listed companies in the catalog, we earn affiliate commissions that support our work.</p>
                     <p>For any questions or comments, email Niko at n.dunkel (at) gmail.com </p> 
