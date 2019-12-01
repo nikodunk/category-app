@@ -15,7 +15,7 @@ export default function SignUp() {
                         <input name="email" type="text"
                             class="form-control pull-right" placeholder="Enter your email" />
                         <span class="input-group-addon btn btn-success success">
-                            <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
+                            ✉️
                             Subscribe
 				</span>
                     </div>
