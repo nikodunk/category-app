@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "30e15c780bb5bc5cc96064fc4afe5835",
+    "revision": "fd415eab5642eb249637c0f71788d35c",
     "url": "/sustco-platform/index.html"
   },
   {
-    "revision": "7dbbec3834b977bff375",
+    "revision": "b7791f03cab3391c0d98",
     "url": "/sustco-platform/static/css/main.ba31768f.chunk.css"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/sustco-platform/static/js/2.318dc12c.chunk.js"
   },
   {
-    "revision": "7dbbec3834b977bff375",
-    "url": "/sustco-platform/static/js/main.6f65575a.chunk.js"
+    "revision": "b7791f03cab3391c0d98",
+    "url": "/sustco-platform/static/js/main.23043aba.chunk.js"
   },
   {
     "revision": "af62ac084dcada988316",
