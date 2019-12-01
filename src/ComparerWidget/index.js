@@ -2,10 +2,6 @@ import React from 'react'
 
 export default function ComparerWidget(props) {
 
-    const openModal = (item) => {
-        console.log(item)
-    }
-
     return (
         <div className="myPanel myRow row p-3" onClick={() => props.openModal(props.item)}>
             <div className="col-xs-4 col-sm-2" >
