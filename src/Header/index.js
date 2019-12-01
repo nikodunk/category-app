@@ -8,7 +8,7 @@ export default function Header() {
             <Link class="navbar-brand" to="/">
                 <p>
                     <img class="brandImage" alt="Brand" src="superjuicelogo.png" height="25px" />
-                    <span style={{ fontWeight: 600, color: 'grey', marginLeft: 5 }}>superjuice</span>
+                    <span style={{ fontWeight: 600, color: 'grey', marginLeft: 5 }}>whole earth catalog</span>
                 </p>
             </Link>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">

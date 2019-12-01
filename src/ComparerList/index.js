@@ -50,7 +50,7 @@ export default function ComparerList() {
         return (
                 <div>
                         <div style={{ textAlign: 'center', paddingTop: 20, paddingBottom: 20 }}>
-                                <h3 style={{ textAlign: 'center' }}>Where To Get Affordable, Sustainable <u>{category}</u></h3>
+                                <h3 style={{ textAlign: 'center' }}>Where to get affordable, sustainable <u>{category}</u></h3>
                                 <br />
                                 <div className="myPanel">
                                         <div className="btn-group btn-group-justified " style={{ display: 'flex', flexWrap: 'wrap' }}>

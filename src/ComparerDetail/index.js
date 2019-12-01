@@ -27,11 +27,8 @@ export default function ComparerDetail(props) {
                         <b>Certifications: &nbsp;</b>
                         <CertificationWidget item={props.item} />
                     </p>
-
                     <p>{props.item.intro}</p>
-
                     <hr />
-
                     <button class="btn btn-info m-1" target="_blank" onClick={() => window.open(props.item.sustlink)}>Sustainability & Ethics</button>
                     <button target="_blank" class="btn btn-success m-1" onClick={() => window.open(props.item.productlink)}>Get It Now</button>
 
