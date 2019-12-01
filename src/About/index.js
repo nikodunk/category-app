@@ -12,7 +12,7 @@ export default function About() {
                 <br />
                 <hr />
                     <h4>The Whole Earth Catalog tries to solve this problem.</h4>
-                    <p>Inspired by Stewart Brand's <a href="https://en.wikipedia.org/wiki/Whole_Earth_Catalog">Whole Earth Catalog</a>, this (new) Whole Earth is a social price and certification comparison experience.</p>
+                    <p>Inspired by Stewart Brand's <a href="https://en.wikipedia.org/wiki/Whole_Earth_Catalog">Whole Earth Catalog</a>, this digital version is a meant to help users curate lists to compare prices and certifications of sustainable brands.</p>
                     <p><b>Disclaimer:</b> When readers choose to buy from some (but not all) of the listed companies in the catalog, we earn affiliate commissions that support our work.</p>
                     <p>For any questions or comments, email Niko at n.dunkel (at) gmail.com </p> 
             </div>
