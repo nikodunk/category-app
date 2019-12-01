@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import SignUp from '../SignUp'
 import ComparerWidget from '../ComparerWidget'
+import ComparerDetail from '../ComparerDetail'
+import Popup from '../PopUp'
 import { fetchPosts } from '../data'
 
 
@@ -9,6 +11,8 @@ export default function ComparerList() {
         const [items, setItems] = useState([])
         const [filteredItems, setFilteredItems] = useState([])
         const [category, setCategory] = useState()
+        const [selectedItem, setSelectedItem] = useState()
+        const [adding, setAdding] = useState()
 
         useEffect(() => {
                 const fetchData = async () => {
@@ -31,6 +35,11 @@ export default function ComparerList() {
                 let filteredItems = items.filter((item) => item.category === category)
                 setFilteredItems(filteredItems)
         }, [category])
+
+        const openModal = (item) => {
+                setAdding(true)
+                setSelectedItem(item)
+        }
 
         const visibilityExpander = () => {
 
@@ -85,14 +94,7 @@ export default function ComparerList() {
                                 </div>
                         </div>
 
-
-
-                        {
-                                filteredItems.map((item, index) => <ComparerWidget key={index} item={item} />)
-                        }
-
-
-
+                        { filteredItems.map((item, index) => <ComparerWidget key={index} item={item} openModal={openModal} />) }
 
                         <div style={{ display: filteredItems.length > 5 ? 'inline' : 'none' }}>
                                 <a className="btn btn-light myPanel" onClick={visibilityExpander} >
@@ -100,18 +102,18 @@ export default function ComparerList() {
                                 </a>
                         </div>
 
-
-                        < div style={{ paddingTop: 100 }}>
+                        <div style={{ paddingTop: 100 }}>
                                 <SignUp />
                         </div >
 
-                        <div id="myModal" className="modal fade" tabIndex="-1" role="dialog" >
-                                <div className="modal-dialog modal-lg" role="document">
-                                        <div className="modal-content">
-                                                {/* <ComparerDetails selectedComponent={props.match.id} /> */}
-                                        </div>
-                                </div >
-                        </div >
+                        { adding ? 
+                                <Popup>
+                                        <h3>Details</h3>
+                                        <ComparerDetail item={selectedItem} />
+                                        <br />
+                                        <button onClick={(e) => {e.preventDefault(); setAdding(false)}} className="btn btn-secondary m-1">Close</button>
+                                </Popup>
+                        : null } 
                 </div>
 
         )

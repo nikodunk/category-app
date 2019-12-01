@@ -7,7 +7,7 @@ export default function ComparerWidget(props) {
     }
 
     return (
-        <div className="myPanel myRow row p-3" onClick={() => openModal(props.item)}>
+        <div className="myPanel myRow row p-3" onClick={() => props.openModal(props.item)}>
             <div className="col-xs-4 col-sm-2" >
                 <img style={{width:'100%', marginTop:'20%'}} src={`https://img.youtube.com/vi/${props.item.videotag}/default.jpg`} />
             </div>
