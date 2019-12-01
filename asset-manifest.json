@@ -1,21 +1,21 @@
 {
   "files": {
     "main.css": "/sustco-platform/static/css/main.ba31768f.chunk.css",
-    "main.js": "/sustco-platform/static/js/main.f7dca42b.chunk.js",
-    "main.js.map": "/sustco-platform/static/js/main.f7dca42b.chunk.js.map",
+    "main.js": "/sustco-platform/static/js/main.8bff202d.chunk.js",
+    "main.js.map": "/sustco-platform/static/js/main.8bff202d.chunk.js.map",
     "runtime-main.js": "/sustco-platform/static/js/runtime-main.1db51b8e.js",
     "runtime-main.js.map": "/sustco-platform/static/js/runtime-main.1db51b8e.js.map",
-    "static/js/2.49dc9b64.chunk.js": "/sustco-platform/static/js/2.49dc9b64.chunk.js",
-    "static/js/2.49dc9b64.chunk.js.map": "/sustco-platform/static/js/2.49dc9b64.chunk.js.map",
+    "static/js/2.fdd51d05.chunk.js": "/sustco-platform/static/js/2.fdd51d05.chunk.js",
+    "static/js/2.fdd51d05.chunk.js.map": "/sustco-platform/static/js/2.fdd51d05.chunk.js.map",
     "index.html": "/sustco-platform/index.html",
-    "precache-manifest.4d08645c6e2afbca0fcd70210e4c295c.js": "/sustco-platform/precache-manifest.4d08645c6e2afbca0fcd70210e4c295c.js",
+    "precache-manifest.4c58e86fc8b10872fe7913f5ff283962.js": "/sustco-platform/precache-manifest.4c58e86fc8b10872fe7913f5ff283962.js",
     "service-worker.js": "/sustco-platform/service-worker.js",
     "static/css/main.ba31768f.chunk.css.map": "/sustco-platform/static/css/main.ba31768f.chunk.css.map"
   },
   "entrypoints": [
     "static/js/runtime-main.1db51b8e.js",
-    "static/js/2.49dc9b64.chunk.js",
+    "static/js/2.fdd51d05.chunk.js",
     "static/css/main.ba31768f.chunk.css",
-    "static/js/main.f7dca42b.chunk.js"
+    "static/js/main.8bff202d.chunk.js"
   ]
 }

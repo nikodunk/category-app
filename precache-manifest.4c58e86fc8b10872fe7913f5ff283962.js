@@ -1,19 +1,19 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "9ad93d1b833bbe6cfb405ba145014f59",
+    "revision": "84180f0b150eae85f93c5cb83311a429",
     "url": "/sustco-platform/index.html"
   },
   {
-    "revision": "47d66e70aebc350b4b9b",
+    "revision": "2e614aa06e690d0263f9",
     "url": "/sustco-platform/static/css/main.ba31768f.chunk.css"
   },
   {
-    "revision": "6c07fee601afdadcda00",
-    "url": "/sustco-platform/static/js/2.49dc9b64.chunk.js"
+    "revision": "daa58f2906c226b2a5a1",
+    "url": "/sustco-platform/static/js/2.fdd51d05.chunk.js"
   },
   {
-    "revision": "47d66e70aebc350b4b9b",
-    "url": "/sustco-platform/static/js/main.f7dca42b.chunk.js"
+    "revision": "2e614aa06e690d0263f9",
+    "url": "/sustco-platform/static/js/main.8bff202d.chunk.js"
   },
   {
     "revision": "af62ac084dcada988316",
