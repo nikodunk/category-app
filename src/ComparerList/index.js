@@ -16,13 +16,7 @@ export default function ComparerList() {
 
         useEffect(() => {
                 const fetchData = async () => {
-                        let data = await fetch('https://superjuice-1cb15.firebaseio.com/.json')
-                        let json = await data.json()
-                        let brands = json.brands
-                        let brandsArr = []
-                        for (var key of Object.keys(brands)) {
-                                brandsArr.push(brands[key])
-                        }
+                        let brandsArr = await fetchPosts()
                         setItems(brandsArr)
                         console.log(brandsArr)
                         setCategory('Fashion')

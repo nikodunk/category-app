@@ -13,7 +13,7 @@ export default function ComparerWidget(props) {
                 {/* <p style={{color:'grey'}}>{ props.item.price }</p> */}
                 {/* <p style="color:grey">{props.item.sust1}</p> */}
                 <CertificationWidget item={props.item} />
-                <br />
+                <br /><br />
                 <button className="btn btn-outline-dark btn-sm pull-right">
                     { props.item.upvote } Purchased Through Superjuice
                 </button>

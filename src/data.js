@@ -6,23 +6,26 @@ export function storeEmails(){
     return this.http.post('https://catalog-daa7b.firebaseio.com/emails.json', body, {headers: headers})
 }
 
-export function storeBrand(){
-  const body=JSON.stringify(this.brand);
-  const headers = new Headers({
-    'Content-Type': 'application/json'
-  });
-  return this.http.post('https://catalog-daa7b.firebaseio.com/.json', body, {headers: headers})
+export async function storeBrand(newBrand){
+  const options = {
+    method: 'POST',
+    body: JSON.stringify(newBrand)
+  }
+  let result = await fetch('https://superjuice-1cb15.firebaseio.com/brands.json', options)
+  let json = await result.json()
+  return json
 }
 
 
-export function fetchPosts(){
-    const body=JSON.stringify(this.brand);
-    const headers = new Headers({
-      'Content-Type': 'application/json'
-    });
-    return this.http.get('https://catalog-daa7b.firebaseio.com/.json')
-      .map(data => data.json())
-
+export async function fetchPosts(){
+    let data = await fetch('https://superjuice-1cb15.firebaseio.com/.json')
+    let json = await data.json()
+    let brands = json.brands
+    let brandsArr = []
+    for (var key of Object.keys(brands)) {
+            brandsArr.push(brands[key])
+    }
+    return brandsArr
   }
 
 export function upVote(upvoteItem, event){

@@ -28,8 +28,8 @@ const style = {
         padding: 30,
         top: '20%',
         left: '50%',
-        margin: '-100px 0 0 -400px',
-        maxWidth: 800
+        margin: '-100px 0 0 -45%',
+        maxWidth: '90%'
       } 
   }
 
