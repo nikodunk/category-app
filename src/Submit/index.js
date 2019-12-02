@@ -15,9 +15,9 @@ export default function App() {
     const [ range, setRange ] = useState('')
     const [ price, setPrice ] = useState('')
 
-    const onSubmit = (event) => {
+    const onSubmit = async (event) => {
         event.preventDefault()
-        storeBrand({
+        await storeBrand({
             title: title,
             video1: video1,
             sustlink: sustlink,
@@ -27,8 +27,10 @@ export default function App() {
             intro: intro,
             category: category,
             range: range,
-            price: price
+            price: price,
+            videotag: video1.substring(video1.length-11, video1.length)
         })
+        setSubmitted(true)
     }
 
 
