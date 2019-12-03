@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/sustco-platform/static/css/main.424912ba.chunk.css",
-    "main.js": "/sustco-platform/static/js/main.2d6db6ef.chunk.js",
-    "main.js.map": "/sustco-platform/static/js/main.2d6db6ef.chunk.js.map",
+    "main.js": "/sustco-platform/static/js/main.e289d0ef.chunk.js",
+    "main.js.map": "/sustco-platform/static/js/main.e289d0ef.chunk.js.map",
     "runtime-main.js": "/sustco-platform/static/js/runtime-main.1db51b8e.js",
     "runtime-main.js.map": "/sustco-platform/static/js/runtime-main.1db51b8e.js.map",
     "static/js/2.1822fc22.chunk.js": "/sustco-platform/static/js/2.1822fc22.chunk.js",
     "static/js/2.1822fc22.chunk.js.map": "/sustco-platform/static/js/2.1822fc22.chunk.js.map",
     "index.html": "/sustco-platform/index.html",
-    "precache-manifest.e3300c20e2f2d9fe36af6117af8efe2e.js": "/sustco-platform/precache-manifest.e3300c20e2f2d9fe36af6117af8efe2e.js",
+    "precache-manifest.889fd428768323114e1b236b398068c5.js": "/sustco-platform/precache-manifest.889fd428768323114e1b236b398068c5.js",
     "service-worker.js": "/sustco-platform/service-worker.js",
     "static/css/main.424912ba.chunk.css.map": "/sustco-platform/static/css/main.424912ba.chunk.css.map"
   },
@@ -16,6 +16,6 @@
     "static/js/runtime-main.1db51b8e.js",
     "static/js/2.1822fc22.chunk.js",
     "static/css/main.424912ba.chunk.css",
-    "static/js/main.2d6db6ef.chunk.js"
+    "static/js/main.e289d0ef.chunk.js"
   ]
 }
